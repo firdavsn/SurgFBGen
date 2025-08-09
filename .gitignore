@@ -13,3 +13,5 @@ research/outputs/embeddings/
 research/tmp
 
 data/
+
+research/evals/cluster_iat/*.pkl
