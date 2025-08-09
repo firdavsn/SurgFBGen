@@ -1,0 +1,11 @@
+ipykernel
+numpy
+pandas
+torch
+torchvision
+torchaudio
+openai
+opencv-python
+scikit-image
+matplotlib
+openpyxl
