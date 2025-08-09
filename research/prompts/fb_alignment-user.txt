@@ -1,0 +1,2 @@
+Using this scale, evaluate this generated feedback: "<GEN_FB>" against this ground truth feedback: "<GT_FB>".  
+Produce just the number, as your response needs to be processed automatically.

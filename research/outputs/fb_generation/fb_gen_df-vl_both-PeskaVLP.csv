@@ -1,0 +1,2291 @@
+Dialogue,Timestamp,Case,instrument-label,instrument-pred,instrument-correct,action-label,action-pred,action-correct,tissue-label,tissue-pred,tissue-correct,valid,iat_triplet,label_prompt,generated_feedback
+(explaining sutures),18:07:39,9,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with the suturing tools; initiate needle driving promptly. Are your wrist angles optimized?
+", I will say it again, this is too medial. this is aorta, this is cava. you keep coming down here and telling me you don't know where you're going",09:30:52,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+", if you're going to keep running this one, regrab your fourth arm closer and pull it up",10:10:51,16,auxiliary_arm,auxiliary_arm,True,traction_retract,traction_retract,True,,,,True,"('auxiliary_arm', 'traction_retract', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction with the auxiliary arm; increase tension now for better exposure. Are you maintaining stable traction?
+", is that a gigantic suture? how much do you have some fluid in the bladder or no?",16:17:54,18,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with the suturing tools; engage the needle driver now. Are you confident with your needle positioning?
+", look up, you need to grab this",10:06:49,16,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold immediately. How secure is your grasp?
+", why is the bladder neck so thin?",11:46:38,28,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on urinary tract exposure. Adjust camera for clearer visualization. Are you confident in the current view?
+Break the shorter one off and then tie and then I'm going to test leave one needle on,17:59:02,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+Do not stick the balloon.,17:41:55,12,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus now. Confirm your instrument setup before proceeding. Are you ready?
+Do we have a rescue suture?,16:57:40,13,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+"Even if he wants to do CIC, he better has this claim the prostate so he will not have significant problems passing the catheter in, either way he benefits from that.",14:22:01,15,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+"Hang on, grab with the...",16:49:36,14,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+I don't know if you're completely through that little vessel,12:01:55,28,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; proceed cautiously to avoid injury. Are you maintaining optimal dissection planes?
+I don't know why you are encroaching closer to the prostate,09:58:06,33,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization now. Are you confident in your exposure?
+"I mean, you can but you don't need to, because what we need",13:55:07,4,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization for precise dissection. How confident are you in your current exposure?
+"I still don't know if we have ureter up or not, so you can keep going, you just have to think about that, okay?",09:35:46,24,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain clear visualization of the urinary tract. Are you confident in your exposure?
+"I think it's even closer, I think you're...",14:26:25,2,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready to proceed?
+"I think you are too far from the prostate, very very far, don't you think?",16:08:58,26,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+I think you should take the other one first,15:31:28,10,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for controlled tissue handling. How steady is your grip?
+"I thought we switched to needle driver, would you mind switching",17:47:41,9,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle?
+I want to see the whole nerve before you take all this tissue down,09:36:20,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; proceed cautiously to avoid injury. Are you maintaining optimal dissection planes?
+I was going to put another clip there,17:09:28,7,clip_device,clip_device,True,,,,,,,True,"('clip_device', 'nan', 'nan')","IAT Triplet:
+instrument: clip_device, action: nan, tissue: nan
+
+Feedback:
+",Good job prepping the clip device; apply clips firmly to control bleeding now. Are you confident in clip placement?
+I would buzz a little bit higher...dont buz ...,15:59:45,32,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase precision now. Focus coagulation on target tissue. Are you confident in your energy control?
+I would cheat a little bit closer to your last stitch,18:57:35,29,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+I would not lift it with that...stop for a second,10:47:01,31,,,,interrupt_action,interrupt_action,True,,,,True,"('nan', 'interrupt_action', 'nan')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: nan
+
+Feedback:
+",Good job pausing; promptly resume precise dissection to maintain surgical flow. Are you ready to continue?
+"I wouldnt do that much yet...the reason is bc i want to start from here and start to see adrenal and march lateral to that and you dont know that yet, so i wouldnt even bother scoring the adrenal",17:18:27,7,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,"('nan', 'nan', 'retroperitoneal_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: retroperitoneal_structures
+
+Feedback:
+",Good start; respect retroperitoneal structures now. Proceed with gentle dissection. Are you maintaining proper tissue planes?
+Like you're digging under your suture line.,18:10:46,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are you confident with your needle angle?
+No the veins gonna collapse,15:09:19,10,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+Now careful bc if you get under the fascia of psoas youre gonna bleed,15:52:20,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,"('nan', 'nan', 'retroperitoneal_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: retroperitoneal_structures
+
+Feedback:
+",Good start; respect retroperitoneal structures now. Proceed with gentle dissection. Are you maintaining proper tissue planes?
+"Press it on, press down on it on the tissue around it.",17:59:26,12,,,,traction_retract,traction_retract,True,,,,True,"('nan', 'traction_retract', 'nan')","IAT Triplet:
+instrument: nan, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction; increase traction gently now. Are you maintaining stable exposure?
+"Press, there you go.",17:59:30,12,,,,traction_retract,traction_retract,True,,,,True,"('nan', 'traction_retract', 'nan')","IAT Triplet:
+instrument: nan, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction; increase traction gently now. Adjust your force carefully. How is exposure?
+Right off the nerve,09:38:49,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+See once you do that how the vein just pushes down...if youre on the plane thats right on top of the vein thats where you want to be,15:56:30,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+So things to work on while you're doing this is it's just simple...Minor adjustments to rock your needle back.,17:49:11,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue approximation. Are you confident in your needle placement?
+Still too much mucosa.,17:46:33,12,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of anatomy; maintain focus on urologic structures now.
+Stop and look at your needle...Stop and look at it.,17:54:46,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue tension. Are you controlling needle angle precisely?
+Sweep sweep it down.,16:01:33,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase precision to avoid tissue trauma. Are you maintaining optimal instrument control?
+The type of bleeding youre gonna run into when you get down there are...which is super annoying so its better to identify them and buzz them,15:57:52,32,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase precision now. Focus coagulation on bleeding vessels. Are you controlling energy delivery effectively?
+"Then we're going to not change the position, extract in this position, then close it, and then we'll take another look inside.",16:59:39,8,,,,inspect,inspect,True,,,,True,"('nan', 'inspect', 'nan')","IAT Triplet:
+instrument: nan, action: inspect, tissue: nan
+
+Feedback:
+",Good start inspecting; increase focus now. Maintain steady camera control. How clear is your view?
+VAS and sems are up,12:04:54,28,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; seminal vesicle dissection needs precision—handle tissue gently now. Are you maintaining proper tension?
+"What is going on, where did this needle come from?",18:19:10,14,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. Are you confident with your needle angle?
+Why is there a third needle?,18:19:21,14,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+a little buzz and push,09:24:53,24,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy promptly to control bleeding effectively. Are you confident in your coagulation settings?
+a little closer to the gland,15:07:19,18,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start—stay focused and maintain steady control. What’s your next precise move?
+"adjust your fourth arm, and pull to retract",09:09:30,17,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the auxiliary arm; adjust its angle now for optimal exposure. Are you confident with this setup?
+"again if you need to do a sharp turn grab the needle closer, and you're going to run out of the needle you can always let go.",17:01:30,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue approximation. Are you confident in your needle placement?
+"again, see how far away your left hand is to the action. too far away right?",14:47:50,22,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Adjust your hand control smoothly now. How steady is your grip?
+"ahh, , that's too thin of a bite, pull that out that's too thin and you were not turning your wrist as you were taking it out",11:00:00,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+all of these come down this..your arterys here and your veins here,15:57:08,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"all the way down and in and that will allow you when you clip ureter, youre gonna move the kidney UP completely",15:42:04,10,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Prepare for precise dissection now. Are you confident in your tissue handling?
+"alright a little bit sloppy, you're cutting onto the clip itself",14:51:44,22,clip_device,clip_device,True,,,,,,,True,"('clip_device', 'nan', 'nan')","IAT Triplet:
+instrument: clip_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the clip device; apply clips precisely now. Are you confident with clip placement?
+alright let's do a little uh... uh... mhm.. that's very small prostate.. okay,09:13:59,1,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+"alright, I think you are almost done there",10:37:45,1,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it carefully to avoid collateral damage. Are you confident in your energy settings?
+"alright, do you remember how I hold the SV's up?",09:50:19,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How confident are you in your dissection plane?
+always inspect the prostate so we have plenty of tissue on the right side and less on the left,15:28:50,3,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization for precise dissection. How confident are you in your current exposure?
+and buzz right above the vein...dont buzz the vein but,15:57:41,32,energy_device,energy_device,True,coagulate,coagulate,True,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('energy_device', 'coagulate', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: energy_device, action: coagulate, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job controlling bleeding; quickly coagulate neurovascular structures precisely. Are you confident in your energy settings?
+and im not a real big fan of you grabbing your needle and taking it off screen okay?,10:26:08,16,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; maintain steady wrist control now. Are your needle angles precise?
+and on the bladder we travel a little bit more,18:58:13,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job maintaining exposure; stay alert to avoid urinary tract injury. How's your visualization?
+"and open up the space, open it up",09:19:35,33,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. How precise is your instrument positioning?
+"and then on the anterior bladder neck, take care of that",09:20:51,1,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain clear visualization of the urinary tract. Are you confident in your exposure?
+and then turn here,19:09:24,29,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation start; increase wrist rotation speed now. Are you maintaining instrument stability?
+and very little mucosa you could take just the edge,15:48:51,3,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for controlled tissue handling. How steady is your grip?
+"and whenever it's not well-defined, come back to the lateral side where it's better-defined... especially towards the...",14:16:15,2,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. How’s your view quality?
+any leaks? anything from the hole that you made?,10:24:03,16,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus now. Confirm your instrument before proceeding. Are you ready?
+are you sure you're not too far from the prostate?,14:21:26,4,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain steady visualization for precise dissection. How confident are you in your current exposure?
+as you progress you can include the sac and bring the sac up,08:51:03,19,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good start; focus now. Identify the target tissue precisely. Are you confident in your exposure?
+back up with your camera,14:34:07,18,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly confirm camera angle for optimal visualization. Are you confident with the view?
+be careful dont get into the prostate,17:04:06,13,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+"be careful what you grab, it's a nephrectomy so it's very fragile",09:33:41,24,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job stabilizing; maintain auxiliary arm position steadily now. Are you confident with this hold?
+be gentle dont poke the tumor,16:46:01,8,,,,ensure_safety,ensure_safety,True,miscellaneous,miscellaneous,True,True,"('nan', 'ensure_safety', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: ensure_safety, tissue: miscellaneous
+
+Feedback:
+",Good job maintaining safety; prioritize careful tissue handling now. Are you confident in your current safety checks?
+because if youre not on the adenoma you run risk,16:03:16,12,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good start; focus now. Identify the target tissue precisely. Are you confident with the anatomy?
+"because it's very easy to deviate from the surface of the adenoma and end up getting through the capsule, and you know that's just really annoying... and you don't want to be annoying",14:04:51,2,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good job maintaining tissue integrity; stay focused and proceed with careful dissection. How precise is your current tissue handling?
+because you are wasting too much urethra real estate,18:58:46,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now on exposing the urinary tract clearly. Are you maintaining optimal visualization?
+below the ureter ...there,14:40:56,10,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on urinary tract exposure. Adjust camera for clearer visualization. Are you confident in the current view?
+break your die stitch,17:03:38,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with the suturing tools; initiate needle driving now for precise closure. Are you confident in your needle angle?
+but just take it so we don't keep making swiss cheese of the urethra,19:00:03,29,,,,grip_hold,grip_hold,True,urinary_tract,urinary_tract,True,True,"('nan', 'grip_hold', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: urinary_tract
+
+Feedback:
+",Good grip on the urinary tract; maintain steady hold to prevent tissue trauma. How secure is your grasp?
+but narrow it down to a nice stock,09:31:16,33,,,,adjust_fix,adjust_fix,True,,,,True,"('nan', 'adjust_fix', 'nan')","IAT Triplet:
+instrument: nan, action: adjust_fix, tissue: nan
+
+Feedback:
+",Good adjustment; increase precision now. Adjust instrument position carefully. Are you confident with this setup?
+"but there's more SV, you see that?",09:50:12,21,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How confident are you in your dissection plane?
+"but you got to take the packet, take the packet, feed it to Louis properly",09:29:21,21,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold firmly. Are you confident in your grip strength?
+buzz,15:59:53,32,energy_device,energy_device,True,coagulate,coagulate,True,,,,True,"('energy_device', 'coagulate', 'nan')","IAT Triplet:
+instrument: energy_device, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; quickly confirm hemostasis with the energy device. How effective is your coagulation?
+buzz,17:16:09,13,energy_device,energy_device,True,coagulate,coagulate,True,,,,True,"('energy_device', 'coagulate', 'nan')","IAT Triplet:
+instrument: energy_device, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; quickly confirm hemostasis with the energy device. How effective is your coagulation?
+"buzz all of that, ____",11:53:49,28,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy cautiously now. Confirm hemostasis before proceeding.
+buzz it,09:27:02,24,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy to ensure hemostasis now. Are you confident in your coagulation settings?
+"buzz that, buzz that",14:16:25,2,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy to ensure hemostasis now. Are you confident in your coagulation control?
+"can I see that window, lets see that window a little more",15:45:21,6,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it precisely now. Are you confident with energy control?
+"can I see... , I'm trying to grab",09:16:58,24,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job prepping the energy device; activate it precisely to control bleeding now. Are you confident in your energy settings?
+"can you zoom in right here, where you tied your suture?",16:16:04,18,suturing_tools,suturing_tools,True,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"('suturing_tools', 'nan', 'fat_fascial_peritoneal_planes')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: fat_fascial_peritoneal_planes
+
+Feedback:
+",Good job exposing the fat-fascial-peritoneal planes; initiate precise suturing now. Are your needle angles optimal?
+"careful what you grab too, that's okay, thats probably the most I would grab because you dont want to grab the ureter accidentally.",09:19:57,33,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job maintaining exposure; stay alert to avoid urinary tract injury. How is your visualization?
+careful when you get the tip like that...need to lift up and use the hook,15:03:52,10,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it precisely now. Are you confident with energy control?
+cause its all these vessels at the corner of the sem that's tethering you,15:49:16,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How confident are you in your dissection plane?
+clean your hook,16:06:25,8,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it carefully to avoid collateral damage. Are you confident in your energy settings?
+closer to the SEM,15:51:10,26,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus. Identify your target tissue clearly now. What’s your next step?
+closer to the prostate,14:39:50,15,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+cold cold,14:48:35,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start on the seminal vesicle; maintain gentle handling to avoid tissue trauma. How is your exposure?
+come a little bit closer to the adenoma,14:26:10,2,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good job maintaining tissue integrity; stay focused on precise dissection now. Are you confident in your current tissue handling?
+cut carefully,15:18:57,10,,,,cut_divide,cut_divide,True,,,,True,"('nan', 'cut_divide', 'nan')","IAT Triplet:
+instrument: nan, action: cut_divide, tissue: nan
+
+Feedback:
+",Good start cutting; increase precision now. Focus on controlled cut_divide movements. How steady is your wrist?
+"cut the tails, cut the tail, make them short, like that",15:28:58,15,,,,cut_divide,cut_divide,True,,,,True,"('nan', 'cut_divide', 'nan')","IAT Triplet:
+instrument: nan, action: cut_divide, tissue: nan
+
+Feedback:
+",Good start cutting; increase precision now. Focus on controlled cut_divide. Are you maintaining stable instrument positioning?
+cut tourniquet also,15:18:21,10,,,,cut_divide,cut_divide,True,,,,True,"('nan', 'cut_divide', 'nan')","IAT Triplet:
+instrument: nan, action: cut_divide, tissue: nan
+
+Feedback:
+",Good cut_divide start; increase precision now. Focus on controlled incision depth. How steady is your wrist?
+did you get the needle out?,15:29:01,15,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with the suturing tools; engage the needle driver precisely now. How's your needle angle?
+"do you want me to expose the urethra to you, to show you where you need to exit",19:07:30,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization for precise dissection. How clear is your current view?
+"doesn't need to be perfect, just grab it and bring it in",08:55:29,19,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for controlled tissue handling. How steady is your grip?
+"don't get closer to the prostate, just stay in that level",09:58:31,33,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job exposing the prostate; maintain steady retraction to optimize visualization. How is your exposure quality?
+don't pull too hard there okay because if you pull hard enough it will fall right through and you will have a hole in your urethra,17:03:03,22,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on urinary tract exposure. Adjust camera for better visualization. Are you confident in the current view?
+"don't sweep underneath there, just do above, it's a nice juicy packet there",09:25:56,21,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. Are you maintaining consistent instrument control?
+dont cut into yellow fat,15:36:13,8,,,,cut_divide,cut_divide,True,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"('nan', 'cut_divide', 'fat_fascial_peritoneal_planes')","IAT Triplet:
+instrument: nan, action: cut_divide, tissue: fat_fascial_peritoneal_planes
+
+Feedback:
+",Good job initiating the dissection; sharply cut the fat and fascial planes now. Are you maintaining proper tension?
+dont rip that,15:39:06,22,,,,ensure_safety,ensure_safety,True,,,,True,"('nan', 'ensure_safety', 'nan')","IAT Triplet:
+instrument: nan, action: ensure_safety, tissue: nan
+
+Feedback:
+",Good job maintaining safety; prioritize clear visualization now. Confirm your instrument position.
+"especially when you see those clear vessels, those are lymphatics, yeah?",09:30:20,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+figure out where the vein is going,15:56:00,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+find the ureter first,14:39:41,10,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Proceed with careful dissection. Are you visualizing the anatomy clearly?
+follow the contour of the gland,16:58:21,14,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job exposing the prostate; maintain steady retraction to optimize visualization. How is your exposure quality?
+get in with L hand and lift up,15:52:14,8,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Engage hand control smoothly and precisely. Are your movements deliberate?
+get into that spot right there,16:52:56,8,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready to proceed?
+get more tissue there,08:52:03,19,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold immediately. Are you confident in your grip strength?
+get mucosa,10:19:00,16,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of the gastrointestinal tract; maintain gentle handling to avoid injury. How is your tissue tension control?
+get those fibers off,17:17:04,29,,,,dissect_clean,dissect_clean,True,,,,True,"('nan', 'dissect_clean', 'nan')","IAT Triplet:
+instrument: nan, action: dissect_clean, tissue: nan
+
+Feedback:
+",Good dissection start; increase precision now. Maintain clean planes during dissection. Are you visualizing correct tissue layers?
+get to the psoas and then work youre way,16:41:30,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,"('nan', 'nan', 'retroperitoneal_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: retroperitoneal_structures
+
+Feedback:
+",Good exposure; carefully maintain retroperitoneal structure integrity now. Are you confident in your dissection plane?
+go a little anterior 12 oclock,15:52:29,12,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase precision now. Adjust instrument tip position carefully. Are you confident with your spatial orientation?
+go a little higher then,11:08:27,31,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. Are you confident with your current view?
+go a little higher; let me show you one sec,14:31:30,10,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. Are you confident in your current view?
+"go ahead and open here, start opening here, go",11:18:30,25,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. How precise is your instrument positioning?
+go ahead and open the bladder,11:19:16,25,,,,open_spread,open_spread,True,urinary_tract,urinary_tract,True,True,"('nan', 'open_spread', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: urinary_tract
+
+Feedback:
+",Good spread on the urinary tract; open more gently to avoid tissue trauma. Are you sensing tissue tension?
+"go deep, go inside, not down, forward",09:47:14,21,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase precision now. Adjust instrument tip position carefully. Are you confident with your spatial orientation?
+go in the urethra,18:59:43,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job maintaining exposure; focus now on clear visualization of the urinary tract. Are you confident in your current view?
+gonadal right? lets find ureter,15:51:10,8,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Proceed with careful dissection. Are you visualizing the anatomy clearly?
+good,09:18:05,17,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus. Identify your instrument and target tissue now. Are you ready?
+good,14:49:28,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How confident are you in your dissection plane?
+good,14:50:58,26,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule. How is your exposure?
+"good all this stuff is tethering you, this is a vessel right here so make sure you get it",17:42:55,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; proceed cautiously to avoid injury. Are you maintaining optimal visualization?
+"good, what are you going to do with your fourth arm?",10:13:48,16,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the auxiliary arm; stabilize it now to prevent unintended movement. How steady is your arm control?
+grab,19:00:26,29,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold firmly. Are you confident in your grip strength?
+grab,19:18:57,29,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold immediately. How secure is your grasp?
+grab it and lift it straight up,17:46:04,29,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+grab sack,08:54:07,19,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your wrist during grip_hold. How steady is your hold?
+grab that leaflet,14:52:16,26,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+hang on for a second,13:55:09,4,,,,grip_hold,grip_hold,True,prostate,prostate,True,True,"('nan', 'grip_hold', 'prostate')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: prostate
+
+Feedback:
+",Good grip on the prostate; maintain firm hold to prevent slippage. Are you confident in your tissue tension?
+"hang on, grab here",09:30:23,24,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; maintain firm hold now. Adjust your wrist angle for better control. How stable is your grasp?
+"here it's very high risk of going too low, and then you suddenly have your SV's, so if you can, tips should be pointing... I think you're...",14:26:38,2,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; seminal vesicle vas is delicate. Handle tissue gently to avoid injury. Are you maintaining proper tension?
+hold it closer to the vein,14:46:33,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"hold on, so grab just the tip of the SV there... you got to leave room for the other SV",09:50:29,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; focus now—identify the seminal vesicle precisely. Are you confident in your landmark recognition?
+hold the need at the halfway point,17:00:59,13,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are you confident with your needle angle?
+how do you break a stitch?,17:03:53,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+i want to get the tissue off the vein,14:46:31,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining optimal visualization?
+i want you to be right off the vein,14:42:13,22,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job maintaining exposure; focus now on clear visualization of the urinary tract. How is your current view quality?
+i would come closer to the prostate,14:39:56,15,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job exposing the prostate; maintain steady retraction for optimal visualization. How is your exposure quality?
+i wouldnt take the vas yet,11:08:10,31,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start on the seminal vesicle; maintain gentle handling to avoid injury. How is your exposure?
+if you angle your tip of your needle downwards towards the rectum,19:02:02,29,suturing_tools,suturing_tools,True,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('suturing_tools', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good start; focus now—engage suturing tools precisely on gastrointestinal tract. Are your needle angles optimal?
+"if you cut past point on the vas, you risk snipping off the vessel, yeah",09:41:09,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How confident are you in your dissection plane?
+"if you do it correctly, there should be a nice little septum here between right and left SV",09:48:03,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; focus now—identify the seminal vesicle precisely. Are you confident in your landmark recognition?
+"if you have to throw sutures in there, throw sutures in there... whatever needs to be done",15:24:31,18,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle?
+"in here, vessel you see it?",16:28:30,13,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+is something holding the bladder back?,18:04:09,13,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization for precise dissection. How confident are you in your current exposure?
+it really exposes the medial surface so you can find the SV,11:07:47,31,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How confident are you in your dissection plane?
+its fine turn there,19:16:28,29,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation speed; increase wrist articulation now for precise dissection. How’s your control?
+"its ok, make the correction",16:41:56,8,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start—stay focused and maintain steady control. What’s your next precise move?
+its right in here...youre going outside of it,17:55:23,12,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization now. Are you confident in your exposure?
+its still bleeding,14:42:23,22,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain gentle handling to avoid trauma. Are you confident in your tissue recognition?
+its still bleeding  you gotta stop that thing,14:52:23,26,,,,interrupt_action,interrupt_action,True,prostate,prostate,True,True,"('nan', 'interrupt_action', 'prostate')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: prostate
+
+Feedback:
+",Good job pausing; urgently maintain clear visualization of the prostate. Are you ready to proceed?
+"just a little bit towards the bladder, a touch",09:19:37,1,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain clear visualization of the urinary tract. Are you confident in your exposure?
+just buzz it,12:02:02,28,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy promptly to control bleeding effectively. Are you confident in your coagulation settings?
+"just drop it, just push against it so its at the apex, yup nice, I agree with you",14:47:12,15,,,,release_instrument,release_instrument,True,,,,True,"('nan', 'release_instrument', 'nan')","IAT Triplet:
+instrument: nan, action: release_instrument, tissue: nan
+
+Feedback:
+",Good job pausing; release the instrument smoothly now. Are you confident with this step?
+just get to the medial of it,09:46:48,21,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase speed to reach the target swiftly. Are you confident with your positioning?
+just open up...,09:34:15,33,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good start opening spread; increase precision now. Control your instrument spread carefully. Are you maintaining stable exposure?
+just remember to stay right on the surface of the adenoma,16:23:18,12,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good job maintaining tissue integrity; stay focused on precise dissection now. Are you confident in your current tissue handling?
+just the tip of your scissors okay?,14:49:51,26,surgical_scissors,surgical_scissors,True,,,,,,,True,"('surgical_scissors', 'nan', 'nan')","IAT Triplet:
+instrument: surgical_scissors, action: nan, tissue: nan
+
+Feedback:
+",Good start with the scissors; increase precision now. Open tissue edges carefully. Are you controlling the scissors smoothly?
+just the vas,15:52:36,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How precise is your current dissection?
+just the vas okay?,15:52:34,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; seminal vesicle vas is delicate. Handle tissue gently to avoid injury. Are you maintaining proper tension?
+leave it there,17:02:08,13,,,,release_instrument,release_instrument,True,,,,True,"('nan', 'release_instrument', 'nan')","IAT Triplet:
+instrument: nan, action: release_instrument, tissue: nan
+
+Feedback:
+",Good job pausing; release the instrument smoothly now. Are you controlling the release steadily?
+"left hand , that corner is always left hand",19:09:53,29,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Adjust hand control smoothly for precise instrument positioning. How steady is your current control?
+left hand comes out,09:21:57,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Stabilize your hand control now. How steady is your grip?
+left hand towards left lower quadrant,09:04:30,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Stabilize your hand control now. How steady is your grip?
+"let go of the needle, you need to be aware of where the suture is where the needle is, all that good stuff. lets go",17:00:20,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; maintain steady wrist control now. Are your needle angles precise?
+"let go of what you have holding there, its just not effective retraction. hold the tissue a little closer to the vein",14:46:21,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"let me just look at the prostate... left side ___ tissue, right side ___ tissue",11:48:38,5,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule. How is your exposure?
+lets find your catheter now,09:58:20,33,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start—stay focused and ready for instrument engagement. What’s your next step?
+lets go,14:52:35,26,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain steady visualization for precise dissection. How confident are you in your current exposure?
+lets see if we can get the upper vein first,15:09:33,10,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+lets travel on the bladder,19:09:08,29,,,,navigate_position,navigate_position,True,urinary_tract,urinary_tract,True,True,"('nan', 'navigate_position', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: urinary_tract
+
+Feedback:
+",Good job navigating; quickly position the camera for optimal urinary tract visualization. Are you confident with this view?
+lift up with your right hand a little bit,09:22:08,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Stabilize your hand control precisely. How steady is your grip?
+like if you grab the suture and pull it off screen its fine because the needle is floppy right?,10:26:22,16,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle?
+"like you're, you're picking up your suture line.",18:11:00,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. Are you confident with your needle angle?
+"look at your controllers, you are too close to here, push them back a little bit",16:48:59,22,,,,inspect,inspect,True,,,,True,"('nan', 'inspect', 'nan')","IAT Triplet:
+instrument: nan, action: inspect, tissue: nan
+
+Feedback:
+",Good start inspecting; focus now on identifying key anatomical landmarks carefully. What do you observe?
+look back by the port,16:14:08,32,,,,inspect,inspect,True,,,,True,"('nan', 'inspect', 'nan')","IAT Triplet:
+instrument: nan, action: inspect, tissue: nan
+
+Feedback:
+",Good start inspecting; increase focus now. Maintain steady camera control. Are you visualizing all landmarks clearly?
+look for gonadal and ureter,15:50:05,8,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization now. Are you confident in your exposure?
+"look up, grab it with your fourth arm",10:06:54,16,auxiliary_arm,auxiliary_arm,True,grip_hold,grip_hold,True,,,,True,"('auxiliary_arm', 'grip_hold', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip with the auxiliary arm; maintain firm hold to stabilize tissue now. Are you confident in your grip strength?
+"make sure you pull the stitch towards you, okay",16:25:32,18,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue tension. Are you feeling steady?
+make sure you turn the needle out,17:52:59,12,suturing_tools,suturing_tools,True,rotate_turn,rotate_turn,True,,,,True,"('suturing_tools', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation with suturing tools; increase speed to maintain suture tension. How precise is your wrist rotation?
+maybe try sweeping the vein over if you can?,16:09:51,32,,,,sweeping_maneuvers,sweeping_maneuvers,True,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'sweeping_maneuvers', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job maintaining exposure; sweep gently around neurovascular structures now. Are you preserving tissue integrity?
+medial to the vein on the pubic ramus,16:39:38,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+mhm,09:35:25,33,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start—stay focused and prepare for instrument docking now. Are you ready?
+more pressure on the left hand,09:00:37,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Stabilize your hand control precisely. Are your movements steady?
+"no its going to get worse, lets go to other side",15:49:13,10,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase speed to reach the target swiftly. Are you confident with your positioning?
+"no, don't bipolar it",09:49:26,24,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it carefully now. Are you confident with energy settings?
+"no, just buzz it",14:14:54,3,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job starting coagulation; increase precision now. Focus energy on targeted tissue. Are you controlling spread effectively?
+"no, open it right on that pearly white thing",14:28:52,3,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good spread technique; increase precision now. Open spread slowly for controlled exposure. Are you maintaining stable instrument positioning?
+"no, open the superficial layer first",16:58:16,14,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. How precise is your instrument positioning?
+"no, so just get the tissue off the tip of the SV, that's it. stay right on the SV, you don't need to take more tissue than that",09:49:55,21,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start on the seminal vesicle; maintain gentle handling to avoid tissue trauma. How is your exposure?
+"no, that's too much... take that first, yeah",15:10:23,2,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for controlled tissue handling. How steady is your grip?
+"no, you're going to have your SV's very soon if you do that",14:26:58,2,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+    
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How confident are you in your dissection plane?
+"nothing too crazy, don't have to go into the prostate",12:06:33,28,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain focus on precise dissection planes now. How confident are you in your current exposure?
+"now buzz, sweep",16:08:15,32,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy cautiously now. Adjust coagulation settings precisely. Are you monitoring tissue response closely?
+now pull the stitch back,19:16:13,29,suturing_tools,suturing_tools,True,traction_retract,traction_retract,True,,,,True,"('suturing_tools', 'traction_retract', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction with suturing tools; increase tension now for better exposure. Are you maintaining consistent tension?
+now you're ready to grab it and just pull it through,18:00:01,30,,,,traction_retract,traction_retract,True,,,,True,"('nan', 'traction_retract', 'nan')","IAT Triplet:
+instrument: nan, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction; increase traction gently now. Are you maintaining stable exposure?
+now youre going to proceed lateral,15:42:50,10,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. Are you confident with your current view?
+ok  stop,16:43:43,13,,,,interrupt_action,interrupt_action,True,,,,True,"('nan', 'interrupt_action', 'nan')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: nan
+
+Feedback:
+",Good job pausing; urgently stop all instrument movement now. Are you ready to proceed?
+ok keep working,15:35:44,22,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready?
+ok now stop for a second,10:48:34,31,,,,interrupt_action,interrupt_action,True,,,,True,"('nan', 'interrupt_action', 'nan')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: nan
+
+Feedback:
+",Good job staying alert; immediately stop all instrument movement. Are you ready to proceed safely?
+ok open that up,09:21:45,33,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good start opening spread; increase precision now. Control your instrument spread carefully. Are you maintaining stable exposure?
+ok wait for a second,16:31:46,13,,,,interrupt_action,interrupt_action,True,,,,True,"('nan', 'interrupt_action', 'nan')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: nan
+
+Feedback:
+",Good job staying alert; stop the current action immediately. Are you ready to proceed?
+"ok, break one off and tie... leave the vicryl",12:25:25,11,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are you confident with your needle angle?
+"ok, drop the foley hold the stitch up, straight up",17:01:54,13,suturing_tools,suturing_tools,True,release_instrument,release_instrument,True,,,,True,"('suturing_tools', 'release_instrument', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: release_instrument, tissue: nan
+
+Feedback:
+",Good job maintaining control; release the suturing tools gently now. How's your instrument positioning?
+okay cut it,14:51:27,22,,,,cut_divide,cut_divide,True,,,,True,"('nan', 'cut_divide', 'nan')","IAT Triplet:
+instrument: nan, action: cut_divide, tissue: nan
+
+Feedback:
+",Good start cutting; increase precision now. Focus on controlled cut_divide movements. How steady is your wrist?
+"okay great, i'll get the drain",10:37:25,16,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus now. Confirm your instrument setup before proceeding. Are you ready?
+okay im going to test you,10:23:57,16,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus now. Confirm your instrument before proceeding. Are you ready?
+okay that's not working... everything your poking you're just making more bleeding happen,10:19:07,1,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready?
+okay you dont want to go too much in the pelvic bone,08:39:59,19,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Prepare instruments for precise dissection. Are you ready to proceed?
+"okay, and just stay very close to the prostate so we don't dig up any more than we need to",14:42:57,2,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization for precise dissection. How confident are you in your current exposure?
+"okay, go ahead do a DRE, make sure there's no blood",15:29:06,3,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Proceed with precise dissection. Are you visualizing the correct planes?
+"okay, keep going",15:06:03,18,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready to proceed?
+"okay, maybe there is a blood vessel or two in that...",09:47:00,1,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; proceed cautiously to avoid injury. Are you maintaining optimal dissection planes?
+"okay, so grab that",09:42:41,1,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+"okay, so this is cava, you don't want to go too medially, right?",09:27:47,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to avoid injury. Are you confident in your tissue plane identification?
+"okay, so this is what I would do before you poke another thing and make a bleed",10:19:58,1,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Prepare instruments for precise dissection. Are you ready to proceed?
+"okay, so widen that out... medial... go to the other side... keep that in tact, we'll clip that",09:28:05,1,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. How steady is your wrist?
+"okay, stick this in the bag please",15:29:00,3,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain steady exposure of the urinary tract. Are you visualizing clearly?
+"okay, that was the vein?",09:18:05,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"okay, what is that to the side of that? in that space",15:03:02,18,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready to proceed?
+okay...the ureter...good,11:42:40,11,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Proceed with careful dissection. Are you visualizing the correct planes?
+one more stitch here and then we will go to the other side,16:40:16,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle?
+"only 47cc gland, so nothing crazy big",14:50:41,26,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job exposing the prostate; maintain steady visualization for precise dissection. How is your exposure quality?
+open and spread,09:33:03,1,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good spread technique; increase precision now. Open spread slowly for controlled exposure. Are you maintaining stable instrument positioning?
+"open that, yes",10:31:40,1,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. How precise is your instrument positioning?
+"open the bladder, start whenever you want",11:17:28,25,,,,open_spread,open_spread,True,urinary_tract,urinary_tract,True,True,"('nan', 'open_spread', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: urinary_tract
+
+Feedback:
+",Good spread on the urinary tract; open more gently to avoid tissue trauma. Are you controlling force precisely?
+open the window,09:19:13,17,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; focus now on precise instrument positioning. Are you confident with your current setup?
+open this space up here,09:18:39,17,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. How precise is your instrument positioning?
+"open this window, don't do that",09:19:14,17,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good spread; increase precision now. Open spread slowly to avoid tissue trauma. Are you controlling the instrument smoothly?
+open up the easy space,16:16:45,6,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good spread technique; increase precision now. Open spread slowly for controlled exposure. Are you maintaining stable instrument positioning?
+"open up wide... before you do that... just open up either side, you're still in a hole",09:33:14,1,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain gentle control to avoid tissue trauma. How steady is your wrist?
+"other way, other way... under the prostate, okay?",09:26:44,1,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+others... yeah just open that up a little bit more too,09:33:44,1,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good spread technique; increase precision now. Open spread slowly for controlled exposure. Are you maintaining stable instrument positioning?
+otherwise you'll cut it out when you're doing it... you have to go really cloes to the...,14:42:44,3,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+"perpendicular to the vein, so sweep toward the vein toward",14:42:48,22,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase precision now to avoid tissue trauma. Are you maintaining consistent instrument control?
+psoas right? so look for psoas here,15:51:34,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,"('nan', 'nan', 'retroperitoneal_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: retroperitoneal_structures
+
+Feedback:
+",Good start exposing retroperitoneal structures; proceed carefully to avoid vascular injury. How is your visualization?
+pull it down,19:16:15,29,,,,traction_retract,traction_retract,True,,,,True,"('nan', 'traction_retract', 'nan')","IAT Triplet:
+instrument: nan, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction; increase traction gently now. Adjust your force carefully. How does tissue tension feel?
+pull the last stitch before you pull up on this one,10:09:14,16,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with the suturing tools; increase precision now. Adjust needle angle carefully. Are you maintaining consistent tension?
+pull up on that,10:16:18,16,,,,traction_retract,traction_retract,True,,,,True,"('nan', 'traction_retract', 'nan')","IAT Triplet:
+instrument: nan, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction; increase traction gently now. Adjust your force carefully. How is tissue tension?
+"push the kidney away, push the kidney away",09:02:56,17,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,"('nan', 'nan', 'retroperitoneal_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: retroperitoneal_structures
+
+Feedback:
+",Good exposure; carefully maintain retroperitoneal dissection planes now. Are you preserving tissue integrity?
+put your R hand there and gently...like your finger,16:27:32,9,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Stabilize your hand control now. How steady is your grip?
+put your fourth arm here now,09:13:47,17,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the auxiliary arm; stabilize it now to avoid unintended movement. How steady is your current setup?
+put your left hand up up up,09:20:56,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Stabilize your hand control precisely. Are your movements steady?
+put your right hand in there and take your left hand out,09:22:24,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Stabilize your hand control now. How steady is your grip?
+realign your left hand,09:22:03,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Adjust your hand control smoothly now. How steady is your wrist?
+remain in the correct fat plane so youre not getting the abd wall fat; You're between the abdominal wall fat and the kidney,16:41:34,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,"('nan', 'nan', 'retroperitoneal_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: retroperitoneal_structures
+
+Feedback:
+",Good start exposing retroperitoneal structures; proceed carefully to avoid vascular injury. How is your visualization?
+"remember I talk about apex stitches, same thing, this is where it will leak..",17:46:08,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue approximation. Are you confident in your needle placement?
+"remember what I said about chopping, like especially this side, right? you could hit the duo, the way you were doing it last week",09:22:22,24,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it precisely now. Are you confident with energy control?
+right on the pearly white adenoma...if theres any bands there you sweep it off,16:03:06,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,miscellaneous,miscellaneous,True,True,"('nan', 'sweeping_maneuvers', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: miscellaneous
+
+Feedback:
+",Good job maintaining control; increase precision in sweeping maneuvers now. Are you confident in your tissue plane identification?
+"right there, I would've buzzed first and then swept",14:11:40,2,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it precisely now. Are you confident with energy control?
+same vessel here that was tethering you,17:45:45,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+see how it moves in the prostate? thats where you go,16:15:55,14,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain steady visualization for precise dissection. Are you confident in your current exposure?
+see if you can just grab,09:35:19,1,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your wrist during grip_hold. How steady is your hold?
+see that's the end of your barbs on both sutures,18:06:00,30,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. Are you confident with your needle angle?
+see theres a vein there,14:45:17,10,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+show yourself the mucosa,10:05:20,16,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of the gastrointestinal tract; maintain gentle handling to avoid injury. How is your tissue tension control?
+since you can see vessel might as well take care of it now,16:09:28,6,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+small needle,15:46:19,15,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are you confident with your needle angle?
+so I think youve done amazing job,16:54:28,9,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Prepare instruments for precise dissection. Are you ready to proceed?
+"so I would do the opposite of what you do, I would burn first, and then do a gentle sweep... burn and then sweep",14:14:26,2,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job starting coagulation; increase precision now. Focus coagulation on targeted tissue. Are you confident in your coagulation control?
+so I would stay on the slightly higher side and you can take that lateral piece first with a clip,10:16:47,1,clip_device,clip_device,True,navigate_position,navigate_position,True,,,,True,"('clip_device', 'navigate_position', 'nan')","IAT Triplet:
+instrument: clip_device, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning the clip device; quickly align it precisely on the target vessel. Are you confident in your clip placement angle?
+"so Jun, I want to see the whole thing, so open the space up. I want to see the whole, cause you can see a glimpse of it somewhere but that doesnt mean you know the exact course of the nerve right?",09:35:02,33,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening spread; increase speed to expose tissue quickly. Are you maintaining stable wrist angles?
+"so advance, grab more of your SV",09:39:10,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; seminal vesicle vas is delicate. Proceed gently to avoid injury. Are you maintaining steady control?
+"so again, the key is to find the posterior plane, extend it to the urethra",10:54:52,1,,,,None,None,True,urinary_tract,urinary_tract,True,True,"('nan', 'None', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: None, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain steady exposure of the urinary tract. Are you visualizing clearly?
+so be careful of your tissue tension here becuase your superficial dvc can be around here,14:42:11,26,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+so bring it towards the left lower quadrant,09:04:27,17,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. Are you confident in your current view?
+"so careful, what you just grabbed im not sure if you grabbed that branch of the vein with it.",14:48:02,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"so get right on it... so peel off that stuff off of it, expose the medial aspect of the SV first",09:47:45,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; focus now—handle the seminal vesicle vas gently. Are you maintaining proper tension?
+so here you can just bluntly sweep off the nerve,09:38:42,33,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. How is your wrist articulation?
+"so here... stop for a second... so rather than grabbing what you're grabbing there, I'd rather you just retract down",09:30:21,1,retractor_device,retractor_device,True,,,,,,,True,"('retractor_device', 'nan', 'nan')","IAT Triplet:
+instrument: retractor_device, action: nan, tissue: nan
+
+Feedback:
+",Good retraction setup; maintain steady exposure with the retractor device now. Are you confident in your current field visualization?
+so hug off the vein and off the bone,14:46:09,22,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Stabilize your hand control now. How steady is your grip?
+so i think you can go to the other side,17:29:37,7,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase precision now. Adjust your camera position carefully. Are you optimizing your view?
+so im very risk adverse so I like to go right off the nerve take that seperate that,14:53:17,22,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. Are you confident in your instrument positioning?
+so instead of grabbing something I would just let go of your left hand and stick the whole thing jaws closed into that space,14:48:47,22,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Stabilize your hand control precisely. Are your movements steady?
+so just account for the spacing right? there's more space on the bladder side than on the urethra side,11:11:39,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+so just make sure all the needles and clips are accounted for,15:15:29,2,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue tension. Are you controlling needle angle precisely?
+"so now come in a little bit, yeah",10:49:39,1,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase speed to reach the target swiftly. Are you confident with your positioning?
+"so now its getting pretty close, get rid of some of that stuff",14:44:33,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+so now we can start to travel a little bit more on the bladder because obviously there's a lot more to cover,19:04:30,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization for precise dissection. How clear is your current view?
+"so now you got to change your angle, yeah? you need to go under the prostate or you're going to get into the bladder",09:26:28,1,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now on exposing the urinary tract clearly. Are you visualizing the anatomy well?
+so open all the space up,09:32:54,33,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening spread; increase precision now. Control your instrument spread carefully. Are you maintaining stable instrument positioning?
+so start with a better grasp of your vas,15:30:36,22,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; focus now—identify and expose the seminal vesicle precisely. Are you confident in your exposure?
+"so stop, pull from up here, pull from the loop",10:16:00,16,,,,traction_retract,traction_retract,True,,,,True,"('nan', 'traction_retract', 'nan')","IAT Triplet:
+instrument: nan, action: traction_retract, tissue: nan
+
+Feedback:
+",Good retraction; increase traction gently now. Are you maintaining stable exposure?
+so that way the risk of getting into the prostate is low,10:48:42,31,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain steady visualization for precise dissection. How confident are you in your current exposure?
+so that's not perpendicular to your...,10:32:11,1,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it carefully to avoid collateral damage. Are you confident in your energy settings?
+"so that's not what I mean by seeing the nerve, I want to see the whole nerve, I don't want to see part of the nerve",09:35:51,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+so that's that corner right? the corner that we turned on the bladder?,19:04:27,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job maintaining exposure; urgently adjust your angle to better visualize the urinary tract. How can you improve your current view?
+so we have a good amount of time for you to do the vas defs,14:50:53,26,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+so what I don't like about this is I want to see your nerve down below,09:37:46,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"so what I'm trying to get you to think about is do I want to get under it here near the aorta or near the ileum, or back down here",09:32:34,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"so what you just bipolared and what you cut was nearly the same spot, you want to give yourself a little bit more wiggle room, right?",09:48:39,1,energy_device,energy_device,True,,,,,,,True,"('energy_device', 'nan', 'nan')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the energy device; activate it carefully to avoid collateral damage. Are you confident with your energy settings?
+"so what you were going to take there, probably fine as a little vessel, but you were in a very compromised position right?",09:34:40,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"so when you cinch, pull 90 degrees from the tissue, okay? if you pull towards the head, because of the barb it's going to cut like a knife",11:12:50,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+so wheres the mucosa,17:50:26,12,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of the gastrointestinal tract; maintain gentle handling to avoid injury. How is your tissue tension control?
+so work along the medial aspect of the vas,13:58:48,4,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How precise is your current dissection?
+so work from this starting edge here and march deeper as you go,17:27:24,7,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly confirm camera angle for optimal visualization. Are you confident in your view?
+so you can do a little more sweeping,09:26:13,21,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; maintain steady wrist control now. How is your instrument positioning?
+"so you can tennis racket it and start at the top and run it not at the urethra, the bladder side and you run it towards the urethra",18:07:02,30,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Proceed with careful dissection. Are you visualizing the correct planes?
+so you got to decide where...,09:41:22,33,,,,interrupt_action,interrupt_action,True,,,,True,"('nan', 'interrupt_action', 'nan')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: nan
+
+Feedback:
+",Good job staying alert; immediately stop all instrument movement now. Are you ready to proceed safely?
+so your original bladder neck wasn't that big and you kind of stretched it out quite aggressively in the very beginning... so just be aware of that,09:26:18,1,,,,ensure_safety,ensure_safety,True,urinary_tract,urinary_tract,True,True,"('nan', 'ensure_safety', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: ensure_safety, tissue: urinary_tract
+
+Feedback:
+",Good job maintaining safety; urgently confirm urinary tract integrity now. Are you confident in your assessment?
+"so your suture management is already not good, you have to do something",16:43:50,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with the suturing tools; initiate needle driving promptly. Are you confident with needle positioning?
+"so, stop for a second... so you see those... pur your retraction there, that's fine",09:30:32,1,retractor_device,retractor_device,True,,,,,,,True,"('retractor_device', 'nan', 'nan')","IAT Triplet:
+instrument: retractor_device, action: nan, tissue: nan
+
+Feedback:
+",Good retraction setup; maintain steady retractor_device positioning now. Are you ensuring optimal exposure?
+spread here with your scissors and your left hand,09:19:51,17,hand_control,hand_control,True,open_spread,open_spread,True,,,,True,"('hand_control', 'open_spread', 'nan')","IAT Triplet:
+instrument: hand_control, action: open_spread, tissue: nan
+
+Feedback:
+",Good job maintaining control; quickly close the hand control to prepare for grasping. How precise was your hand positioning?
+staple across the ureter and whole shebang,16:55:05,8,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Prepare for precise dissection now. Are you confident in your tissue handling?
+"staple the ureter now, that area there",15:42:02,10,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization now. Are you confident in your exposure?
+"start again, right hands go up",09:22:54,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Adjust your hand control for precise instrument positioning. How steady is your current control?
+"stay close to the prostate... uh, the adenoma, okay? just stay close",14:45:09,2,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain steady visualization for precise dissection. How confident are you in your current exposure?
+stay down stay down,09:11:23,33,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. How’s your view angle?
+"stay in the correct plane, yup, between the two fascial layers",15:35:44,8,,,,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"('nan', 'nan', 'fat_fascial_peritoneal_planes')","IAT Triplet:
+instrument: nan, action: nan, tissue: fat_fascial_peritoneal_planes
+
+Feedback:
+",Good start; maintain focus on fat-fascial-peritoneal planes. Proceed with careful dissection. Are you visualizing the correct tissue layers?
+stay right next to ureter...so  its unlikely you will cause damange,11:50:15,11,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain clear visualization of the urinary tract. Are you confident in your exposure?
+stop for a second,10:49:14,31,,,,interrupt_action,interrupt_action,True,,,,True,"('nan', 'interrupt_action', 'nan')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: nan
+
+Feedback:
+",Good job staying alert; immediately stop any unintended instrument movement. Are you maintaining control?
+stop for a second,12:28:30,28,,,,interrupt_action,interrupt_action,True,,,,True,"('nan', 'interrupt_action', 'nan')","IAT Triplet:
+instrument: nan, action: interrupt_action, tissue: nan
+
+Feedback:
+",Good job pausing; promptly resume precise dissection now. Are you confident in your next move?
+stop look at see your needle driver It's got to be perpendicular to the needle.,17:51:46,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. Are you confident with your needle angle?
+sure but take it dont put holes in the urethra,19:14:26,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on urinary tract exposure. Adjust camera for better visualization. Are you confident in the current view?
+sweep along it because you are going to get into endopelvis,14:38:18,26,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. Are you maintaining consistent instrument control?
+"sweep further, theres another layer",16:01:37,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase wrist articulation now for precise dissection. Are you maintaining stable camera control?
+"sweep it into the spoon, help her",14:43:12,26,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. Are you maintaining consistent instrument control?
+sweep it off... start from where you know where the adenoma is and then just sweep it off,15:04:29,18,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase wrist articulation now for precise dissection. Are you maintaining stable camera control?
+sweep sweep sweep,09:38:40,33,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. Are you maintaining consistent instrument control?
+"sweep this down, sweep this down",14:59:20,20,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase wrist articulation now for better exposure. Are you maintaining consistent instrument control?
+sweep towards the vein okay? always sweep towards the vein,14:42:35,22,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. Are you maintaining consistent instrument control?
+"sweep, sweep, sweep, that should be a very blunt dissection",09:25:52,21,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. Are you maintaining consistent instrument control?
+sweep...You'll get into the perfect layer... sweep all those strands off....Keep sweeping first. ....Get all those bands off.,16:01:54,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,"('nan', 'sweeping_maneuvers', 'nan')","IAT Triplet:
+instrument: nan, action: sweeping_maneuvers, tissue: nan
+
+Feedback:
+",Good job initiating sweeping maneuvers; increase speed to clear the field efficiently. Are you maintaining consistent instrument control?
+take it,09:27:28,24,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+take it,15:35:00,10,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for controlled tissue handling. How steady is your grip?
+take it,15:40:51,10,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold immediately. Are you confident in your grip strength?
+"take it a little higher, you don't want something dangling in your face, that's really annoying.",09:11:32,33,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. Are you confident in your current view?
+take it..no up..deep,15:34:09,10,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. How’s your view angle?
+take loop w R hand and w L retract,15:20:48,10,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus now. Stabilize your hand control precisely. Are your movements steady?
+"take one more... yeah, one more bite of that",15:10:29,2,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+"that looks too small, looks like there are 2 veins",17:05:12,7,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+"that's ___, you can't push that, yeah. it's a vessel right there, right in the middle, yeah, it's not going to push off",12:01:34,28,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+that's a whole bowel up there,15:35:33,23,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of the gastrointestinal tract; maintain gentle handling to avoid injury. How is your tissue tension control?
+that's it you can grab that peritoneum and thats it on the left,08:56:32,19,hand_control,hand_control,True,grip_hold,grip_hold,True,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"('hand_control', 'grip_hold', 'fat_fascial_peritoneal_planes')","IAT Triplet:
+instrument: hand_control, action: grip_hold, tissue: fat_fascial_peritoneal_planes
+
+Feedback:
+",Good grip on the fat planes; release tension gently now. Are you sensing tissue resistance?
+that's probably the vein that you just cut,14:52:02,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; proceed cautiously to avoid injury. Are you maintaining optimal dissection planes?
+thats fine but youre taking a lot of urethra,19:07:51,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain clear visualization of the urinary tract. Are you confident in your exposure?
+"thats it, okay now close the peritineum",08:45:48,19,,,,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"('nan', 'nan', 'fat_fascial_peritoneal_planes')","IAT Triplet:
+instrument: nan, action: nan, tissue: fat_fascial_peritoneal_planes
+
+Feedback:
+",Good start; focus now. Identify and expose fat fascial peritoneal planes carefully. Are you visualizing the correct tissue layers?
+thats not how you break a stitch man,17:03:51,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue tension. Are you controlling needle angle precisely?
+thats not the correct plane...its between the two fascial layers,15:35:48,8,,,,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"('nan', 'nan', 'fat_fascial_peritoneal_planes')","IAT Triplet:
+instrument: nan, action: nan, tissue: fat_fascial_peritoneal_planes
+
+Feedback:
+",Good start; focus now—carefully dissect fat fascial peritoneal planes. Are you maintaining proper tension?
+thats the capsule fibers,16:44:23,9,,,,,,,muscular_capsular_structures,muscular_capsular_structures,True,True,"('nan', 'nan', 'muscular_capsular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: muscular_capsular_structures
+
+Feedback:
+",Good control on muscular capsular structures; maintain gentle dissection to avoid tears. Are you sensing tissue tension?
+thats the ves,15:31:33,22,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good start; focus sharply on seminal vesicle vas. Maintain steady exposure now. How’s your visualization?
+"thats too much, take less",16:57:40,26,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for controlled tissue handling. How steady is your grip?
+the lateral... lateral stuff... lateral,10:37:53,1,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good job maintaining tissue integrity; stay focused on precise dissection now. Are you confident in your current tissue handling?
+"the reason why I like it wide, is because I like to be able to see the shape of the prostate as you are doing this",09:56:05,33,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+the vein dangling in your face... the vein,16:25:21,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"the whole point is to make the ureter completely irrelevant to your work, right?",09:22:28,33,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; maintain focus on the urinary tract. Proceed with precise dissection. Are you confident in your current exposure?
+"there are times when you have to hold the posterior bladder neck, and there are times you don't have to",13:55:57,4,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job exposing the prostate; maintain steady retraction to optimize visualization. How is your exposure quality?
+"there thats where you are going to grab, do you see it?",08:51:58,19,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for better control. How steady is your hold?
+"there you go, that is finally the first good one there, okay?",11:00:31,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; proceed cautiously to avoid injury. Are you maintaining optimal dissection planes?
+"there's a few open vessels... yeah, just burn those",10:44:10,1,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"theres a vessel there, careful of vessel",16:09:00,6,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"theres something bleeding down there, buzz it directly",17:16:04,13,energy_device,energy_device,True,coagulate,coagulate,True,,,,True,"('energy_device', 'coagulate', 'nan')","IAT Triplet:
+instrument: energy_device, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; quickly confirm hemostasis with the energy device. Are you confident in your coagulation control?
+"these little things that are tethering the vein up, you can buzz them or sweep them down",15:52:12,32,energy_device,energy_device,True,coagulate,coagulate,True,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('energy_device', 'coagulate', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: energy_device, action: coagulate, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job; quickly coagulate the neurovascular bundle to control bleeding. Are you confident in your energy settings?
+this first one you have to travel a little bit,16:43:23,22,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase speed to optimize docking time. Are you confident with your positioning?
+this is a vessel here that is tethering you,17:47:58,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining adequate visualization?
+this is ileostomy,15:42:41,23,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of anatomy; maintain focus on gastrointestinal tract proximity. Stay cautious near bowel; avoid traction. Are you monitoring tissue tension carefully?
+"this is the vein, there's a vein there",09:49:36,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+"this is whats tethering the vein, see how its all wispy and everything here",15:56:15,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+this isnt like a strength suture,12:48:39,31,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+those are all vessels,17:45:37,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+"those little red vessels, tiny vessels. I would burn them as you see them, because if you rip them off they are going to bleed",09:32:56,33,energy_device,energy_device,True,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('energy_device', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; avoid energy use here to prevent damage. Are you confident in your tissue recognition?
+"to save yourself this re grab, when you grab your needle for the first time, act like you know what your next bite is going to be. does that make sense?",16:49:21,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are you confident with your needle angle?
+"too far, come a little bit closer to the prostate",09:59:18,33,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain steady visualization for precise dissection. How confident are you in your current exposure?
+"travel, travel",11:09:28,21,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase speed to reach the target promptly. Are you confident with your positioning?
+try and get under the SV first before you do that,11:08:14,31,,,,navigate_position,navigate_position,True,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'navigate_position', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job navigating; quickly position the camera for optimal seminal vesicle visualization. How precise is your current view?
+"try something, instead of holding this, put your closed left hand in here and your push it this way",09:05:52,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Adjust your hand control for precise instrument positioning. How steady is your current control?
+try to grab the end of the sac and bring the sac up,08:53:04,19,,,,grip_hold,grip_hold,True,miscellaneous,miscellaneous,True,True,"('nan', 'grip_hold', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: miscellaneous
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How secure is your grasp?
+try to open that space up,14:49:07,22,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good start; open spread carefully now. Control your instrument spread precisely. Are you maintaining stable instrument positioning?
+turn,17:55:34,12,,,,rotate_turn,rotate_turn,True,urinary_tract,urinary_tract,True,True,"('nan', 'rotate_turn', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: urinary_tract
+
+Feedback:
+",Good rotation on the urinary tract; increase speed to maintain procedural flow. Are you confident with this rotation angle?
+turn,18:58:30,29,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation speed; increase wrist articulation now for precise dissection. Are you controlling rotation smoothly?
+turn,19:04:59,29,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation start; increase wrist rotation speed now. Are you maintaining instrument stability?
+turn,19:09:27,29,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation speed; increase wrist articulation now for precise dissection. How’s your control?
+turn dont pull,17:52:48,12,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation control; increase speed to optimize efficiency; maintain smooth wrist rotation; how steady is your rotation?
+"turn dont push, turn",17:52:37,12,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation start; increase wrist rotation speed now. Are you maintaining instrument stability?
+turn more,19:05:01,29,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation technique; increase speed to optimize console efficiency. Adjust wrist rotation now. How precise is your current rotation angle?
+turn turn turn turn,19:16:32,29,,,,rotate_turn,rotate_turn,True,,,,True,"('nan', 'rotate_turn', 'nan')","IAT Triplet:
+instrument: nan, action: rotate_turn, tissue: nan
+
+Feedback:
+",Good rotation technique; increase speed to optimize console efficiency. Adjust wrist rotation now. How precise is your current rotation angle?
+"uh huh, yes this little band",14:44:05,15,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready to proceed?
+"uh if anything, I would want to stay short of how far you want to go distally, because you don't want to get to the rectourethralis muscle",09:54:26,1,,,,,,,muscular_capsular_structures,muscular_capsular_structures,True,True,"('nan', 'nan', 'muscular_capsular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: muscular_capsular_structures
+
+Feedback:
+",Good start; focus now—maintain gentle handling of muscular capsular structures. Are you sensing tissue tension?
+uh you should have...im ok taking together but i want a good exposure of the artery...I want to see it..,15:54:37,6,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus now. Confirm your instrument setup before proceeding. Are you ready?
+up high near the liver,09:13:55,24,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good start; maintain focus on tissue handling. Identify your instrument now. What’s your next move?
+vessel right there ok?,16:37:31,13,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+watch your arm,16:20:32,32,,,,inspect,inspect,True,,,,True,"('nan', 'inspect', 'nan')","IAT Triplet:
+instrument: nan, action: inspect, tissue: nan
+
+Feedback:
+","Good start inspecting; focus now, maintain steady camera control; are you visualizing clearly?"
+"watch your suture, you don't want that to touch the camera lens. if you smudge your camera you will lose your console time",16:40:45,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue tension. Are you controlling needle angle precisely?
+well uh in this case a 3-0 on a SH,16:57:46,13,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+when this kind of a thing is not available,13:56:07,4,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization for precise dissection. Are you confident in your current exposure?
+"when youre at the hilum your strokes have to be smaller...because lets say theres a lumbar vein here...big stride could have ripped it right thru, if you make your moves smaller, and...much smaller injury",15:52:02,6,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+where is it? look at your 4th arm,18:22:11,12,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job stabilizing; engage the auxiliary arm now for optimal exposure. How’s your arm positioning?
+where is the bowel?,15:42:02,23,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of anatomy; urgently avoid gastrointestinal tract contact; maintain safe dissection planes. Are you confident in your tissue differentiation?
+"where is the ureter, I want to see the ureter",16:01:46,32,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization now. Are you confident in your exposure?
+where is this artery in the scan?,09:48:14,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; proceed cautiously to avoid injury. Are you maintaining clear visualization?
+where you come out has to be closer to where you just came out on the urethra,18:58:08,29,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain clear visualization of the urinary tract. Are you confident in your exposure?
+wheres the ureter,10:16:54,11,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain gentle handling to avoid trauma. Are you confident in your tissue recognition?
+wheres your other stitch,19:17:17,29,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle?
+why is this thing up in the air like this? your fourth arm,14:28:32,3,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job stabilizing; maintain auxiliary arm position steadily now. Are you confident with this setup?
+whyd you let go of the stitch,19:16:25,29,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are you confident with your needle angle?
+work toward the bladder first bc its more avascular,16:47:46,13,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain gentle handling of the urinary tract. Are you sensing tissue tension?
+yeah,09:32:03,33,,,,None,None,True,,,,True,"('nan', 'None', 'nan')","IAT Triplet:
+instrument: nan, action: None, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Initiate instrument engagement promptly. Are you ready to proceed?
+"yeah but you need to drop it up there, see that? that's where you drop it",09:09:04,17,,,,release_instrument,release_instrument,True,,,,True,"('nan', 'release_instrument', 'nan')","IAT Triplet:
+instrument: nan, action: release_instrument, tissue: nan
+
+Feedback:
+",Good job pausing; release the instrument smoothly to avoid tissue trauma. Did you maintain control?
+yeah go,19:15:18,29,,,,None,None,True,,,,True,"('nan', 'None', 'nan')","IAT Triplet:
+instrument: nan, action: None, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Initiate instrument engagement promptly. Are you ready to proceed?
+yeah just buzz that,10:28:08,31,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy cautiously now. Confirm hemostasis before proceeding.
+yeah lift that up and now you can gently buzz and sweep the stuff off,15:49:15,32,energy_device,energy_device,True,coagulate,coagulate,True,None,None,True,True,"('energy_device', 'coagulate', 'None')","IAT Triplet:
+instrument: energy_device, action: coagulate, tissue: None
+
+Feedback:
+",Good job initiating hemostasis; quickly coagulate precisely to avoid collateral damage. Are you confident in your energy control?
+yeah maybe cut that tissue,15:21:29,15,,,,cut_divide,cut_divide,True,,,,True,"('nan', 'cut_divide', 'nan')","IAT Triplet:
+instrument: nan, action: cut_divide, tissue: nan
+
+Feedback:
+",Good start cutting; increase precision now. Focus on controlled cut_divide movements. How steady is your wrist?
+yeah pre buzz it,15:58:08,32,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job initiating coagulation; increase energy cautiously to avoid tissue damage. Are you monitoring tissue response?
+yeah the stump,17:11:41,7,,,,,,,None,None,True,True,"('nan', 'nan', 'None')","IAT Triplet:
+instrument: nan, action: nan, tissue: None
+
+Feedback:
+",Good start; maintain focus. Identify your instrument and target tissue now. Are you ready?
+"yeah, I think those needles are reasonably big, so i think it should be fine",15:17:08,15,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle?
+"yeah, I think you just got to keep it low",16:12:42,32,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. How’s your view now?
+"yeah, deeper doesn't mean more far away, deeper just means deeper",15:10:52,2,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus and prepare instruments for precise dissection. How confident are you with setup?
+"yeah, it'll grow close to the muscle, just open it here",14:28:48,3,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening spread; increase speed to expose tissue faster. Are you maintaining stable wrist angles?
+"yeah, just open there up... the point is to separate... look up here, look up here",09:16:17,21,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. Are you confident in your instrument positioning?
+"yeah, so I would not waste your time doing this, you see you had to let go of the needle... just throw and you cinch all at the end, it's just a little bit more efficient",11:18:21,1,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are you confident with your needle angle?
+"yeah, so that's the problem... okay come back... so I'm going to take over for a quick second, okay?",09:23:37,1,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job navigating; increase speed to optimize docking time. Are you confident with your positioning?
+"yeah, so the goal is to eventually grab the tip of the SV, you may not be able to do that immediately but grab whatever you can and then lift",09:41:24,1,,,,grip_hold,grip_hold,True,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'grip_hold', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good grip on the seminal vesicle vas; maintain steady hold to prevent slippage. How secure is your grasp?
+"yeah, you can, you can... I thought when you were talking about the lateral thing I thought you were talking about the anteiror part",09:22:44,1,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good job maintaining tissue integrity; stay focused on precise dissection now. Are you confident in your current tissue handling?
+"yeah, you could probably get rid of the vas now",09:40:40,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,"('nan', 'nan', 'seminal_vesicle_vas')","IAT Triplet:
+instrument: nan, action: nan, tissue: seminal_vesicle_vas
+
+Feedback:
+",Good job identifying the seminal vesicle vas; proceed carefully to avoid injury. How precise is your dissection here?
+yes,14:51:00,26,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+"yes like that, what you were doing it but a little bit more force",09:38:52,33,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start—stay focused and prepare your instruments carefully. What’s your next step?
+"yes, drop it, beautiful, just like that uh huh",14:46:58,15,,,,release_instrument,release_instrument,True,,,,True,"('nan', 'release_instrument', 'nan')","IAT Triplet:
+instrument: nan, action: release_instrument, tissue: nan
+
+Feedback:
+",Good job pausing; release the instrument smoothly now. Are you confident with this step?
+you can even come 1 mm closer to the prostate,09:14:19,1,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+you can grab it,15:31:24,10,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+"you can open that up though, yeah that thing",10:31:37,1,energy_device,energy_device,True,open_spread,open_spread,True,,,,True,"('energy_device', 'open_spread', 'nan')","IAT Triplet:
+instrument: energy_device, action: open_spread, tissue: nan
+
+Feedback:
+",Good job controlling the energy device; urgently open and spread precisely now. Are you maintaining stable instrument positioning?
+you can regrab and turn more,19:16:38,29,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+you can release your 4th arm,15:43:18,10,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the auxiliary arm; stabilize it now to prevent unintended movement. Are you confident in its current placement?
+you can see the... you can grab the tissue posterior,13:56:34,4,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold immediately. Are you confident in your grip strength?
+"you can start with that, and then... once you free it up a little bit... get a better grab",09:35:32,1,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Maintain steady hold on tissue. How firm is your grasp?
+"you didn't get it, you didn't get mucosa",10:19:04,16,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,"('nan', 'nan', 'gastrointestinal_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: gastrointestinal_tract
+
+Feedback:
+",Good awareness of anatomy; maintain focus on gastrointestinal tract proximity. Stay cautious near bowel; reassess your dissection plane now.
+"you don't have to buzz for fun, buzz on that crease, on the frindge",14:31:03,2,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job starting coagulation; increase precision now. Focus energy on targeted tissue. Are you controlling spread effectively?
+"you don't want to get into bleeders there, you want to know where your ureter is, you don't want to injure your ureter, you want to know where your nerve is. The cognitive load of thinking about all of those structures should be less and less as you identify each of these structures and not only identify it but take them out of concern.",09:25:54,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+"you dont have to hook it, you can buzz it",15:52:17,32,,,,coagulate,coagulate,True,,,,True,"('nan', 'coagulate', 'nan')","IAT Triplet:
+instrument: nan, action: coagulate, tissue: nan
+
+Feedback:
+",Good job starting coagulation; increase precision now. Focus energy on targeted tissue. Are you controlling spread effectively?
+"you got to actually where the bleeder is, you have no idea where it is",14:48:01,2,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('nan', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: nan, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good awareness of neurovascular structures; maintain gentle handling to prevent injury. Are you confident in your tissue plane identification?
+you got to grab,19:18:53,29,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip hold; increase precision now. Stabilize your wrist for controlled tissue handling. How steady is your grip?
+you gotta grab it,19:00:29,29,,,,grip_hold,grip_hold,True,,,,True,"('nan', 'grip_hold', 'nan')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: nan
+
+Feedback:
+",Good grip; increase precision now. Stabilize your hold immediately. Are you confident in your grip?
+you need help?,15:30:50,23,None,None,True,,,,,,,True,"('None', 'nan', 'nan')","IAT Triplet:
+instrument: None, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Prepare instruments for precise dissection. Are you ready to proceed?
+you need to adjust for the amount of bladder neck you have here with minimal amount of the urethra,12:26:42,25,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization for precise dissection. How clear is your current view?
+you need to grab the peritineum down there,08:51:13,19,,,,grip_hold,grip_hold,True,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"('nan', 'grip_hold', 'fat_fascial_peritoneal_planes')","IAT Triplet:
+instrument: nan, action: grip_hold, tissue: fat_fascial_peritoneal_planes
+
+Feedback:
+",Good grip on the fascial planes; increase precision to avoid fat disruption. Are you confident in your tissue handling?
+you saw what you did right?..you literally just poked 2 holes in the same vein cause of a lack of awareness,15:45:04,6,energy_device,energy_device,True,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,"('energy_device', 'nan', 'vascular_neurovascular_structures')","IAT Triplet:
+instrument: energy_device, action: nan, tissue: vascular_neurovascular_structures
+
+Feedback:
+",Good job identifying neurovascular structures; avoid energy use near them now. Are you confident in your tissue recognition?
+you see how you're grabbing your needle its gonna spin like that,17:51:42,12,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle?
+"you see that, right? you can actually even see how thin your posterior bladder neck is... yeah",09:28:20,1,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good start; focus now—maintain clear visualization of the urinary tract. Are you confident in your exposure?
+"you see the edge of the prostate back there, yup, so don't go too close, stay a little lower. if you're working medially, you should be holding medially",12:18:48,28,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job identifying the prostate; maintain clear visualization of the prostate capsule now.
+you should find the ureter pretty soon,09:19:56,33,,,,,,,urinary_tract,urinary_tract,True,True,"('nan', 'nan', 'urinary_tract')","IAT Triplet:
+instrument: nan, action: nan, tissue: urinary_tract
+
+Feedback:
+",Good job identifying the urinary tract; maintain steady visualization now. Are you confident in your exposure?
+you want to be going down this way,17:41:11,29,,,,navigate_position,navigate_position,True,,,,True,"('nan', 'navigate_position', 'nan')","IAT Triplet:
+instrument: nan, action: navigate_position, tissue: nan
+
+Feedback:
+",Good job positioning; quickly orient the camera for optimal prostate visualization. How’s your view now?
+you want to see how you can get around all this tissue,14:43:21,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good start with suturing tools; increase speed to maintain tissue tension. Are you controlling needle angle precisely?
+you want to switch to a needle driver?,17:45:20,9,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now. Are your angles optimal?
+you're getting tangled up in your suture a little bit,16:39:37,22,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+"you're stabbing through the tissue again, hold on stop stop stop do you have any idea where the tip of your graspers is?",16:59:40,22,,,,,,,miscellaneous,miscellaneous,True,True,"('nan', 'nan', 'miscellaneous')","IAT Triplet:
+instrument: nan, action: nan, tissue: miscellaneous
+
+Feedback:
+",Good start; maintain focus on tissue handling. Increase precision now. Assess your instrument positioning.
+"you're working in a hole, its okay, but normally you'd want to open this up so you weren't in a hole",09:20:25,17,,,,open_spread,open_spread,True,,,,True,"('nan', 'open_spread', 'nan')","IAT Triplet:
+instrument: nan, action: open_spread, tissue: nan
+
+Feedback:
+",Good job opening the spread; maintain steady control to avoid tissue trauma. How precise is your instrument positioning?
+your 4th arm,15:38:52,8,auxiliary_arm,auxiliary_arm,True,,,,,,,True,"('auxiliary_arm', 'nan', 'nan')","IAT Triplet:
+instrument: auxiliary_arm, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the auxiliary arm; stabilize it now to prevent unintended movement. How steady is your arm control?
+"your L hands not doing anthing, pull towards cam",15:50:31,8,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+","Good start with hand control; maintain steady, precise movements now. Are your hand motions smooth?"
+"your angle is barely correct, so more under the prostate",09:27:27,1,,,,,,,prostate,prostate,True,True,"('nan', 'nan', 'prostate')","IAT Triplet:
+instrument: nan, action: nan, tissue: prostate
+
+Feedback:
+",Good job exposing the prostate; maintain steady retraction to optimize visualization. How is your exposure quality?
+your left hand is facing this way,09:23:37,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Adjust your hand control for precise instrument positioning. How steady is your current control?
+your right hand is fine,09:23:22,17,hand_control,hand_control,True,,,,,,,True,"('hand_control', 'nan', 'nan')","IAT Triplet:
+instrument: hand_control, action: nan, tissue: nan
+
+Feedback:
+",Good start; maintain focus. Adjust your hand control for precise instrument positioning. How steady is your control now?
+"yup, I think yeah I like it",19:15:14,29,,,,None,None,True,,,,True,"('nan', 'None', 'nan')","IAT Triplet:
+instrument: nan, action: None, tissue: nan
+
+Feedback:
+",Good start—engage the camera now for optimal visualization. Are you ready?
+zoom in where you tied your suture,16:16:08,18,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?
+"zoom in where you tied your suture, please",16:16:11,18,suturing_tools,suturing_tools,True,,,,,,,True,"('suturing_tools', 'nan', 'nan')","IAT Triplet:
+instrument: suturing_tools, action: nan, tissue: nan
+
+Feedback:
+",Good job positioning the suturing tools; initiate needle driving now for precise closure. How is your needle angle control?

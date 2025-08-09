@@ -1,0 +1,7 @@
+IAT Triplet:
+instrument: <INSTRUMENT>, action: <ACTION>, tissue: <TISSUE>
+
+Examples:
+<EXAMPLES>
+
+Feedback:

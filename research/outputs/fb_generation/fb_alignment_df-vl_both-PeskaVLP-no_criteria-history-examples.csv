@@ -1,0 +1,459 @@
+Dialogue,Timestamp,Case,instrument-label,instrument-pred,instrument-correct,action-label,action-pred,action-correct,tissue-label,tissue-pred,tissue-correct,valid,generated_feedback,alignment_score
+(explaining sutures),18:07:39,9,suturing_tools,suturing_tools,True,,,,,,,True,Ensure the suturing tools are ready for precise needle control and placement.,3
+", I will say it again, this is too medial. this is aorta, this is cava. you keep coming down here and telling me you don't know where you're going",09:30:52,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures meticulously to prevent bleeding and nerve injury.,2
+", if you're going to keep running this one, regrab your fourth arm closer and pull it up",10:10:51,16,auxiliary_arm,auxiliary_arm,True,traction_retract,traction_retract,True,,,,True,Adjust the auxiliary arm traction for better exposure without excessive tension.,3
+", is that a gigantic suture? how much do you have some fluid in the bladder or no?",16:17:54,18,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready for precise needle placement and knot tying.,2
+", look up, you need to grab this",10:06:49,16,,,,grip_hold,grip_hold,True,,,,True,Use a firm grip and hold steadily to maintain control.,3
+", why is the bladder neck so thin?",11:46:38,28,,,,,,,urinary_tract,urinary_tract,True,True,Maintain gentle handling of the urinary tract to prevent injury.,2
+Break the shorter one off and then tie and then I'm going to test leave one needle on,17:59:02,12,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and knot tying.,2
+Do not stick the balloon.,17:41:55,12,,,,,,,None,None,True,True,Stay alert and prepare for the next step in the procedure.,1
+Do we have a rescue suture?,16:57:40,13,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready for precise needle handling and knot tying.,2
+"Even if he wants to do CIC, he better has this claim the prostate so he will not have significant problems passing the catheter in, either way he benefits from that.",14:22:01,15,,,,,,,prostate,prostate,True,True,Keep the prostate well exposed for accurate dissection and avoid unnecessary manipulation.,3
+"Hang on, grab with the...",16:49:36,14,,,,grip_hold,grip_hold,True,,,,True,Engage the grip firmly to secure tissue without excessive force.,3
+I don't know if you're completely through that little vessel,12:01:55,28,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+I don't know why you are encroaching closer to the prostate,09:58:06,33,,,,,,,prostate,prostate,True,True,Focus on preserving the prostate capsule during dissection.,1
+"I mean, you can but you don't need to, because what we need",13:55:07,4,,,,,,,prostate,prostate,True,True,Focus on precise dissection around the prostate to preserve surrounding structures.,2
+"I still don't know if we have ureter up or not, so you can keep going, you just have to think about that, okay?",09:35:46,24,,,,,,,urinary_tract,urinary_tract,True,True,Maintain gentle handling of the urinary tract to prevent tissue damage.,3
+"I think it's even closer, I think you're...",14:26:25,2,None,None,True,,,,,,,True,Maintain focus and prepare for the next instrument insertion carefully.,2
+"I think you are too far from the prostate, very very far, don't you think?",16:08:58,26,,,,,,,prostate,prostate,True,True,Keep the prostate well exposed and maintain clear visualization throughout dissection.,2
+I think you should take the other one first,15:31:28,10,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue effectively.,2
+"I thought we switched to needle driver, would you mind switching",17:47:41,9,suturing_tools,suturing_tools,True,,,,,,,True,Check needle orientation before starting the suture.,2
+I want to see the whole nerve before you take all this tissue down,09:36:20,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve erectile function.,3
+I was going to put another clip there,17:09:28,7,clip_device,clip_device,True,,,,,,,True,Prepare the clip device for vessel or duct ligation as needed.,3
+I would buzz a little bit higher...dont buz ...,15:59:45,32,,,,coagulate,coagulate,True,,,,True,Coagulate cautiously to control bleeding without damaging surrounding tissues.,2
+I would cheat a little bit closer to your last stitch,18:57:35,29,suturing_tools,suturing_tools,True,,,,,,,True,Ensure the suturing tools are ready for precise needle placement.,2
+I would not lift it with that...stop for a second,10:47:01,31,,,,interrupt_action,interrupt_action,True,,,,True,Pause and reassess before proceeding with the next step.,4
+"I wouldnt do that much yet...the reason is bc i want to start from here and start to see adrenal and march lateral to that and you dont know that yet, so i wouldnt even bother scoring the adrenal",17:18:27,7,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,Keep clear visualization of retroperitoneal structures to avoid inadvertent injury.,2
+Like you're digging under your suture line.,18:10:46,12,suturing_tools,suturing_tools,True,,,,,,,True,Check your needle loading carefully before starting the suture.,2
+No the veins gonna collapse,15:09:19,10,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Stay lateral to the neurovascular bundles to preserve erectile function.,2
+Now careful bc if you get under the fascia of psoas youre gonna bleed,15:52:20,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,Handle retroperitoneal structures with care to avoid inadvertent injury.,3
+"Press it on, press down on it on the tissue around it.",17:59:26,12,,,,traction_retract,traction_retract,True,,,,True,Apply gentle traction and retraction to optimize exposure without causing tissue stress.,2
+"Press, there you go.",17:59:30,12,,,,traction_retract,traction_retract,True,,,,True,Use gentle traction and retraction to avoid tissue injury.,2
+Right off the nerve,09:38:49,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures meticulously to prevent bleeding and nerve injury.,3
+See once you do that how the vein just pushes down...if youre on the plane thats right on top of the vein thats where you want to be,15:56:30,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Preserve the neurovascular structures carefully to maintain erectile function.,2
+So things to work on while you're doing this is it's just simple...Minor adjustments to rock your needle back.,17:49:11,12,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling.,2
+Still too much mucosa.,17:46:33,12,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Avoid manipulating the gastrointestinal tract to prevent inadvertent injury.,2
+Stop and look at your needle...Stop and look at it.,17:54:46,12,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and placement.,2
+Sweep sweep it down.,16:01:33,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Continue gentle sweeping maneuvers to maintain clear surgical field and avoid tissue trauma.,4
+The type of bleeding youre gonna run into when you get down there are...which is super annoying so its better to identify them and buzz them,15:57:52,32,,,,coagulate,coagulate,True,,,,True,Coagulate carefully to control bleeding and preserve surrounding structures.,2
+"Then we're going to not change the position, extract in this position, then close it, and then we'll take another look inside.",16:59:39,8,,,,inspect,inspect,True,,,,True,Inspect carefully to identify key anatomical landmarks before proceeding.,2
+VAS and sems are up,12:04:54,28,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas with utmost care to prevent injury.,2
+"What is going on, where did this needle come from?",18:19:10,14,suturing_tools,suturing_tools,True,,,,,,,True,Ensure the suturing tools are ready for precise needle handling and knot tying.,2
+Why is there a third needle?,18:19:21,14,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and placement.,2
+a little buzz and push,09:24:53,24,,,,coagulate,coagulate,True,,,,True,Coagulate cautiously to control bleeding without damaging surrounding tissues.,3
+a little closer to the gland,15:07:19,18,None,None,True,,,,,,,True,Maintain focus and readiness for the next instrument or action.,2
+"adjust your fourth arm, and pull to retract",09:09:30,17,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Adjust the auxiliary arm for optimal retraction and exposure.,4
+"again if you need to do a sharp turn grab the needle closer, and you're going to run out of the needle you can always let go.",17:01:30,22,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools for precise needle handling and knot tying.,2
+"again, see how far away your left hand is to the action. too far away right?",14:47:50,22,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to maintain precise instrument positioning.,2
+"ahh, , that's too thin of a bite, pull that out that's too thin and you were not turning your wrist as you were taking it out",11:00:00,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve function.,2
+all of these come down this..your arterys here and your veins here,15:57:08,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect vascular neurovascular structures meticulously to prevent bleeding or nerve injury.,3
+"all the way down and in and that will allow you when you clip ureter, youre gonna move the kidney UP completely",15:42:04,10,,,,,,,urinary_tract,urinary_tract,True,True,Inspect the urinary tract carefully to identify any abnormalities or injury.,2
+"alright a little bit sloppy, you're cutting onto the clip itself",14:51:44,22,clip_device,clip_device,True,,,,,,,True,Prepare the clip device carefully before applying clips.,2
+alright let's do a little uh... uh... mhm.. that's very small prostate.. okay,09:13:59,1,,,,,,,prostate,prostate,True,True,Focus on preserving the prostate capsule during dissection.,2
+"alright, I think you are almost done there",10:37:45,1,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously and confirm target tissue before proceeding.,2
+"alright, do you remember how I hold the SV's up?",09:50:19,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas delicately to prevent inadvertent injury.,3
+always inspect the prostate so we have plenty of tissue on the right side and less on the left,15:28:50,3,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract tissues with utmost care to prevent any trauma.,2
+and buzz right above the vein...dont buzz the vein but,15:57:41,32,energy_device,energy_device,True,coagulate,coagulate,True,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Coagulate the neurovascular structures cautiously to prevent thermal injury.,1
+and im not a real big fan of you grabbing your needle and taking it off screen okay?,10:26:08,16,suturing_tools,suturing_tools,True,,,,,,,True,Check suture tension carefully before proceeding with needle passage.,2
+and on the bladder we travel a little bit more,18:58:13,29,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract delicately to prevent trauma or leakage.,2
+"and open up the space, open it up",09:19:35,33,,,,open_spread,open_spread,True,,,,True,Open and spread cautiously to avoid unnecessary tissue trauma.,3
+"and then on the anterior bladder neck, take care of that",09:20:51,1,,,,,,,urinary_tract,urinary_tract,True,True,", keep the urinary tract well visualized and avoid unnecessary manipulation.",3
+and then turn here,19:09:24,29,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the camera slowly to maintain orientation and avoid disorientation.,3
+and very little mucosa you could take just the edge,15:48:51,3,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to ensure stable tissue manipulation.,2
+"and whenever it's not well-defined, come back to the lateral side where it's better-defined... especially towards the...",14:16:15,2,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal positioning and avoid unnecessary tissue tension.,3
+any leaks? anything from the hole that you made?,10:24:03,16,,,,,,,None,None,True,True,Maintain focus and proceed carefully with the next step.,2
+are you sure you're not too far from the prostate?,14:21:26,4,,,,,,,prostate,prostate,True,True,Focus on clear prostate exposure before proceeding with dissection.,3
+as you progress you can include the sac and bring the sac up,08:51:03,19,,,,,,,miscellaneous,miscellaneous,True,True,Maintain clear visualization of the miscellaneous tissue for safe dissection.,2
+back up with your camera,14:34:07,18,,,,navigate_position,navigate_position,True,,,,True,Focus on precise navigation to maintain optimal instrument positioning.,2
+be careful dont get into the prostate,17:04:06,13,,,,,,,prostate,prostate,True,True,Focus on clear prostate margins to ensure complete oncologic resection.,1
+"be careful what you grab, it's a nephrectomy so it's very fragile",09:33:41,24,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Position the auxiliary arm to optimize exposure without causing tissue tension.,3
+be gentle dont poke the tumor,16:46:01,8,,,,ensure_safety,ensure_safety,True,miscellaneous,miscellaneous,True,True,Ensure safety by maintaining gentle tissue handling throughout the procedure.,3
+because if youre not on the adenoma you run risk,16:03:16,12,,,,,,,miscellaneous,miscellaneous,True,True,Keep the field clear and maintain optimal visualization throughout the procedure.,2
+"because it's very easy to deviate from the surface of the adenoma and end up getting through the capsule, and you know that's just really annoying... and you don't want to be annoying",14:04:51,2,,,,,,,miscellaneous,miscellaneous,True,True,Keep your focus on the miscellaneous tissue to avoid inadvertent injury.,3
+because you are wasting too much urethra real estate,18:58:46,29,,,,,,,urinary_tract,urinary_tract,True,True,Maintain clear visualization of the urinary tract for precise dissection.,2
+below the ureter ...there,14:40:56,10,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract with care to preserve its integrity during dissection.,3
+break your die stitch,17:03:38,22,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools for precise needle handling and secure knot tying.,2
+but just take it so we don't keep making swiss cheese of the urethra,19:00:03,29,,,,grip_hold,grip_hold,True,urinary_tract,urinary_tract,True,True,Grip the urinary tract gently to avoid unnecessary trauma.,3
+but narrow it down to a nice stock,09:31:16,33,,,,adjust_fix,adjust_fix,True,,,,True,Adjust the fixation carefully to maintain stable instrument positioning.,3
+"but there's more SV, you see that?",09:50:12,21,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to avoid injury during dissection.,3
+"but you got to take the packet, take the packet, feed it to Louis properly",09:29:21,21,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue effectively.,2
+buzz,15:59:53,32,energy_device,energy_device,True,coagulate,coagulate,True,,,,True,Coagulate carefully to achieve hemostasis without damaging adjacent tissues.,3
+buzz,17:16:09,13,energy_device,energy_device,True,coagulate,coagulate,True,,,,True,Coagulate carefully with the energy device to control bleeding effectively.,4
+"buzz all of that, ____",11:53:49,28,,,,coagulate,coagulate,True,,,,True,Use precise coagulation to control bleeding without damaging surrounding tissues.,4
+buzz it,09:27:02,24,,,,coagulate,coagulate,True,,,,True,Coagulate cautiously to control bleeding without damaging surrounding tissues.,4
+"buzz that, buzz that",14:16:25,2,,,,coagulate,coagulate,True,,,,True,Use the appropriate instrument for coagulation to control bleeding effectively.,4
+"can I see that window, lets see that window a little more",15:45:21,6,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to avoid collateral tissue damage.,2
+"can I see... , I'm trying to grab",09:16:58,24,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to avoid collateral tissue damage.,2
+"can you zoom in right here, where you tied your suture?",16:16:04,18,suturing_tools,suturing_tools,True,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,Engage the suturing tools carefully with the fat-fascial-peritoneal planes.,2
+"careful what you grab too, that's okay, thats probably the most I would grab because you dont want to grab the ureter accidentally.",09:19:57,33,,,,,,,urinary_tract,urinary_tract,True,True,Keep the urinary tract clearly visible for safe dissection and manipulation.,3
+careful when you get the tip like that...need to lift up and use the hook,15:03:52,10,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to avoid collateral tissue damage.,3
+cause its all these vessels at the corner of the sem that's tethering you,15:49:16,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Keep the seminal vesicle and vas deferens clearly visualized and avoid excessive traction.,3
+clean your hook,16:06:25,8,energy_device,energy_device,True,,,,,,,True,Use the energy device cautiously to prevent unintended tissue injury.,2
+closer to the SEM,15:51:10,26,,,,,,,None,None,True,True,Maintain focus and proceed cautiously with the next step.,2
+closer to the prostate,14:39:50,15,,,,,,,prostate,prostate,True,True,Maintain clear visualization of the prostate for precise dissection.,3
+cold cold,14:48:35,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to preserve their integrity.,2
+come a little bit closer to the adenoma,14:26:10,2,,,,,,,miscellaneous,miscellaneous,True,True,Avoid unnecessary manipulation of miscellaneous tissues to prevent inadvertent injury.,2
+cut carefully,15:18:57,10,,,,cut_divide,cut_divide,True,,,,True,Cut precisely and avoid unnecessary tissue damage.,4
+"cut the tails, cut the tail, make them short, like that",15:28:58,15,,,,cut_divide,cut_divide,True,,,,True,Focus on precise cutting; ensure clear visualization before dividing tissue.,3
+cut tourniquet also,15:18:21,10,,,,cut_divide,cut_divide,True,,,,True,Cut carefully and maintain clear visualization during dissection.,2
+did you get the needle out?,15:29:01,15,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready and needles are securely loaded.,2
+"do you want me to expose the urethra to you, to show you where you need to exit",19:07:30,29,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract with care to avoid any inadvertent injury.,2
+"doesn't need to be perfect, just grab it and bring it in",08:55:29,19,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to ensure stable tissue handling.,3
+"don't get closer to the prostate, just stay in that level",09:58:31,33,,,,,,,prostate,prostate,True,True,Keep the prostate well exposed for accurate and safe dissection.,1
+don't pull too hard there okay because if you pull hard enough it will fall right through and you will have a hole in your urethra,17:03:03,22,,,,,,,urinary_tract,urinary_tract,True,True,Keep the urinary tract well visualized for safe and precise manipulation.,2
+"don't sweep underneath there, just do above, it's a nice juicy packet there",09:25:56,21,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use smooth sweeping maneuvers to clear the field gently.,1
+dont cut into yellow fat,15:36:13,8,,,,cut_divide,cut_divide,True,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,Cut carefully through the fat and fascial planes to avoid injuring underlying structures.,3
+dont rip that,15:39:06,22,,,,ensure_safety,ensure_safety,True,,,,True,Ensure safety by maintaining clear visualization and gentle tissue handling throughout.,3
+"especially when you see those clear vessels, those are lymphatics, yeah?",09:30:20,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures meticulously to prevent bleeding and preserve nerve function.,2
+figure out where the vein is going,15:56:00,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular bundles meticulously to preserve erectile function.,2
+find the ureter first,14:39:41,10,,,,,,,urinary_tract,urinary_tract,True,True,Maintain gentle handling of the urinary tract to prevent injury.,2
+follow the contour of the gland,16:58:21,14,,,,,,,prostate,prostate,True,True,Focus on precise dissection around the prostate to preserve surrounding structures.,3
+get in with L hand and lift up,15:52:14,8,hand_control,hand_control,True,,,,,,,True,Maintain steady hand control to ensure precise instrument positioning.,2
+get into that spot right there,16:52:56,8,None,None,True,,,,,,,True,Keep your focus sharp and maintain smooth instrument control throughout.,2
+get more tissue there,08:52:03,19,,,,grip_hold,grip_hold,True,,,,True,Engage the tissue firmly with your grip to maintain control.,3
+get mucosa,10:19:00,16,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Avoid manipulating the gastrointestinal tract to prevent inadvertent injury.,2
+get those fibers off,17:17:04,29,,,,dissect_clean,dissect_clean,True,,,,True,Dissect cleanly and maintain clear visualization throughout the procedure.,3
+get to the psoas and then work youre way,16:41:30,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,Handle the retroperitoneal structures with care to avoid inadvertent injury.,2
+go a little anterior 12 oclock,15:52:29,12,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain orientation and avoid unnecessary tissue contact.,2
+go a little higher then,11:08:27,31,,,,navigate_position,navigate_position,True,,,,True,Keep steady navigation to maintain optimal camera positioning throughout the procedure.,2
+go a little higher; let me show you one sec,14:31:30,10,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal camera positioning throughout the procedure.,2
+"go ahead and open here, start opening here, go",11:18:30,25,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain clear visualization and avoid tissue trauma.,3
+go ahead and open the bladder,11:19:16,25,,,,open_spread,open_spread,True,urinary_tract,urinary_tract,True,True,Open and spread carefully to avoid trauma to the urinary tract.,3
+"go deep, go inside, not down, forward",09:47:14,21,,,,navigate_position,navigate_position,True,,,,True,Keep the camera steady and optimize your navigation smoothly.,2
+go in the urethra,18:59:43,29,,,,,,,urinary_tract,urinary_tract,True,True,Keep the urinary tract well visualized to avoid inadvertent injury.,2
+gonadal right? lets find ureter,15:51:10,8,,,,,,,urinary_tract,urinary_tract,True,True,Keep the urinary tract clearly exposed for safe dissection and identification.,3
+good,09:18:05,17,,,,,,,None,None,True,True,Maintain steady control and ensure clear visualization throughout the procedure.,3
+good,14:49:28,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas with care to prevent inadvertent injury.,3
+good,14:50:58,26,,,,,,,prostate,prostate,True,True,Focus on clear prostate visualization before proceeding with dissection.,3
+"good all this stuff is tethering you, this is a vessel right here so make sure you get it",17:42:55,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to preserve function and prevent bleeding.,3
+"good, what are you going to do with your fourth arm?",10:13:48,16,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Adjust the auxiliary arm for optimal exposure and instrument stability.,2
+grab,19:00:26,29,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue effectively.,4
+grab,19:18:57,29,,,,grip_hold,grip_hold,True,,,,True,Maintain a gentle grip to prevent tissue trauma during manipulation.,3
+grab it and lift it straight up,17:46:04,29,,,,grip_hold,grip_hold,True,,,,True,Engage the instrument firmly to secure tissue without excessive force.,3
+grab sack,08:54:07,19,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue effectively.,3
+grab that leaflet,14:52:16,26,,,,grip_hold,grip_hold,True,,,,True,Ensure a firm grip before proceeding to maintain tissue control.,3
+hang on for a second,13:55:09,4,,,,grip_hold,grip_hold,True,prostate,prostate,True,True,Grip the prostate firmly but gently to avoid tissue damage.,2
+"hang on, grab here",09:30:23,24,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to ensure tissue stability during manipulation.,3
+"here it's very high risk of going too low, and then you suddenly have your SV's, so if you can, tips should be pointing... I think you're...",14:26:38,2,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to avoid injury.,3
+hold it closer to the vein,14:46:33,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures by maintaining gentle dissection and avoiding traction.,2
+"hold on, so grab just the tip of the SV there... you got to leave room for the other SV",09:50:29,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Focus on careful dissection around the seminal vesicle and vas deferens.,3
+hold the need at the halfway point,17:00:59,13,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and knot tying.,2
+how do you break a stitch?,17:03:53,22,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready for precise needle control and knot tying.,2
+i want to get the tissue off the vein,14:46:31,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve function and minimize bleeding.,2
+i want you to be right off the vein,14:42:13,22,,,,,,,urinary_tract,urinary_tract,True,True,Maintain clear visualization of the urinary tract to avoid inadvertent injury.,2
+i would come closer to the prostate,14:39:56,15,,,,,,,prostate,prostate,True,True,Focus on precise dissection around the prostate to avoid capsular injury.,3
+i wouldnt take the vas yet,11:08:10,31,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Protect the seminal vesicle and vas to prevent inadvertent injury.,3
+if you angle your tip of your needle downwards towards the rectum,19:02:02,29,suturing_tools,suturing_tools,True,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Prepare the suturing tools carefully for gastrointestinal tract repair.,2
+"if you cut past point on the vas, you risk snipping off the vessel, yeah",09:41:09,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to avoid injury and maintain function.,3
+"if you do it correctly, there should be a nice little septum here between right and left SV",09:48:03,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to preserve their integrity.,3
+"if you have to throw sutures in there, throw sutures in there... whatever needs to be done",15:24:31,18,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and secure knot tying.,3
+"in here, vessel you see it?",16:28:30,13,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve function and minimize bleeding.,2
+is something holding the bladder back?,18:04:09,13,,,,,,,urinary_tract,urinary_tract,True,True,Focus on preserving the urinary tract integrity during dissection.,2
+it really exposes the medial surface so you can find the SV,11:07:47,31,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to avoid injury during dissection.,2
+its fine turn there,19:16:28,29,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the camera slowly to maintain orientation and avoid disorientation.,2
+"its ok, make the correction",16:41:56,8,None,None,True,,,,,,,True,Keep your focus steady and prepare for the next instrument insertion.,2
+its right in here...youre going outside of it,17:55:23,12,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract with care to prevent any inadvertent injury.,2
+its still bleeding,14:42:23,22,,,,,,,urinary_tract,urinary_tract,True,True,Keep the urinary tract clearly visible and avoid unnecessary manipulation.,2
+its still bleeding  you gotta stop that thing,14:52:23,26,,,,interrupt_action,interrupt_action,True,prostate,prostate,True,True,Pause and reassess your approach to the prostate before proceeding.,2
+"just a little bit towards the bladder, a touch",09:19:37,1,,,,,,,urinary_tract,urinary_tract,True,True,Maintain clear visualization of the urinary tract for precise dissection.,2
+just buzz it,12:02:02,28,,,,coagulate,coagulate,True,,,,True,Coagulate cautiously to control bleeding without damaging surrounding tissues.,3
+"just drop it, just push against it so its at the apex, yup nice, I agree with you",14:47:12,15,,,,release_instrument,release_instrument,True,,,,True,Release the instrument slowly to maintain tissue safety and avoid sudden movements.,2
+just get to the medial of it,09:46:48,21,,,,navigate_position,navigate_position,True,,,,True,Continue adjusting your position smoothly to maintain optimal surgical view.,2
+just open up...,09:34:15,33,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain clear visualization and avoid tissue injury.,4
+just remember to stay right on the surface of the adenoma,16:23:18,12,,,,,,,miscellaneous,miscellaneous,True,True,Maintain clear visualization and proceed cautiously with all miscellaneous tissues.,3
+just the tip of your scissors okay?,14:49:51,26,surgical_scissors,surgical_scissors,True,,,,,,,True,Use the surgical scissors carefully to avoid inadvertent tissue injury.,3
+just the vas,15:52:36,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to avoid injury.,3
+just the vas okay?,15:52:34,26,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Maintain clear visualization of the seminal vesicle and vas for precise dissection.,3
+leave it there,17:02:08,13,,,,release_instrument,release_instrument,True,,,,True,Release the instrument smoothly to avoid sudden movements.,3
+"left hand , that corner is always left hand",19:09:53,29,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure precise instrument movement.,2
+left hand comes out,09:21:57,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady and ready for precise instrument manipulation.,2
+left hand towards left lower quadrant,09:04:30,17,hand_control,hand_control,True,,,,,,,True,Use the hand control smoothly to maintain precise instrument movement.,2
+"let go of the needle, you need to be aware of where the suture is where the needle is, all that good stuff. lets go",17:00:20,22,suturing_tools,suturing_tools,True,,,,,,,True,Check suture integrity and prepare for precise needle placement.,3
+"let go of what you have holding there, its just not effective retraction. hold the tissue a little closer to the vein",14:46:21,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to preserve function and prevent bleeding.,2
+"let me just look at the prostate... left side ___ tissue, right side ___ tissue",11:48:38,5,,,,,,,prostate,prostate,True,True,Keep the prostate well exposed for accurate and safe dissection.,2
+lets find your catheter now,09:58:20,33,None,None,True,,,,,,,True,Ensure all instruments are ready before proceeding with the next step.,2
+lets go,14:52:35,26,,,,,,,prostate,prostate,True,True,Keep the prostate well visualized to guide precise dissection steps.,2
+lets see if we can get the upper vein first,15:09:33,10,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Identify and preserve the neurovascular structures to maintain erectile function.,2
+lets travel on the bladder,19:09:08,29,,,,navigate_position,navigate_position,True,urinary_tract,urinary_tract,True,True,Navigate carefully to maintain optimal positioning around the urinary tract.,3
+lift up with your right hand a little bit,09:22:08,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady and ready for the next instrument action.,2
+like if you grab the suture and pull it off screen its fine because the needle is floppy right?,10:26:22,16,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and knot tying.,2
+"like you're, you're picking up your suture line.",18:11:00,12,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready for precise needle control and placement.,2
+"look at your controllers, you are too close to here, push them back a little bit",16:48:59,22,,,,inspect,inspect,True,,,,True,Continue inspecting carefully to identify key anatomical landmarks.,2
+look back by the port,16:14:08,32,,,,inspect,inspect,True,,,,True,Continue thorough inspection to ensure no anatomical details are missed.,2
+look for gonadal and ureter,15:50:05,8,,,,,,,urinary_tract,urinary_tract,True,True,Maintain gentle handling of the urinary tract to prevent injury.,2
+"look up, grab it with your fourth arm",10:06:54,16,auxiliary_arm,auxiliary_arm,True,grip_hold,grip_hold,True,,,,True,Use the auxiliary arm to maintain a firm grip and steady tissue control.,3
+"make sure you pull the stitch towards you, okay",16:25:32,18,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools for precise needle handling and knot tying.,2
+make sure you turn the needle out,17:52:59,12,suturing_tools,suturing_tools,True,rotate_turn,rotate_turn,True,,,,True,Rotate the suturing tools smoothly to maintain needle control.,4
+maybe try sweeping the vein over if you can?,16:09:51,32,,,,sweeping_maneuvers,sweeping_maneuvers,True,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Perform sweeping maneuvers gently to avoid injuring vascular neurovascular structures.,3
+medial to the vein on the pubic ramus,16:39:38,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve function and prevent bleeding.,2
+mhm,09:35:25,33,None,None,True,,,,,,,True,Maintain steady visualization and prepare for the next instrument insertion.,2
+more pressure on the left hand,09:00:37,17,hand_control,hand_control,True,,,,,,,True,Adjust your hand control for precise instrument movement.,2
+"no its going to get worse, lets go to other side",15:49:13,10,,,,navigate_position,navigate_position,True,,,,True,Keep the camera steady and optimize your navigation for better visualization.,2
+"no, don't bipolar it",09:49:26,24,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to avoid collateral tissue damage.,1
+"no, just buzz it",14:14:54,3,,,,coagulate,coagulate,True,,,,True,Use the coagulation carefully to control bleeding without damaging surrounding tissues.,2
+"no, open it right on that pearly white thing",14:28:52,3,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain tissue planes and avoid injury.,2
+"no, open the superficial layer first",16:58:16,14,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain optimal exposure without tissue damage.,2
+"no, so just get the tissue off the tip of the SV, that's it. stay right on the SV, you don't need to take more tissue than that",09:49:55,21,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to avoid tissue damage.,3
+"no, that's too much... take that first, yeah",15:10:23,2,,,,grip_hold,grip_hold,True,,,,True,Ensure a firm grip and hold to maintain stable tissue control.,1
+"no, you're going to have your SV's very soon if you do that",14:26:58,2,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to prevent inadvertent injury.,1
+"nothing too crazy, don't have to go into the prostate",12:06:33,28,,,,,,,prostate,prostate,True,True,Focus on preserving the prostate capsule during dissection to minimize bleeding.,3
+"now buzz, sweep",16:08:15,32,,,,coagulate,coagulate,True,,,,True,Use precise coagulation to control bleeding effectively.,2
+now pull the stitch back,19:16:13,29,suturing_tools,suturing_tools,True,traction_retract,traction_retract,True,,,,True,Use the suturing tools to apply gentle traction for optimal exposure.,3
+now you're ready to grab it and just pull it through,18:00:01,30,,,,traction_retract,traction_retract,True,,,,True,Apply gentle traction and retraction to optimize exposure without causing tissue trauma.,3
+now youre going to proceed lateral,15:42:50,10,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal positioning for the next step.,3
+ok  stop,16:43:43,13,,,,interrupt_action,interrupt_action,True,,,,True,Pause and reassess before proceeding with the next step.,4
+ok keep working,15:35:44,22,None,None,True,,,,,,,True,Maintain focus and proceed cautiously with the next step.,4
+ok now stop for a second,10:48:34,31,,,,interrupt_action,interrupt_action,True,,,,True,Pause and reassess before proceeding with the next step.,5
+ok open that up,09:21:45,33,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain tissue planes and avoid unnecessary trauma.,4
+ok wait for a second,16:31:46,13,,,,interrupt_action,interrupt_action,True,,,,True,Pause and reassess before proceeding with the next step.,4
+"ok, break one off and tie... leave the vicryl",12:25:25,11,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools for precise needle handling and secure knot tying.,3
+"ok, drop the foley hold the stitch up, straight up",17:01:54,13,suturing_tools,suturing_tools,True,release_instrument,release_instrument,True,,,,True,Release the suturing tools smoothly to prepare for the next step.,3
+okay cut it,14:51:27,22,,,,cut_divide,cut_divide,True,,,,True,Select the appropriate instrument before proceeding with cutting or dividing tissue.,2
+"okay great, i'll get the drain",10:37:25,16,,,,,,,None,None,True,True,Keep focus and prepare for the next instrument insertion carefully.,2
+okay im going to test you,10:23:57,16,,,,,,,None,None,True,True,Maintain focus and prepare for the next step carefully.,2
+okay that's not working... everything your poking you're just making more bleeding happen,10:19:07,1,None,None,True,,,,,,,True,Keep your focus steady and prepare for the next instrument engagement.,1
+okay you dont want to go too much in the pelvic bone,08:39:59,19,None,None,True,,,,,,,True,Maintain focus and prepare for the next instrument deployment.,2
+"okay, and just stay very close to the prostate so we don't dig up any more than we need to",14:42:57,2,,,,,,,prostate,prostate,True,True,Keep the prostate well exposed for accurate dissection and safe margins.,3
+"okay, go ahead do a DRE, make sure there's no blood",15:29:06,3,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract tissues with care to prevent any inadvertent injury.,2
+"okay, keep going",15:06:03,18,None,None,True,,,,,,,True,Keep your focus steady and prepare for the next instrument insertion.,4
+"okay, maybe there is a blood vessel or two in that...",09:47:00,1,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures meticulously to prevent bleeding and nerve injury.,3
+"okay, so grab that",09:42:41,1,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to ensure stable tissue manipulation.,4
+"okay, so this is cava, you don't want to go too medially, right?",09:27:47,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Preserve the neurovascular structures by minimizing manipulation and maintaining clear visualization.,2
+"okay, so this is what I would do before you poke another thing and make a bleed",10:19:58,1,None,None,True,,,,,,,True,Maintain focus and prepare for the next instrument deployment.,3
+"okay, so widen that out... medial... go to the other side... keep that in tact, we'll clip that",09:28:05,1,,,,open_spread,open_spread,True,,,,True,Open and spread gently to optimize visualization without causing tissue trauma.,3
+"okay, stick this in the bag please",15:29:00,3,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract gently to prevent trauma during dissection.,2
+"okay, that was the vein?",09:18:05,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and preserve function.,2
+"okay, what is that to the side of that? in that space",15:03:02,18,None,None,True,,,,,,,True,Keep your instruments ready and maintain focus on the surgical field.,2
+okay...the ureter...good,11:42:40,11,,,,,,,urinary_tract,urinary_tract,True,True,Maintain gentle handling of the urinary tract to prevent trauma.,3
+one more stitch here and then we will go to the other side,16:40:16,22,suturing_tools,suturing_tools,True,,,,,,,True,Check your needle loading on the suturing tools before starting the stitch.,2
+"only 47cc gland, so nothing crazy big",14:50:41,26,,,,,,,prostate,prostate,True,True,Maintain clear visualization of the prostate for precise dissection.,2
+open and spread,09:33:03,1,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain clear visualization and avoid tissue trauma.,4
+"open that, yes",10:31:40,1,,,,open_spread,open_spread,True,,,,True,Keep the open-spread motion gentle to maintain optimal exposure without causing trauma.,3
+"open the bladder, start whenever you want",11:17:28,25,,,,open_spread,open_spread,True,urinary_tract,urinary_tract,True,True,Open spread carefully to expose the urinary tract without causing tissue damage.,3
+open the window,09:19:13,17,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain clear visualization and avoid tissue trauma.,3
+open this space up here,09:18:39,17,,,,open_spread,open_spread,True,,,,True,Open and spread gently to optimize exposure without causing tissue trauma.,4
+"open this window, don't do that",09:19:14,17,,,,open_spread,open_spread,True,,,,True,Open and spread gently to enhance visualization without causing tissue trauma.,3
+open up the easy space,16:16:45,6,,,,open_spread,open_spread,True,,,,True,Open and spread tissues gently to avoid unnecessary trauma.,3
+"open up wide... before you do that... just open up either side, you're still in a hole",09:33:14,1,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain optimal visualization and avoid tissue trauma.,3
+"other way, other way... under the prostate, okay?",09:26:44,1,,,,,,,prostate,prostate,True,True,Maintain clear visualization of the prostate for precise dissection.,2
+others... yeah just open that up a little bit more too,09:33:44,1,,,,open_spread,open_spread,True,,,,True,Maintain gentle open-spread motion to optimize exposure without tissue trauma.,3
+otherwise you'll cut it out when you're doing it... you have to go really cloes to the...,14:42:44,3,,,,,,,prostate,prostate,True,True,Keep the prostate well visualized to guide your dissection precisely.,3
+"perpendicular to the vein, so sweep toward the vein toward",14:42:48,22,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Continue gentle sweeping maneuvers to maintain tissue integrity and clear the field.,3
+psoas right? so look for psoas here,15:51:34,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,Handle retroperitoneal structures with care to avoid inadvertent injury.,2
+pull it down,19:16:15,29,,,,traction_retract,traction_retract,True,,,,True,Apply gentle traction and retraction to avoid tissue damage.,3
+pull the last stitch before you pull up on this one,10:09:14,16,suturing_tools,suturing_tools,True,,,,,,,True,Check the suturing tools for needle integrity before starting the stitch.,2
+pull up on that,10:16:18,16,,,,traction_retract,traction_retract,True,,,,True,Apply gentle traction and retraction to maintain clear exposure.,3
+"push the kidney away, push the kidney away",09:02:56,17,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,Carefully identify and protect retroperitoneal structures during dissection.,2
+put your R hand there and gently...like your finger,16:27:32,9,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure precise instrument movement.,3
+put your fourth arm here now,09:13:47,17,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Position the auxiliary arm to optimize exposure and assist with retraction.,4
+put your left hand up up up,09:20:56,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure precise instrument movements.,2
+put your right hand in there and take your left hand out,09:22:24,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to maintain precise instrument movement.,2
+realign your left hand,09:22:03,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure precise instrument movement.,3
+remain in the correct fat plane so youre not getting the abd wall fat; You're between the abdominal wall fat and the kidney,16:41:34,8,,,,,,,retroperitoneal_structures,retroperitoneal_structures,True,True,Protect the retroperitoneal structures carefully during dissection.,3
+"remember I talk about apex stitches, same thing, this is where it will leak..",17:46:08,12,suturing_tools,suturing_tools,True,,,,,,,True,Check the suturing tools for needle integrity before starting the stitch.,2
+"remember what I said about chopping, like especially this side, right? you could hit the duo, the way you were doing it last week",09:22:22,24,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to avoid unintended tissue damage.,3
+right on the pearly white adenoma...if theres any bands there you sweep it off,16:03:06,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,miscellaneous,miscellaneous,True,True,Use gentle sweeping maneuvers to avoid tissue trauma.,3
+"right there, I would've buzzed first and then swept",14:11:40,2,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to avoid collateral tissue damage.,2
+same vessel here that was tethering you,17:45:45,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures by minimizing manipulation and avoiding traction.,3
+see how it moves in the prostate? thats where you go,16:15:55,14,,,,,,,prostate,prostate,True,True,Keep the prostate well visualized for accurate dissection and preservation.,3
+see if you can just grab,09:35:19,1,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue without causing trauma.,3
+see that's the end of your barbs on both sutures,18:06:00,30,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools and ensure proper needle loading before proceeding.,2
+see theres a vein there,14:45:17,10,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Stay cautious around neurovascular structures to preserve erectile function.,3
+show yourself the mucosa,10:05:20,16,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Minimize handling of the gastrointestinal tract to prevent inadvertent injury.,2
+since you can see vessel might as well take care of it now,16:09:28,6,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Identify and preserve the neurovascular bundles carefully to maintain function.,2
+small needle,15:46:19,15,suturing_tools,suturing_tools,True,,,,,,,True,Check suture tension and needle orientation before proceeding with the stitch.,3
+so I think youve done amazing job,16:54:28,9,None,None,True,,,,,,,True,Maintain steady visualization and prepare for the next instrument insertion.,2
+"so I would do the opposite of what you do, I would burn first, and then do a gentle sweep... burn and then sweep",14:14:26,2,,,,coagulate,coagulate,True,,,,True,Use precise coagulation to control bleeding without damaging surrounding tissues.,1
+so I would stay on the slightly higher side and you can take that lateral piece first with a clip,10:16:47,1,clip_device,clip_device,True,navigate_position,navigate_position,True,,,,True,Navigate the clip device carefully to the target position without causing tissue trauma.,3
+"so Jun, I want to see the whole thing, so open the space up. I want to see the whole, cause you can see a glimpse of it somewhere but that doesnt mean you know the exact course of the nerve right?",09:35:02,33,,,,open_spread,open_spread,True,,,,True,Open the instruments slowly and maintain steady control.,2
+"so advance, grab more of your SV",09:39:10,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Maintain careful dissection around the seminal vesicle and vas deferens to avoid injury.,2
+"so again, the key is to find the posterior plane, extend it to the urethra",10:54:52,1,,,,None,None,True,urinary_tract,urinary_tract,True,True,Keep gentle handling of the urinary tract to prevent tissue injury.,2
+so be careful of your tissue tension here becuase your superficial dvc can be around here,14:42:11,26,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular bundles carefully to preserve erectile function.,3
+so bring it towards the left lower quadrant,09:04:27,17,,,,navigate_position,navigate_position,True,,,,True,Keep steady navigation to maintain optimal camera angles and field of view.,2
+"so careful, what you just grabbed im not sure if you grabbed that branch of the vein with it.",14:48:02,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,3
+"so get right on it... so peel off that stuff off of it, expose the medial aspect of the SV first",09:47:45,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Identify and preserve the seminal vesicle and vas deferens carefully during dissection.,3
+so here you can just bluntly sweep off the nerve,09:38:42,33,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use smooth sweeping maneuvers to clear the field gently.,3
+"so here... stop for a second... so rather than grabbing what you're grabbing there, I'd rather you just retract down",09:30:21,1,retractor_device,retractor_device,True,,,,,,,True,Use the retractor device to gently expose the surgical field.,4
+so hug off the vein and off the bone,14:46:09,22,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady and ready for precise instrument manipulation.,2
+so i think you can go to the other side,17:29:37,7,,,,navigate_position,navigate_position,True,,,,True,Adjust your position carefully to maintain optimal visualization and access.,2
+so im very risk adverse so I like to go right off the nerve take that seperate that,14:53:17,22,,,,open_spread,open_spread,True,,,,True,Open and spread tissues gently to maintain clear visualization and avoid trauma.,2
+so instead of grabbing something I would just let go of your left hand and stick the whole thing jaws closed into that space,14:48:47,22,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure precise instrument movement.,2
+so just account for the spacing right? there's more space on the bladder side than on the urethra side,11:11:39,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+so just make sure all the needles and clips are accounted for,15:15:29,2,suturing_tools,suturing_tools,True,,,,,,,True,Check the suturing tools for needle integrity before starting the stitch.,3
+"so now come in a little bit, yeah",10:49:39,1,,,,navigate_position,navigate_position,True,,,,True,Keep the camera steady and optimize your navigation for better visualization.,2
+"so now its getting pretty close, get rid of some of that stuff",14:44:33,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve erectile function.,2
+so now we can start to travel a little bit more on the bladder because obviously there's a lot more to cover,19:04:30,29,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract delicately to avoid injury during dissection.,2
+"so now you got to change your angle, yeah? you need to go under the prostate or you're going to get into the bladder",09:26:28,1,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract delicately to prevent injury during exposure.,2
+so open all the space up,09:32:54,33,,,,open_spread,open_spread,True,,,,True,Spread gently to avoid tissue trauma and improve exposure.,4
+so start with a better grasp of your vas,15:30:36,22,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to preserve surrounding structures.,3
+"so stop, pull from up here, pull from the loop",10:16:00,16,,,,traction_retract,traction_retract,True,,,,True,Apply gentle traction and retract carefully to avoid tissue injury.,3
+so that way the risk of getting into the prostate is low,10:48:42,31,,,,,,,prostate,prostate,True,True,Handle the prostate carefully to preserve surrounding neurovascular bundles.,3
+so that's not perpendicular to your...,10:32:11,1,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to avoid collateral tissue damage.,2
+"so that's not what I mean by seeing the nerve, I want to see the whole nerve, I don't want to see part of the nerve",09:35:51,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Stay lateral to the neurovascular bundles to prevent inadvertent injury.,2
+so that's that corner right? the corner that we turned on the bladder?,19:04:27,29,,,,,,,urinary_tract,urinary_tract,True,True,Inspect the urinary tract carefully for any signs of injury or obstruction.,2
+so we have a good amount of time for you to do the vas defs,14:50:53,26,,,,,,,prostate,prostate,True,True,Maintain careful dissection around the prostate to preserve surrounding structures.,2
+so what I don't like about this is I want to see your nerve down below,09:37:46,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to maintain erectile function.,2
+"so what I'm trying to get you to think about is do I want to get under it here near the aorta or near the ileum, or back down here",09:32:34,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+"so what you just bipolared and what you cut was nearly the same spot, you want to give yourself a little bit more wiggle room, right?",09:48:39,1,energy_device,energy_device,True,,,,,,,True,Activate the energy device cautiously to prevent unintended tissue injury.,3
+"so what you were going to take there, probably fine as a little vessel, but you were in a very compromised position right?",09:34:40,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+"so when you cinch, pull 90 degrees from the tissue, okay? if you pull towards the head, because of the barb it's going to cut like a knife",11:12:50,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding or nerve injury.,2
+so wheres the mucosa,17:50:26,12,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Handle the gastrointestinal tract with care to prevent inadvertent injury.,2
+so work along the medial aspect of the vas,13:58:48,4,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Protect the seminal vesicle and vas during dissection to prevent injury.,3
+so work from this starting edge here and march deeper as you go,17:27:24,7,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal positioning for the next surgical step.,3
+so you can do a little more sweeping,09:26:13,21,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use gentle sweeping maneuvers to clear the field without causing tissue damage.,4
+"so you can tennis racket it and start at the top and run it not at the urethra, the bladder side and you run it towards the urethra",18:07:02,30,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract delicately to prevent injury during dissection.,2
+so you got to decide where...,09:41:22,33,,,,interrupt_action,interrupt_action,True,,,,True,Pause and reassess before proceeding with the next step.,2
+so your original bladder neck wasn't that big and you kind of stretched it out quite aggressively in the very beginning... so just be aware of that,09:26:18,1,,,,ensure_safety,ensure_safety,True,urinary_tract,urinary_tract,True,True,Ensure safety by protecting the urinary tract during all maneuvers.,3
+"so your suture management is already not good, you have to do something",16:43:50,22,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and knot tying.,2
+"so, stop for a second... so you see those... pur your retraction there, that's fine",09:30:32,1,retractor_device,retractor_device,True,,,,,,,True,Use the retractor device to optimize exposure without excessive force.,3
+spread here with your scissors and your left hand,09:19:51,17,hand_control,hand_control,True,open_spread,open_spread,True,,,,True,Open and spread the field gently to avoid tissue trauma.,3
+staple across the ureter and whole shebang,16:55:05,8,,,,,,,urinary_tract,urinary_tract,True,True,Keep the urinary tract clearly visible and avoid unnecessary manipulation.,2
+"staple the ureter now, that area there",15:42:02,10,,,,,,,urinary_tract,urinary_tract,True,True,Keep the urinary tract well visualized and handle it with utmost care.,2
+"start again, right hands go up",09:22:54,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure precise instrument manipulation.,2
+"stay close to the prostate... uh, the adenoma, okay? just stay close",14:45:09,2,,,,,,,prostate,prostate,True,True,Handle the prostate tissue gently to preserve surrounding structures.,3
+stay down stay down,09:11:23,33,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal positioning and avoid unnecessary tissue contact.,3
+"stay in the correct plane, yup, between the two fascial layers",15:35:44,8,,,,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,"Handle the fat, fascial, and peritoneal planes delicately to preserve tissue integrity.",3
+stay right next to ureter...so  its unlikely you will cause damange,11:50:15,11,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract tissues gently to prevent trauma and maintain integrity.,3
+stop for a second,10:49:14,31,,,,interrupt_action,interrupt_action,True,,,,True,Pause and reassess before continuing with the next step.,4
+stop for a second,12:28:30,28,,,,interrupt_action,interrupt_action,True,,,,True,Pause and reassess before proceeding with the next step.,4
+stop look at see your needle driver It's got to be perpendicular to the needle.,17:51:46,12,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready and handle needles with precision.,2
+sure but take it dont put holes in the urethra,19:14:26,29,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract delicately to prevent trauma and maintain tissue integrity.,3
+sweep along it because you are going to get into endopelvis,14:38:18,26,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use smooth sweeping maneuvers to clear the field and improve visualization.,3
+"sweep further, theres another layer",16:01:37,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use sweeping maneuvers gently to avoid tissue trauma.,3
+"sweep it into the spoon, help her",14:43:12,26,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use gentle sweeping maneuvers to avoid unnecessary tissue trauma.,3
+sweep it off... start from where you know where the adenoma is and then just sweep it off,15:04:29,18,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Keep your sweeping maneuvers smooth and consistent to maintain a clear field.,4
+sweep sweep sweep,09:38:40,33,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use smooth sweeping maneuvers to clear the field without causing tissue trauma.,3
+"sweep this down, sweep this down",14:59:20,20,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use smooth sweeping maneuvers to clear the field gently.,4
+sweep towards the vein okay? always sweep towards the vein,14:42:35,22,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use sweeping maneuvers smoothly to clear the field without causing tissue trauma.,3
+"sweep, sweep, sweep, that should be a very blunt dissection",09:25:52,21,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Use controlled sweeping maneuvers to avoid unnecessary tissue disturbance.,3
+sweep...You'll get into the perfect layer... sweep all those strands off....Keep sweeping first. ....Get all those bands off.,16:01:54,12,,,,sweeping_maneuvers,sweeping_maneuvers,True,,,,True,Continue sweeping maneuvers smoothly to clear the field without causing tissue trauma.,4
+take it,09:27:28,24,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue effectively.,3
+take it,15:35:00,10,,,,grip_hold,grip_hold,True,,,,True,Keep a steady grip to maintain tissue stability during dissection.,2
+take it,15:40:51,10,,,,grip_hold,grip_hold,True,,,,True,Ensure a secure grip to maintain stable tissue control.,3
+"take it a little higher, you don't want something dangling in your face, that's really annoying.",09:11:32,33,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal positioning and avoid unnecessary tissue contact.,3
+take it..no up..deep,15:34:09,10,,,,navigate_position,navigate_position,True,,,,True,Keep the camera steady and optimize your position for the best view.,2
+take loop w R hand and w L retract,15:20:48,10,hand_control,hand_control,True,,,,,,,True,Adjust your hand control smoothly to maintain optimal instrument positioning.,2
+"take one more... yeah, one more bite of that",15:10:29,2,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip and prepare for precise tissue manipulation.,2
+"that looks too small, looks like there are 2 veins",17:05:12,7,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve erectile function and minimize bleeding.,2
+"that's ___, you can't push that, yeah. it's a vessel right there, right in the middle, yeah, it's not going to push off",12:01:34,28,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Handle vascular neurovascular structures with utmost care to prevent bleeding or nerve injury.,3
+that's a whole bowel up there,15:35:33,23,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Avoid contact with the gastrointestinal tract to prevent inadvertent injury.,3
+that's it you can grab that peritoneum and thats it on the left,08:56:32,19,hand_control,hand_control,True,grip_hold,grip_hold,True,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,Grip and hold the fat and fascial planes gently to avoid tearing.,3
+that's probably the vein that you just cut,14:52:02,22,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Preserve the neurovascular structures carefully to maintain erectile function.,2
+thats fine but youre taking a lot of urethra,19:07:51,29,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract delicately to avoid trauma during manipulation.,3
+"thats it, okay now close the peritineum",08:45:48,19,,,,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,Avoid excessive traction on fat and fascial peritoneal planes to prevent tissue damage.,2
+thats not how you break a stitch man,17:03:51,22,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready and positioned for precise needle control.,2
+thats not the correct plane...its between the two fascial layers,15:35:48,8,,,,,,,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,Maintain clear planes in the fat-fascial-peritoneal layers for safe dissection.,3
+thats the capsule fibers,16:44:23,9,,,,,,,muscular_capsular_structures,muscular_capsular_structures,True,True,Handle muscular capsular structures delicately to preserve integrity and avoid bleeding.,3
+thats the ves,15:31:33,22,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Handle the seminal vesicle and vas carefully to avoid injury.,3
+"thats too much, take less",16:57:40,26,,,,grip_hold,grip_hold,True,,,,True,Keep your grip gentle to prevent tissue damage.,4
+the lateral... lateral stuff... lateral,10:37:53,1,,,,,,,miscellaneous,miscellaneous,True,True,Maintain clear visualization of all tissues for safe and precise dissection.,2
+"the reason why I like it wide, is because I like to be able to see the shape of the prostate as you are doing this",09:56:05,33,,,,,,,prostate,prostate,True,True,Handle the prostate with care to preserve surrounding neurovascular bundles.,2
+the vein dangling in your face... the vein,16:25:21,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+"the whole point is to make the ureter completely irrelevant to your work, right?",09:22:28,33,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract tissues with utmost care to prevent any trauma.,2
+"there are times when you have to hold the posterior bladder neck, and there are times you don't have to",13:55:57,4,,,,,,,prostate,prostate,True,True,Keep the prostate well visualized for accurate and safe dissection.,2
+"there thats where you are going to grab, do you see it?",08:51:58,19,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip but avoid excessive force to prevent tissue damage.,3
+"there you go, that is finally the first good one there, okay?",11:00:31,21,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+"there's a few open vessels... yeah, just burn those",10:44:10,1,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Preserve neurovascular structures meticulously to maintain erectile function and minimize bleeding.,2
+"theres a vessel there, careful of vessel",16:09:00,6,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,4
+"theres something bleeding down there, buzz it directly",17:16:04,13,energy_device,energy_device,True,coagulate,coagulate,True,,,,True,Coagulate carefully to control bleeding without damaging surrounding tissues.,4
+"these little things that are tethering the vein up, you can buzz them or sweep them down",15:52:12,32,energy_device,energy_device,True,coagulate,coagulate,True,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Coagulate the neurovascular structures gently to preserve function and minimize damage.,2
+this first one you have to travel a little bit,16:43:23,22,,,,navigate_position,navigate_position,True,,,,True,Keep the camera steady and optimize your navigation smoothly.,2
+this is a vessel here that is tethering you,17:47:58,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures by maintaining gentle manipulation throughout.,2
+this is ileostomy,15:42:41,23,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Avoid unnecessary manipulation of the gastrointestinal tract to prevent injury.,2
+"this is the vein, there's a vein there",09:49:36,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Preserve the vascular neurovascular structures meticulously to avoid bleeding and nerve damage.,3
+"this is whats tethering the vein, see how its all wispy and everything here",15:56:15,32,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Preserve the vascular neurovascular structures meticulously to maintain function.,2
+this isnt like a strength suture,12:48:39,31,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools for precise needle handling and secure knot tying.,2
+those are all vessels,17:45:37,29,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to preserve function and prevent bleeding.,3
+"those little red vessels, tiny vessels. I would burn them as you see them, because if you rip them off they are going to bleed",09:32:56,33,energy_device,energy_device,True,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Activate the energy device cautiously near vascular neurovascular structures to prevent injury.,3
+"to save yourself this re grab, when you grab your needle for the first time, act like you know what your next bite is going to be. does that make sense?",16:49:21,22,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for accurate needle placement.,3
+"too far, come a little bit closer to the prostate",09:59:18,33,,,,,,,prostate,prostate,True,True,Maintain clear visualization of the prostate for precise dissection.,3
+"travel, travel",11:09:28,21,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal positioning and avoid unnecessary tissue tension.,3
+try and get under the SV first before you do that,11:08:14,31,,,,navigate_position,navigate_position,True,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Navigate carefully around the seminal vesicle and vas to avoid injury.,3
+"try something, instead of holding this, put your closed left hand in here and your push it this way",09:05:52,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure precise instrument movements.,2
+try to grab the end of the sac and bring the sac up,08:53:04,19,,,,grip_hold,grip_hold,True,miscellaneous,miscellaneous,True,True,Ensure a secure grip and hold on the tissue to prevent slippage.,3
+try to open that space up,14:49:07,22,,,,open_spread,open_spread,True,,,,True,Open and spread tissues gently to maintain clear visualization and avoid trauma.,4
+turn,17:55:34,12,,,,rotate_turn,rotate_turn,True,urinary_tract,urinary_tract,True,True,Rotate the urinary tract gently to prevent tissue trauma.,4
+turn,18:58:30,29,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the instrument slowly to maintain steady and precise control.,4
+turn,19:04:59,29,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the camera slowly to maintain optimal visualization of the surgical field.,4
+turn,19:09:27,29,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the camera slowly to maintain optimal visualization of the surgical field.,4
+turn dont pull,17:52:48,12,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the instrument slowly to maintain precise control and avoid tissue trauma.,3
+"turn dont push, turn",17:52:37,12,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the camera slowly to maintain optimal visualization of the surgical field.,4
+turn more,19:05:01,29,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the camera smoothly to maintain optimal visualization of the surgical field.,3
+turn turn turn turn,19:16:32,29,,,,rotate_turn,rotate_turn,True,,,,True,Rotate the instrument smoothly to optimize your angle of approach.,4
+"uh huh, yes this little band",14:44:05,15,None,None,True,,,,,,,True,Maintain clear visualization and prepare for the next instrument engagement.,2
+"uh if anything, I would want to stay short of how far you want to go distally, because you don't want to get to the rectourethralis muscle",09:54:26,1,,,,,,,muscular_capsular_structures,muscular_capsular_structures,True,True,Handle muscular capsular structures delicately to prevent capsular tears.,2
+uh you should have...im ok taking together but i want a good exposure of the artery...I want to see it..,15:54:37,6,,,,,,,None,None,True,True,Maintain focus and prepare for the next instrument docking step.,2
+up high near the liver,09:13:55,24,,,,,,,miscellaneous,miscellaneous,True,True,Maintain awareness of all miscellaneous tissues to avoid inadvertent injury.,2
+vessel right there ok?,16:37:31,13,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve erectile function.,2
+watch your arm,16:20:32,32,,,,inspect,inspect,True,,,,True,Continue inspecting carefully to identify key anatomical landmarks.,2
+"watch your suture, you don't want that to touch the camera lens. if you smudge your camera you will lose your console time",16:40:45,22,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling.,2
+well uh in this case a 3-0 on a SH,16:57:46,13,suturing_tools,suturing_tools,True,,,,,,,True,Ensure suturing tools are ready for precise needle control and knot tying.,2
+when this kind of a thing is not available,13:56:07,4,,,,,,,prostate,prostate,True,True,Handle the prostate with care to preserve surrounding structures.,2
+"when youre at the hilum your strokes have to be smaller...because lets say theres a lumbar vein here...big stride could have ripped it right thru, if you make your moves smaller, and...much smaller injury",15:52:02,6,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures meticulously to preserve function and prevent bleeding.,3
+where is it? look at your 4th arm,18:22:11,12,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Adjust the auxiliary arm for optimal exposure and stability.,2
+where is the bowel?,15:42:02,23,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Avoid contact with the gastrointestinal tract to prevent inadvertent injury.,2
+"where is the ureter, I want to see the ureter",16:01:46,32,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract tissues gently to prevent trauma during dissection.,2
+where is this artery in the scan?,09:48:14,24,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+where you come out has to be closer to where you just came out on the urethra,18:58:08,29,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract tissues with care to prevent any inadvertent injury.,2
+wheres the ureter,10:16:54,11,,,,,,,urinary_tract,urinary_tract,True,True,Handle the urinary tract delicately to prevent injury during dissection.,2
+wheres your other stitch,19:17:17,29,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle placement.,2
+why is this thing up in the air like this? your fourth arm,14:28:32,3,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Adjust the auxiliary arm for optimal exposure and instrument stability.,4
+whyd you let go of the stitch,19:16:25,29,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and secure knot tying.,2
+work toward the bladder first bc its more avascular,16:47:46,13,,,,,,,urinary_tract,urinary_tract,True,True,Maintain gentle handling of the urinary tract to prevent tissue injury.,2
+yeah,09:32:03,33,,,,None,None,True,,,,True,Stay focused and maintain steady control during the next steps.,3
+"yeah but you need to drop it up there, see that? that's where you drop it",09:09:04,17,,,,release_instrument,release_instrument,True,,,,True,Release the instrument smoothly to avoid sudden movements in the surgical field.,3
+yeah go,19:15:18,29,,,,None,None,True,,,,True,Maintain focus and proceed cautiously with the next step.,3
+yeah just buzz that,10:28:08,31,,,,coagulate,coagulate,True,,,,True,Coagulate cautiously to avoid thermal injury to surrounding tissues.,3
+yeah lift that up and now you can gently buzz and sweep the stuff off,15:49:15,32,energy_device,energy_device,True,coagulate,coagulate,True,None,None,True,True,Coagulate cautiously to prevent thermal injury to surrounding tissues.,2
+yeah maybe cut that tissue,15:21:29,15,,,,cut_divide,cut_divide,True,,,,True,Cut precisely and avoid unnecessary tissue damage.,3
+yeah pre buzz it,15:58:08,32,,,,coagulate,coagulate,True,,,,True,Coagulate carefully to control bleeding without damaging surrounding tissues.,3
+yeah the stump,17:11:41,7,,,,,,,None,None,True,True,Maintain focus and proceed cautiously with the next step.,2
+"yeah, I think those needles are reasonably big, so i think it should be fine",15:17:08,15,suturing_tools,suturing_tools,True,,,,,,,True,Check the suturing tools for needle integrity before starting the stitch.,2
+"yeah, I think you just got to keep it low",16:12:42,32,,,,navigate_position,navigate_position,True,,,,True,Keep the camera steady and optimize your view continuously.,2
+"yeah, deeper doesn't mean more far away, deeper just means deeper",15:10:52,2,None,None,True,,,,,,,True,Keep your focus steady and proceed with caution.,2
+"yeah, it'll grow close to the muscle, just open it here",14:28:48,3,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain clear visualization of the surgical field.,3
+"yeah, just open there up... the point is to separate... look up here, look up here",09:16:17,21,,,,open_spread,open_spread,True,,,,True,Open and spread carefully to maintain clear exposure without causing tissue trauma.,3
+"yeah, so I would not waste your time doing this, you see you had to let go of the needle... just throw and you cinch all at the end, it's just a little bit more efficient",11:18:21,1,suturing_tools,suturing_tools,True,,,,,,,True,Check the suture material and prepare for precise needle placement.,2
+"yeah, so that's the problem... okay come back... so I'm going to take over for a quick second, okay?",09:23:37,1,,,,navigate_position,navigate_position,True,,,,True,Adjust camera angle smoothly to enhance the surgical field view.,2
+"yeah, so the goal is to eventually grab the tip of the SV, you may not be able to do that immediately but grab whatever you can and then lift",09:41:24,1,,,,grip_hold,grip_hold,True,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Grip the seminal vesicle and vas carefully to avoid tissue damage.,3
+"yeah, you can, you can... I thought when you were talking about the lateral thing I thought you were talking about the anteiror part",09:22:44,1,,,,,,,miscellaneous,miscellaneous,True,True,Keep the field clear for optimal visualization of all tissues.,2
+"yeah, you could probably get rid of the vas now",09:40:40,1,,,,,,,seminal_vesicle_vas,seminal_vesicle_vas,True,True,Focus on the seminal vesicle and vas for careful dissection and preservation.,2
+yes,14:51:00,26,,,,,,,prostate,prostate,True,True,Focus on clear visualization of the prostate for precise dissection.,3
+"yes like that, what you were doing it but a little bit more force",09:38:52,33,None,None,True,,,,,,,True,Maintain focus and prepare for the next instrument deployment.,2
+"yes, drop it, beautiful, just like that uh huh",14:46:58,15,,,,release_instrument,release_instrument,True,,,,True,Release the instrument smoothly to maintain stable tissue positioning.,5
+you can even come 1 mm closer to the prostate,09:14:19,1,,,,,,,prostate,prostate,True,True,Focus on the prostate anatomy to guide your dissection precisely.,3
+you can grab it,15:31:24,10,,,,grip_hold,grip_hold,True,,,,True,Maintain a gentle grip; avoid excessive force to prevent tissue damage.,3
+"you can open that up though, yeah that thing",10:31:37,1,energy_device,energy_device,True,open_spread,open_spread,True,,,,True,Use the energy device to open and spread tissues cautiously.,3
+you can regrab and turn more,19:16:38,29,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip and hold steadily to control tissue effectively.,3
+you can release your 4th arm,15:43:18,10,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Use the auxiliary arm to maintain stable exposure throughout the procedure.,1
+you can see the... you can grab the tissue posterior,13:56:34,4,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to ensure stable tissue handling.,3
+"you can start with that, and then... once you free it up a little bit... get a better grab",09:35:32,1,,,,grip_hold,grip_hold,True,,,,True,Maintain a gentle grip to prevent inadvertent tissue injury.,3
+"you didn't get it, you didn't get mucosa",10:19:04,16,,,,,,,gastrointestinal_tract,gastrointestinal_tract,True,True,Avoid injuring the gastrointestinal tract; maintain clear visualization and gentle manipulation.,2
+"you don't have to buzz for fun, buzz on that crease, on the frindge",14:31:03,2,,,,coagulate,coagulate,True,,,,True,Coagulate cautiously to achieve hemostasis without damaging surrounding tissues.,2
+"you don't want to get into bleeders there, you want to know where your ureter is, you don't want to injure your ureter, you want to know where your nerve is. The cognitive load of thinking about all of those structures should be less and less as you identify each of these structures and not only identify it but take them out of concern.",09:25:54,33,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the neurovascular structures carefully to preserve erectile function.,3
+"you dont have to hook it, you can buzz it",15:52:17,32,,,,coagulate,coagulate,True,,,,True,Coagulate carefully to control bleeding without damaging surrounding tissues.,2
+"you got to actually where the bleeder is, you have no idea where it is",14:48:01,2,,,,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Protect the vascular neurovascular structures carefully to prevent bleeding and nerve injury.,2
+you got to grab,19:18:53,29,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue effectively.,4
+you gotta grab it,19:00:29,29,,,,grip_hold,grip_hold,True,,,,True,Maintain a firm grip to stabilize the tissue effectively.,4
+you need help?,15:30:50,23,None,None,True,,,,,,,True,Maintain focus and proceed carefully with the next step.,2
+you need to adjust for the amount of bladder neck you have here with minimal amount of the urethra,12:26:42,25,,,,,,,urinary_tract,urinary_tract,True,True,Inspect the urinary tract carefully for any signs of injury or obstruction.,2
+you need to grab the peritineum down there,08:51:13,19,,,,grip_hold,grip_hold,True,fat_fascial_peritoneal_planes,fat_fascial_peritoneal_planes,True,True,Grip the fat and fascial planes gently to avoid unnecessary tissue trauma.,3
+you saw what you did right?..you literally just poked 2 holes in the same vein cause of a lack of awareness,15:45:04,6,energy_device,energy_device,True,,,,vascular_neurovascular_structures,vascular_neurovascular_structures,True,True,Use the energy device cautiously near vascular and neurovascular structures.,3
+you see how you're grabbing your needle its gonna spin like that,17:51:42,12,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and secure knot tying.,2
+"you see that, right? you can actually even see how thin your posterior bladder neck is... yeah",09:28:20,1,,,,,,,urinary_tract,urinary_tract,True,True,Maintain clear visualization of the urinary tract to avoid inadvertent injury.,2
+"you see the edge of the prostate back there, yup, so don't go too close, stay a little lower. if you're working medially, you should be holding medially",12:18:48,28,,,,,,,prostate,prostate,True,True,Keep the prostate well visualized for accurate and safe dissection.,3
+you should find the ureter pretty soon,09:19:56,33,,,,,,,urinary_tract,urinary_tract,True,True,Maintain gentle handling of the urinary tract to prevent tissue injury.,2
+you want to be going down this way,17:41:11,29,,,,navigate_position,navigate_position,True,,,,True,Navigate carefully to maintain optimal positioning and avoid unnecessary tissue contact.,3
+you want to see how you can get around all this tissue,14:43:21,22,suturing_tools,suturing_tools,True,,,,,,,True,Check suture tension and needle orientation before proceeding with the stitch.,2
+you want to switch to a needle driver?,17:45:20,9,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling.,2
+you're getting tangled up in your suture a little bit,16:39:37,22,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and knot tying.,2
+"you're stabbing through the tissue again, hold on stop stop stop do you have any idea where the tip of your graspers is?",16:59:40,22,,,,,,,miscellaneous,miscellaneous,True,True,Maintain clear visualization of all tissues to guide precise instrument use.,1
+"you're working in a hole, its okay, but normally you'd want to open this up so you weren't in a hole",09:20:25,17,,,,open_spread,open_spread,True,,,,True,Open and spread slowly to optimize exposure without causing tissue trauma.,4
+your 4th arm,15:38:52,8,auxiliary_arm,auxiliary_arm,True,,,,,,,True,Adjust the auxiliary arm for optimal exposure and instrument coordination.,3
+"your L hands not doing anthing, pull towards cam",15:50:31,8,hand_control,hand_control,True,,,,,,,True,Adjust your hand control for precise instrument positioning.,2
+"your angle is barely correct, so more under the prostate",09:27:27,1,,,,,,,prostate,prostate,True,True,Maintain clear visualization of the prostate for precise dissection and safe handling.,3
+your left hand is facing this way,09:23:37,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady and prepare for precise instrument movement.,2
+your right hand is fine,09:23:22,17,hand_control,hand_control,True,,,,,,,True,Keep your hand control steady to ensure smooth instrument movement.,3
+"yup, I think yeah I like it",19:15:14,29,,,,None,None,True,,,,True,Maintain focus and prepare for the next instrument action.,2
+zoom in where you tied your suture,16:16:08,18,suturing_tools,suturing_tools,True,,,,,,,True,Prepare the suturing tools carefully for precise needle handling and knot tying.,2
+"zoom in where you tied your suture, please",16:16:11,18,suturing_tools,suturing_tools,True,,,,,,,True,Check your needle loading and suture tension before starting the stitch.,2

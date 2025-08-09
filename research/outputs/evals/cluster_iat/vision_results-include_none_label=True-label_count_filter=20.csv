@@ -1,0 +1,148 @@
+model,task,auprc_mean,auroc_mean,accuracy_mean,precision_mean,recall_mean,f1_mean,confusion_matrix,confusion_matrix_labels
+surgvlp,instrument,0.8348653506962321,0.6108782131886439,0.8445921054634576,0.8161890445505513,0.8445921054634576,0.8298125816231625,"[[   0    0    0    0    0    0    0   32    0    0    0    0]
+ [   0    1    0    1    0    0    0   21    0    0    0    0]
+ [   0    0    0    0    0    0    2   57    1    4    1    0]
+ [   0    2    0    0    0    1    0   32    0    0    0    0]
+ [   0    1    0    0    1    0    1   34    0    1    0    0]
+ [   0    0    0    1    1    2    0   27    0    1    0    1]
+ [   0    0    1    0    1    0    4   31    0    0    0    0]
+ [  15   11   53   20   14   24   18 3411   16   32   16   14]
+ [   0    0    2    0    0    0    0   19    0    0    0    0]
+ [   0    0    2    0    0    0    0   62    1    3    0    1]
+ [   0    0    0    0    0    1    0   28    0    2    1    0]
+ [   0    0    0    0    0    0    0   23    0    1    0    1]]","[np.str_('7_fourth_arm_tenaculum_stitch'), np.str_('9_suture_suction_prograsp_perforator'), np.str_('1_electrocautery_energy_devices_device'), np.str_('4_sucker_instrument_right_hand'), np.str_('2_needle_needles_sutures_clips'), np.str_('5_stitch_thinpoint_vicyl_chromic'), np.str_('3_scissors_driver_scissor_needle'), np.str_('None'), np.str_('10_clip_foley_clips_weck'), np.str_('0_left_hand_camera_arm'), np.str_('6_4th_arm__'), np.str_('8_retractor_locking_liver_alice')]"
+surgvlp,action,0.33203035769842737,0.5592750763486098,0.3549929222580827,0.3230097360592913,0.3549929222580827,0.337098889541979,"[[1 0 0 ... 0 0 1]
+ [0 0 0 ... 0 0 1]
+ [1 0 1 ... 0 0 0]
+ ...
+ [0 1 1 ... 0 0 0]
+ [0 0 0 ... 0 3 0]
+ [0 0 0 ... 0 1 3]]","[np.str_('8_grab_swipe_scoop_lower'), np.str_('32_sure_make_know_check'), np.str_('21_find_care_connect_identify'), np.str_('31_pull_pulling_neutral_closing'), np.str_('20_in_ahead_inside_get'), np.str_('3_buzz_buzzing_not_frindge'), np.str_('6_higher_slow_go_below'), np.str_('35_stick_get_not_defat'), np.str_('27_release_clip_releasing_sneak'), np.str_('29_work_zoom_working_focused'), np.str_('7_open_see_apply_completely'), np.str_('37_put_drain_cover_snip'), np.str_('34_move_wrist_smaller_hand'), np.str_('38_show_expose_present_define'), np.str_('16_going_keep_continue_following'), np.str_('None'), np.str_('1_pull_grab_drop_regrab'), np.str_('17_go_along_anchor_change'), np.str_('0_sweep_shorter_buzz_sweeping'), np.str_('10_stop_wait_short_'), np.str_('4_take_watch_do_it'), np.str_('24_lift_hold_advance_up'), np.str_('2_back_travel_bit_little'), np.str_('36_look_control_inspect_examine'), np.str_('25_adjust_pinch_fix_readjust'), np.str_('18_stay_right_keep_remain'), np.str_('15_through_don_do_strangulate'), np.str_('19_closer_close_let_come'), np.str_('14_off_leave_out_right'), np.str_('30_tie_break_hook_tuck'), np.str_('23_push_pull_more_tight'), np.str_('26_clean_follow_burn_coagulate'), np.str_('9_cut_cutting_cold_scrape'), np.str_('22_cinch_down_slide_over'), np.str_('33_retract_switch_bring_down'), np.str_('11_open_up_press_spread'), np.str_('5_side_lateral_the_other'), np.str_('28_start_run_top_from'), np.str_('12_turn_rotate_flip_round'), np.str_('13_careful_be_rip_gentle')]"
+surgvlp,tissue,0.7734293539194385,0.6176885933732627,0.8123035602557647,0.7703633722758746,0.8123035602557647,0.7886591859050485,"[[   4    0    1    1    0   78    0    0    1    0    0    0    0    0
+     0]
+ [   1    3    0    1    0   29    0    1    0    0    1    0    0    0
+     1]
+ [   0    0    1    0    0   21    0    0    0    0    1    0    0    0
+     0]
+ [   1    0    0    2    0   19    0    0    0    0    0    1    2    0
+     0]
+ [   0    0    1    0    2   22    0    0    0    0    0    0    0    0
+     0]
+ [  31   21    6   15   15 3259   21   10   19   13   15   11   17   35
+    17]
+ [   0    0    0    1    0   32    0    0    0    0    0    0    0    0
+     0]
+ [   0    0    0    0    0   17    0    1    0    0    0    0    2    0
+     1]
+ [   2    0    1    0    0   29    0    0    1    0    0    0    0    0
+     0]
+ [   0    0    1    1    1   20    0    0    0    2    0    0    0    0
+     0]
+ [   0    2    1    0    0   22    0    0    0    0    4    0    0    0
+     0]
+ [   1    0    0    0    0   35    1    0    0    0    0    4    0    1
+     0]
+ [   0    1    0    0    0   45    0    2    0    0    0    0    1    0
+     0]
+ [   0    0    0    0    0   70    0    0    0    0    0    0    0    4
+     0]
+ [   1    1    1    0    0   35    1    0    0    0    1    0    1    1
+     1]]","[np.str_('6_prostate_side_apex_apical'), np.str_('5_bladder_catheter_on_needle'), np.str_('13_posterior_urethra_bladder_neck'), np.str_('12_fat_fascia_abdominal_endopelvic'), np.str_('11_mucosa_mucosal_inner_edge'), np.str_('None'), np.str_('8_seminal_vesicles_vesicle_medial'), np.str_('14_artery_cava_sac_iliac'), np.str_('7_muscle_fibers_detrusor_capsule'), np.str_('10_structure_lateral_anterior_median'), np.str_('9_urethra_dvc_edge_'), np.str_('4_vessel_vessels_thicker_nerves'), np.str_('2_ureter_gonadal_upper_gondal'), np.str_('0_vein_veins_complex_dorsal'), np.str_('3_tissue_adrenal_gland_node')]"
+hecvl,instrument,0.8283545155836551,0.5973996399289534,0.8470597189873803,0.8144685731909311,0.8470597189873803,0.8293099496421364,"[[   0    0    0    0    0    1    0   31    0    0    0    0]
+ [   0    2    0    0    2    0    1   18    0    0    0    0]
+ [   0    0    1    0    0    0    0   63    1    0    0    0]
+ [   0    0    0    0    0    0    0   35    0    0    0    0]
+ [   0    1    0    0    2    1    1   32    0    1    0    0]
+ [   0    0    0    1    0    0    0   31    0    1    0    0]
+ [   0    0    0    0    1    1    1   32    0    0    2    0]
+ [  23    4   45   19   18   22   13 3425    8   39   14   14]
+ [   0    0    1    0    0    0    0   20    0    0    0    0]
+ [   0    0    1    0    0    1    0   62    1    3    1    0]
+ [   0    0    0    1    0    0    0   31    0    0    0    0]
+ [   0    0    0    0    0    0    0   24    0    1    0    0]]","[np.str_('7_fourth_arm_tenaculum_stitch'), np.str_('9_suture_suction_prograsp_perforator'), np.str_('1_electrocautery_energy_devices_device'), np.str_('4_sucker_instrument_right_hand'), np.str_('2_needle_needles_sutures_clips'), np.str_('5_stitch_thinpoint_vicyl_chromic'), np.str_('3_scissors_driver_scissor_needle'), np.str_('None'), np.str_('10_clip_foley_clips_weck'), np.str_('0_left_hand_camera_arm'), np.str_('6_4th_arm__'), np.str_('8_retractor_locking_liver_alice')]"
+hecvl,action,0.33161775817789907,0.5609446510097238,0.3568886246531907,0.3301511258768235,0.3568886246531907,0.3416161010345197,"[[1 0 0 ... 1 0 1]
+ [0 0 0 ... 3 0 0]
+ [0 0 0 ... 0 0 0]
+ ...
+ [2 0 0 ... 0 0 0]
+ [1 0 1 ... 0 3 0]
+ [0 0 0 ... 1 0 0]]","[np.str_('8_grab_swipe_scoop_lower'), np.str_('32_sure_make_know_check'), np.str_('21_find_care_connect_identify'), np.str_('31_pull_pulling_neutral_closing'), np.str_('20_in_ahead_inside_get'), np.str_('3_buzz_buzzing_not_frindge'), np.str_('6_higher_slow_go_below'), np.str_('35_stick_get_not_defat'), np.str_('27_release_clip_releasing_sneak'), np.str_('29_work_zoom_working_focused'), np.str_('7_open_see_apply_completely'), np.str_('37_put_drain_cover_snip'), np.str_('34_move_wrist_smaller_hand'), np.str_('38_show_expose_present_define'), np.str_('16_going_keep_continue_following'), np.str_('None'), np.str_('1_pull_grab_drop_regrab'), np.str_('17_go_along_anchor_change'), np.str_('0_sweep_shorter_buzz_sweeping'), np.str_('10_stop_wait_short_'), np.str_('4_take_watch_do_it'), np.str_('24_lift_hold_advance_up'), np.str_('2_back_travel_bit_little'), np.str_('36_look_control_inspect_examine'), np.str_('25_adjust_pinch_fix_readjust'), np.str_('18_stay_right_keep_remain'), np.str_('15_through_don_do_strangulate'), np.str_('19_closer_close_let_come'), np.str_('14_off_leave_out_right'), np.str_('30_tie_break_hook_tuck'), np.str_('23_push_pull_more_tight'), np.str_('26_clean_follow_burn_coagulate'), np.str_('9_cut_cutting_cold_scrape'), np.str_('22_cinch_down_slide_over'), np.str_('33_retract_switch_bring_down'), np.str_('11_open_up_press_spread'), np.str_('5_side_lateral_the_other'), np.str_('28_start_run_top_from'), np.str_('12_turn_rotate_flip_round'), np.str_('13_careful_be_rip_gentle')]"
+hecvl,tissue,0.7833543009855213,0.6443979857870701,0.8066202749927512,0.7650603419498286,0.8066202749927512,0.784480936430243,"[[   6    1    1    1    0   74    0    0    0    1    0    1    0    0
+     0]
+ [   0    3    0    1    1   30    0    0    0    0    1    0    0    0
+     1]
+ [   1    0    1    0    0   19    0    0    0    0    1    0    1    0
+     0]
+ [   1    3    0    3    0   18    0    0    0    0    0    0    0    0
+     0]
+ [   0    0    0    0    2   22    0    0    0    0    0    0    0    0
+     1]
+ [  43   13    8   13   16 3237   20    8   17   15   12   21   19   42
+    21]
+ [   0    0    0    0    0   31    0    0    0    0    0    2    0    0
+     0]
+ [   0    0    0    0    0   19    0    0    0    0    0    0    2    0
+     0]
+ [   0    0    0    0    1   27    0    0    3    1    0    0    0    1
+     0]
+ [   0    0    0    0    1   21    0    0    1    2    0    0    0    0
+     0]
+ [   0    0    1    0    0   26    0    0    0    0    1    0    0    0
+     1]
+ [   1    0    0    1    0   37    0    0    0    0    0    2    0    1
+     0]
+ [   0    0    0    1    0   44    0    0    0    0    0    0    4    0
+     0]
+ [   0    0    0    0    0   71    0    0    0    0    0    1    0    2
+     0]
+ [   1    0    1    0    1   37    1    0    0    1    0    0    0    1
+     0]]","[np.str_('6_prostate_side_apex_apical'), np.str_('5_bladder_catheter_on_needle'), np.str_('13_posterior_urethra_bladder_neck'), np.str_('12_fat_fascia_abdominal_endopelvic'), np.str_('11_mucosa_mucosal_inner_edge'), np.str_('None'), np.str_('8_seminal_vesicles_vesicle_medial'), np.str_('14_artery_cava_sac_iliac'), np.str_('7_muscle_fibers_detrusor_capsule'), np.str_('10_structure_lateral_anterior_median'), np.str_('9_urethra_dvc_edge_'), np.str_('4_vessel_vessels_thicker_nerves'), np.str_('2_ureter_gonadal_upper_gondal'), np.str_('0_vein_veins_complex_dorsal'), np.str_('3_tissue_adrenal_gland_node')]"
+peskavlp,instrument,0.8282244670560093,0.6087635458897847,0.8507622048682467,0.8135871625505666,0.8507622048682467,0.8315406575621547,"[[   0    0    0    0    0    0    0   32    0    0    0    0]
+ [   0    2    0    0    0    0    0   20    0    0    1    0]
+ [   0    0    0    1    0    0    2   61    1    0    0    0]
+ [   0    1    0    0    0    1    0   32    0    0    1    0]
+ [   0    1    0    0    0    1    1   35    0    0    0    0]
+ [   0    0    0    1    0    1    0   30    0    1    0    0]
+ [   0    0    0    0    1    0    3   32    1    0    0    0]
+ [  22    9   40   12   16   23   16 3439   11   35    9   12]
+ [   0    0    1    0    0    1    0   19    0    0    0    0]
+ [   0    0    1    0    0    1    0   63    1    2    0    1]
+ [   0    0    0    0    0    0    1   30    1    0    0    0]
+ [   0    0    0    0    0    0    0   23    0    0    0    2]]","[np.str_('7_fourth_arm_tenaculum_stitch'), np.str_('9_suture_suction_prograsp_perforator'), np.str_('1_electrocautery_energy_devices_device'), np.str_('4_sucker_instrument_right_hand'), np.str_('2_needle_needles_sutures_clips'), np.str_('5_stitch_thinpoint_vicyl_chromic'), np.str_('3_scissors_driver_scissor_needle'), np.str_('None'), np.str_('10_clip_foley_clips_weck'), np.str_('0_left_hand_camera_arm'), np.str_('6_4th_arm__'), np.str_('8_retractor_locking_liver_alice')]"
+peskavlp,action,0.33711907953208314,0.562625548859965,0.3723583036068173,0.3285423262328016,0.3723583036068173,0.3471173298683223,"[[3 0 0 ... 0 0 0]
+ [0 0 0 ... 1 0 0]
+ [1 1 0 ... 0 0 0]
+ ...
+ [0 1 0 ... 0 0 0]
+ [1 0 0 ... 1 3 0]
+ [2 0 0 ... 0 1 0]]","[np.str_('8_grab_swipe_scoop_lower'), np.str_('32_sure_make_know_check'), np.str_('21_find_care_connect_identify'), np.str_('31_pull_pulling_neutral_closing'), np.str_('20_in_ahead_inside_get'), np.str_('3_buzz_buzzing_not_frindge'), np.str_('6_higher_slow_go_below'), np.str_('35_stick_get_not_defat'), np.str_('27_release_clip_releasing_sneak'), np.str_('29_work_zoom_working_focused'), np.str_('7_open_see_apply_completely'), np.str_('37_put_drain_cover_snip'), np.str_('34_move_wrist_smaller_hand'), np.str_('38_show_expose_present_define'), np.str_('16_going_keep_continue_following'), np.str_('None'), np.str_('1_pull_grab_drop_regrab'), np.str_('17_go_along_anchor_change'), np.str_('0_sweep_shorter_buzz_sweeping'), np.str_('10_stop_wait_short_'), np.str_('4_take_watch_do_it'), np.str_('24_lift_hold_advance_up'), np.str_('2_back_travel_bit_little'), np.str_('36_look_control_inspect_examine'), np.str_('25_adjust_pinch_fix_readjust'), np.str_('18_stay_right_keep_remain'), np.str_('15_through_don_do_strangulate'), np.str_('19_closer_close_let_come'), np.str_('14_off_leave_out_right'), np.str_('30_tie_break_hook_tuck'), np.str_('23_push_pull_more_tight'), np.str_('26_clean_follow_burn_coagulate'), np.str_('9_cut_cutting_cold_scrape'), np.str_('22_cinch_down_slide_over'), np.str_('33_retract_switch_bring_down'), np.str_('11_open_up_press_spread'), np.str_('5_side_lateral_the_other'), np.str_('28_start_run_top_from'), np.str_('12_turn_rotate_flip_round'), np.str_('13_careful_be_rip_gentle')]"
+peskavlp,tissue,0.7840433643710784,0.6343064480673173,0.7994613072074959,0.7651725768956099,0.7994613072074959,0.7799950220736855,"[[   7    1    0    1    0   76    0    0    0    0    0    0    0    0
+     0]
+ [   2    0    0    0    0   33    0    0    0    0    1    0    0    1
+     0]
+ [   0    0    0    0    0   22    0    0    0    0    1    0    0    0
+     0]
+ [   1    0    0    2    0   21    0    0    0    0    0    0    0    1
+     0]
+ [   0    0    0    0    2   22    0    0    0    0    0    0    1    0
+     0]
+ [  46   17   11   10   19 3207   15   12   20   15   21   24   25   37
+    26]
+ [   1    0    0    1    0   30    0    0    0    0    0    1    0    0
+     0]
+ [   0    0    0    0    0   20    0    1    0    0    0    0    0    0
+     0]
+ [   2    0    0    0    0   30    0    0    1    0    0    0    0    0
+     0]
+ [   2    0    0    0    0   22    0    0    0    1    0    0    0    0
+     0]
+ [   0    0    0    0    2   23    0    0    0    0    4    0    0    0
+     0]
+ [   0    0    0    0    0   37    1    0    0    0    0    3    0    1
+     0]
+ [   0    0    0    0    0   40    0    1    0    0    0    0    6    2
+     0]
+ [   0    0    0    1    0   71    0    0    0    0    0    0    0    2
+     0]
+ [   0    0    1    0    0   39    1    0    0    0    0    1    0    0
+     1]]","[np.str_('6_prostate_side_apex_apical'), np.str_('5_bladder_catheter_on_needle'), np.str_('13_posterior_urethra_bladder_neck'), np.str_('12_fat_fascia_abdominal_endopelvic'), np.str_('11_mucosa_mucosal_inner_edge'), np.str_('None'), np.str_('8_seminal_vesicles_vesicle_medial'), np.str_('14_artery_cava_sac_iliac'), np.str_('7_muscle_fibers_detrusor_capsule'), np.str_('10_structure_lateral_anterior_median'), np.str_('9_urethra_dvc_edge_'), np.str_('4_vessel_vessels_thicker_nerves'), np.str_('2_ureter_gonadal_upper_gondal'), np.str_('0_vein_veins_complex_dorsal'), np.str_('3_tissue_adrenal_gland_node')]"

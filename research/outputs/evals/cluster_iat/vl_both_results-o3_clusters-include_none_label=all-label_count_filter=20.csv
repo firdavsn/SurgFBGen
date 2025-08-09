@@ -1,0 +1,178 @@
+model,task,auprc_mean,auroc_mean,accuracy_mean,precision_mean,recall_mean,f1_mean,confusion_matrix,confusion_matrix_labels
+surgvlp,instrument,0.8284808396648268,0.6645347138746596,0.8522406820745434,0.8126869355944647,0.8522406820745434,0.8305144089709969,"[[  10    0    0   18    0    0    1    0    0    0]
+ [   0    0    1   22    1    0    0    1    2    0]
+ [   0    0    2   65    1    0    0    1    1    0]
+ [  14   10   22 3454   50    8   18   44   16    8]
+ [   1    0    0   91    5    0    0    0    1    0]
+ [   0    0    0   25    1    1    0    0    0    0]
+ [   1    0    0   36    0    1    1    0    0    0]
+ [   0    0    0   74    2    0    0    4    0    0]
+ [   1    0    0   38    2    0    0    0    1    0]
+ [   0    0    0   24    1    0    0    0    0    0]]","[np.str_('suture_material'), np.str_('scissors'), np.str_('fourth_arm'), np.str_('None'), np.str_('left_hand'), np.str_('clip'), np.str_('needle'), np.str_('energy_device'), np.str_('stitch'), np.str_('retractor')]"
+surgvlp,action,0.6283123495139041,0.5817745016062699,0.6755161623048548,0.6169257842309654,0.6755161623048548,0.6428162474886875,"[[   0   23    0    0    0    0    0    0    0    0    0    1    0    0
+     0    0    0    0    0]
+ [  12 2748   14   24   11   18   67   34   15   27   15   60   14    8
+    22   23   16   40   26]
+ [   0   29    1    0    0    0    0    0    1    1    0    0    1    0
+     2    0    4    0    0]
+ [   0   50    0    0    0    0    2    0    0    0    0    1    2    0
+     1    1    0    0    0]
+ [   0   26    0    0    2    1    0    1    0    0    0    0    0    0
+     0    1    2    0    0]
+ [   0   32    0    1    0    7    1    0    0    0    0    0    0    0
+     0    0    0    1    0]
+ [   0  127    1    0    0    3    9    0    1    0    0    1    0    0
+     1    1    0    0    1]
+ [   0   48    0    0    0    1    0    0    0    0    0    1    0    0
+     1    0    1    0    0]
+ [   0   30    2    1    0    0    0    0    0    1    1    1    0    0
+     0    0    0    0    0]
+ [   0   67    1    0    0    0    1    0    2    6    0    3    0    0
+     0    0    1    0    0]
+ [   0   22    0    0    0    1    0    0    2    0    0    0    0    0
+     0    0    0    0    0]
+ [   0   69    0    0    0    0    2    2    0    1    0    6    0    0
+     3    3    0    0    0]
+ [   0   47    0    1    0    0    3    1    0    1    0    1    0    0
+     1    0    2    0    0]
+ [   0   21    0    0    1    0    0    0    0    0    0    0    0    1
+     0    0    1    1    0]
+ [   1   51    0    1    0    0    0    1    0    0    1    3    0    0
+    10    1    0    0    0]
+ [   0   44    0    0    1    1    1    0    0    0    0    0    0    0
+     1    2    0    0    0]
+ [   0   28    1    1    0    0    0    0    0    0    0    0    0    0
+     0    0    1    0    0]
+ [   0   45    0    0    0    1    0    0    0    0    0    1    0    0
+     0    0    0    5    0]
+ [   0   39    0    1    0    0    0    1    0    0    0    0    1    0
+     1    0    0    1    0]]","[np.str_('dissect'), np.str_('None'), np.str_('inspect'), np.str_('navigate_space'), np.str_('release_instrument'), np.str_('turn'), np.str_('grasp'), np.str_('control_depth'), np.str_('cut'), np.str_('open'), np.str_('adjust'), np.str_('coagulate'), np.str_('ensure_safety'), np.str_('spread'), np.str_('perform_sweeping_maneuvers'), np.str_('stop'), np.str_('continue_action'), np.str_('apply_traction'), np.str_('adjust_direction')]"
+surgvlp,tissue,0.7511432553315677,0.6584510445733512,0.7687630447862599,0.7299185214496696,0.7687630447862599,0.7476241454577304,"[[   1    1    1    0   26    0    0    0    0    0    0]
+ [   0    0    0    0   20    0    1    0    0    0    0]
+ [   1    0   23    1  129    1    2    3    1    0    1]
+ [   0    0    1    5   81    0    1    0    1    1    1]
+ [  21    8   88   49 3157   29   12   79    9   23   33]
+ [   0    1    2    1   73    3    0    1    0    0    0]
+ [   0    0    1    2   22    0    0    1    0    1    0]
+ [   2    0    4    0  122    2    0    7    0    0    4]
+ [   0    0    0    0   18    0    0    0    2    0    0]
+ [   0    0    0    0   37    1    0    0    0    2    0]
+ [   0    0    0    1   40    1    2    0    0    0    5]]","[np.str_('adrenal_kidney_region'), np.str_('peritoneum_abdominal_wall'), np.str_('ureter_bladder_urethra'), np.str_('prostate_tissue'), np.str_('None'), np.str_('miscellaneous'), np.str_('muscle_capsule'), np.str_('vascular_and_major_vessels'), np.str_('fat_fascia_planes'), np.str_('gi_tract'), np.str_('seminal_vesicle_vas')]"
+hecvl,instrument,0.8242893180602374,0.6527007312849578,0.8336153310773513,0.8048950219091486,0.8336153310773513,0.8187309803450343,"[[   8    0    0   18    1    0    1    0    1    0]
+ [   0    2    0   25    0    0    0    0    0    0]
+ [   0    0    0   65    1    0    0    4    0    0]
+ [  16   15   45 3384   60   18   28   48   23    7]
+ [   0    0    0   90    5    0    1    0    2    0]
+ [   0    0    0   27    0    0    0    0    0    0]
+ [   0    0    0   36    0    1    1    0    1    0]
+ [   0    1    0   76    0    0    0    2    1    0]
+ [   1    0    1   35    2    0    2    1    0    0]
+ [   0    0    0   23    1    0    0    1    0    0]]","[np.str_('suture_material'), np.str_('scissors'), np.str_('fourth_arm'), np.str_('None'), np.str_('left_hand'), np.str_('clip'), np.str_('needle'), np.str_('energy_device'), np.str_('stitch'), np.str_('retractor')]"
+hecvl,action,0.6301102332121207,0.5872311751513768,0.6554844612273678,0.6073475428390911,0.6554844612273678,0.6299851914942455,"[[   0   21    0    0    0    0    0    0    1    0    0    1    0    0
+     0    0    0    0    1]
+ [  14 2677   23   36   15   24   80   19   26   47   12   52   26   15
+    48   27   11   19   23]
+ [   1   30    0    1    0    0    2    0    1    0    0    0    0    0
+     2    1    1    0    0]
+ [   0   44    0    1    0    1    2    1    1    0    0    1    3    0
+     0    1    1    1    0]
+ [   0   24    2    1    2    0    2    1    0    0    0    0    0    0
+     0    0    1    0    0]
+ [   0   35    0    4    0    1    2    0    0    0    0    0    0    0
+     0    0    0    0    0]
+ [   0  122    0    3    0    0   10    1    0    0    0    2    1    1
+     1    0    1    1    2]
+ [   0   44    0    0    0    1    0    2    0    0    0    2    0    0
+     1    0    1    0    1]
+ [   0   33    0    1    0    0    0    0    0    1    1    0    0    0
+     0    0    0    0    0]
+ [   1   65    1    0    0    0    0    0    1    7    0    3    3    0
+     0    0    0    0    0]
+ [   0   21    1    0    0    0    1    0    1    0    0    0    1    0
+     0    0    0    0    0]
+ [   3   67    0    1    0    0    1    1    0    3    0    4    0    0
+     5    0    0    1    0]
+ [   0   45    0    1    0    0    0    0    1    2    0    3    0    0
+     1    1    1    0    2]
+ [   0   22    1    0    0    0    1    0    0    0    0    1    0    0
+     0    0    0    0    0]
+ [   0   49    0    0    0    0    1    0    0    4    0    2    1    1
+    10    0    0    0    1]
+ [   0   44    0    0    0    1    0    1    0    0    0    1    0    0
+     2    1    0    0    0]
+ [   0   26    2    1    0    0    1    0    1    0    0    0    0    0
+     0    0    0    0    0]
+ [   0   46    0    1    0    1    3    0    0    0    0    1    0    0
+     0    0    0    0    0]
+ [   0   42    0    0    0    0    0    0    0    0    0    0    2    0
+     0    0    0    0    0]]","[np.str_('dissect'), np.str_('None'), np.str_('inspect'), np.str_('navigate_space'), np.str_('release_instrument'), np.str_('turn'), np.str_('grasp'), np.str_('control_depth'), np.str_('cut'), np.str_('open'), np.str_('adjust'), np.str_('coagulate'), np.str_('ensure_safety'), np.str_('spread'), np.str_('perform_sweeping_maneuvers'), np.str_('stop'), np.str_('continue_action'), np.str_('apply_traction'), np.str_('adjust_direction')]"
+hecvl,tissue,0.7563895654307,0.6657984953796992,0.7658893773336672,0.7348402203261634,0.7658893773336672,0.7486400687139183,"[[   1    0    2    0   25    0    0    1    0    0    0]
+ [   1    1    0    0   16    1    0    1    0    1    0]
+ [   2    0   33    2  118    2    3    2    0    0    0]
+ [   0    0    5    4   76    2    2    0    1    0    1]
+ [  12    7  113   52 3135   29   14   85    6   29   26]
+ [   0    0    2    2   71    2    0    3    0    0    1]
+ [   0    0    2    2   20    0    1    0    0    2    0]
+ [   0    1    3    0  127    1    0    8    0    0    1]
+ [   0    0    0    1   17    0    0    0    2    0    0]
+ [   0    0    0    1   36    0    1    0    0    2    0]
+ [   0    0    1    1   40    1    1    1    0    0    4]]","[np.str_('adrenal_kidney_region'), np.str_('peritoneum_abdominal_wall'), np.str_('ureter_bladder_urethra'), np.str_('prostate_tissue'), np.str_('None'), np.str_('miscellaneous'), np.str_('muscle_capsule'), np.str_('vascular_and_major_vessels'), np.str_('fat_fascia_planes'), np.str_('gi_tract'), np.str_('seminal_vesicle_vas')]"
+peskavlp,instrument,0.8152078679859525,0.6271095216612558,0.838765989872081,0.8142832176139698,0.838765989872081,0.8243299941020288,"[[   8    0    0   19    1    0    1    0    0    0]
+ [   0    2    0   23    1    0    0    1    0    0]
+ [   0    0    2   63    4    0    1    0    0    0]
+ [  12    7   36 3394   63   13   26   62   22    9]
+ [   0    0    0   90    3    0    0    3    2    0]
+ [   0    0    0   24    0    3    0    0    0    0]
+ [   0    0    0   33    1    1    4    0    0    0]
+ [   0    0    0   71    2    0    0    6    1    0]
+ [   1    0    0   37    3    0    1    0    0    0]
+ [   0    0    0   23    1    0    0    0    0    1]]","[np.str_('suture_material'), np.str_('scissors'), np.str_('fourth_arm'), np.str_('None'), np.str_('left_hand'), np.str_('clip'), np.str_('needle'), np.str_('energy_device'), np.str_('stitch'), np.str_('retractor')]"
+peskavlp,action,0.6244901588077522,0.5804492366028887,0.6603101344382092,0.6183737402953478,0.6603101344382092,0.6373037050627263,"[[   1   22    1    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0]
+ [  10 2678   18   36    9   17   83   31   22   52   10   49   33   16
+    27   31   17   36   19]
+ [   0   28    1    0    0    0    3    0    0    1    0    0    0    2
+     2    0    1    1    0]
+ [   0   51    0    0    0    0    2    1    0    1    0    0    1    0
+     1    0    0    0    0]
+ [   0   27    0    0    2    0    1    0    0    1    0    0    0    0
+     0    1    1    0    0]
+ [   0   31    0    2    0    4    2    0    0    0    0    0    0    0
+     0    2    0    1    0]
+ [   0  116    0    3    1    1    9    0    1    1    0    4    1    1
+     2    1    0    3    1]
+ [   0   50    0    0    0    0    0    0    0    0    0    2    0    0
+     0    0    0    0    0]
+ [   0   32    0    0    0    0    0    0    1    2    0    0    0    0
+     0    0    1    0    0]
+ [   0   67    1    0    0    0    1    0    0   10    0    1    0    0
+     0    0    0    0    1]
+ [   0   19    2    0    0    0    1    0    3    0    0    0    0    0
+     0    0    0    0    0]
+ [   2   57    0    2    0    0    2    1    0    2    0   10    2    0
+     6    1    1    0    0]
+ [   0   47    0    1    0    0    0    0    0    3    0    2    0    0
+     2    0    1    0    1]
+ [   0   22    1    0    0    0    0    0    0    0    0    0    0    1
+     0    0    1    0    0]
+ [   0   41    1    2    1    0    2    0    0    1    1    5    0    1
+    12    1    0    0    1]
+ [   0   46    0    0    0    0    1    1    0    0    0    1    0    0
+     0    1    0    0    0]
+ [   0   26    1    0    1    0    1    0    1    0    0    0    0    1
+     0    0    0    0    0]
+ [   0   42    1    0    0    0    2    1    0    0    0    0    0    0
+     0    1    0    5    0]
+ [   0   41    0    0    0    0    0    1    0    0    0    0    1    1
+     0    0    0    0    0]]","[np.str_('dissect'), np.str_('None'), np.str_('inspect'), np.str_('navigate_space'), np.str_('release_instrument'), np.str_('turn'), np.str_('grasp'), np.str_('control_depth'), np.str_('cut'), np.str_('open'), np.str_('adjust'), np.str_('coagulate'), np.str_('ensure_safety'), np.str_('spread'), np.str_('perform_sweeping_maneuvers'), np.str_('stop'), np.str_('continue_action'), np.str_('apply_traction'), np.str_('adjust_direction')]"
+peskavlp,tissue,0.7552743652337852,0.6686322566384877,0.7680476507149623,0.7357847481862543,0.7680476507149623,0.7504531088007158,"[[   2    1    2    0   24    0    0    0    0    0    0]
+ [   1    0    0    0   20    0    0    0    0    0    0]
+ [   1    0   26    1  128    2    2    1    0    0    1]
+ [   0    0    3    9   74    2    1    0    1    1    0]
+ [  16   18   89   48 3142   50   13   79   10   22   21]
+ [   1    1    4    2   65    6    0    2    0    0    0]
+ [   0    0    3    1   20    0    2    0    0    1    0]
+ [   0    0    2    1  129    1    0    7    0    0    1]
+ [   0    0    1    1   16    0    0    0    2    0    0]
+ [   0    1    0    1   36    0    0    0    0    2    0]
+ [   0    0    0    2   39    2    1    1    0    0    4]]","[np.str_('adrenal_kidney_region'), np.str_('peritoneum_abdominal_wall'), np.str_('ureter_bladder_urethra'), np.str_('prostate_tissue'), np.str_('None'), np.str_('miscellaneous'), np.str_('muscle_capsule'), np.str_('vascular_and_major_vessels'), np.str_('fat_fascia_planes'), np.str_('gi_tract'), np.str_('seminal_vesicle_vas')]"
