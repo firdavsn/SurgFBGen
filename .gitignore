@@ -1,0 +1,15 @@
+.venv/*
+__pycache__/*
+
+keys.json
+*checkpoints/*
+outputs/embeddings/
+
+plan.md
+
+research/checkpoints/
+research/logging/
+research/outputs/embeddings/
+research/tmp
+
+data/
