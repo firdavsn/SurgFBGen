@@ -101,9 +101,9 @@ def main():
     extractions_df = set_procedure_and_task(extractions_df, procedures_df, tasks_df)
 
     # Load mappings
-    instrument_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'o3_instrument_clusters-mapping.json')
-    action_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'o3_action_clusters-mapping.json')
-    tissue_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'o3_tissue_clusters-mapping.json')
+    instrument_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'instrument_clusters-mapping.json')
+    action_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'action_clusters-mapping.json')
+    tissue_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'tissue_clusters-mapping.json')
     instrument_mappings = pd.read_json(instrument_mappings_path, typ='series').to_dict()
     action_mappings = pd.read_json(action_mappings_path, typ='series').to_dict()
     tissue_mappings = pd.read_json(tissue_mappings_path, typ='series').to_dict()
