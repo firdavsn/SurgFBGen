@@ -16,6 +16,7 @@ data/CholecT45-related/
 data/tmp/
 data/urology-related
 data/IAT/extractions_df.csv
+data/iat_predictor_splits/
 
 *.pt
 
