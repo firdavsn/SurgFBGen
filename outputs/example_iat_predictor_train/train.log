@@ -1,0 +1,241 @@
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.000)] 
+============================================================
+ EnhancedLogger initialized
+ Logger Name: example_iat_predictor_train
+ Start Time: 2025-08-10 01:57:46
+============================================================
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.000)] Device: cuda
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.021)] IAT classes:
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.021)] {
+    "tissue": [
+        "adrenal_kidney_region",
+        "vascular_and_major_vessels",
+        "miscellaneous",
+        "seminal_vesicle_vas",
+        "peritoneum_abdominal_wall",
+        "gi_tract",
+        "skeletal_landmark",
+        "muscle_capsule",
+        "fat_fascia_planes",
+        "NONE",
+        "lymph_node",
+        "prostate_tissue",
+        "nerve_neurovascular",
+        "ureter_bladder_urethra"
+    ],
+    "action": [
+        "continue_action",
+        "coagulate",
+        "lift",
+        "maintain_position",
+        "fix",
+        "inspect",
+        "adjust",
+        "staple",
+        "release_instrument",
+        "suture",
+        "NONE",
+        "stop",
+        "spread",
+        "grasp",
+        "divide",
+        "pause",
+        "rotate",
+        "apply_traction",
+        "turn",
+        "navigate_space",
+        "dissect",
+        "tie",
+        "retract",
+        "open",
+        "cut",
+        "control_depth",
+        "expose",
+        "ensure_safety",
+        "hold",
+        "clean",
+        "adjust_direction",
+        "perform_sweeping_maneuvers"
+    ],
+    "instrument": [
+        "camera",
+        "stitch",
+        "scissors",
+        "NONE",
+        "arm_instrument",
+        "graspers",
+        "balloon",
+        "general_instrument",
+        "needle",
+        "bipolar",
+        "catheter",
+        "fourth_arm",
+        "right_hand",
+        "left_hand",
+        "energy_device",
+        "retractor",
+        "clip",
+        "needle_driver",
+        "stapler",
+        "suction",
+        "spreader",
+        "suture_material"
+    ]
+}
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.022)] Train iters/epoch (approx): 421; Val batches: 106
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.022)] Validating configuration...
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.022)] Configuration validated.
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.022)] Initializing predictor with type: 'surgical_vl'
+[pid=1612562] time=(2025-08-10 01:57:46) elapsed=(00:00:00.022)] Loading base surgical VL model: PeskaVLP
+[pid=1612562] time=(2025-08-10 01:57:49) elapsed=(00:00:03.405)] Base model loaded.
+[pid=1612562] time=(2025-08-10 01:57:49) elapsed=(00:00:03.405)] Total embedding dimension: 768
+[pid=1612562] time=(2025-08-10 01:57:49) elapsed=(00:00:03.405)] Building SIMULTANEOUS model with shared FFN.
+[pid=1612562] time=(2025-08-10 01:57:49) elapsed=(00:00:03.407)] Assembled unified SurgicalVLModel.
+[pid=1612562] time=(2025-08-10 01:57:49) elapsed=(00:00:03.407)] Training: surgical_vl_base is frozen.
+[pid=1612562] time=(2025-08-10 01:57:49) elapsed=(00:00:03.407)] Training: FFN and all classification heads simultaneously.
+[pid=1612562] time=(2025-08-10 01:58:04) elapsed=(00:00:18.255)] Iter 100/5000 | Loss: 8.7635 | LR: 0.000100
+[pid=1612562] time=(2025-08-10 01:58:33) elapsed=(00:00:47.358)] Iter 200/5000 | Loss: 6.2543 | LR: 0.000100
+[pid=1612562] time=(2025-08-10 01:59:03) elapsed=(00:01:16.554)] Iter 300/5000 | Loss: 3.4358 | LR: 0.000099
+[pid=1612562] time=(2025-08-10 01:59:32) elapsed=(00:01:45.734)] Iter 400/5000 | Loss: 3.2835 | LR: 0.000098
+[pid=1612562] time=(2025-08-10 02:00:01) elapsed=(00:02:15.416)] Iter 500/5000 | Loss: 2.2031 | LR: 0.000098
+[pid=1612562] time=(2025-08-10 02:00:30) elapsed=(00:02:43.676)] Iter 600/5000 | Loss: 1.8729 | LR: 0.000096
+[pid=1612562] time=(2025-08-10 02:00:58) elapsed=(00:03:12.352)] Iter 700/5000 | Loss: 2.0823 | LR: 0.000095
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.000)] 
+============================================================
+ EnhancedLogger initialized
+ Logger Name: example_iat_predictor_train
+ Start Time: 2025-08-10 02:01:13
+============================================================
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.000)] Device: cuda
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.021)] IAT classes:
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.021)] {
+    "tissue": [
+        "seminal_vesicle_vas",
+        "prostate_tissue",
+        "NONE",
+        "nerve_neurovascular",
+        "miscellaneous",
+        "adrenal_kidney_region",
+        "lymph_node",
+        "fat_fascia_planes",
+        "ureter_bladder_urethra",
+        "vascular_and_major_vessels",
+        "gi_tract",
+        "muscle_capsule",
+        "skeletal_landmark",
+        "peritoneum_abdominal_wall"
+    ],
+    "action": [
+        "release_instrument",
+        "adjust",
+        "suture",
+        "staple",
+        "turn",
+        "hold",
+        "control_depth",
+        "grasp",
+        "retract",
+        "divide",
+        "maintain_position",
+        "coagulate",
+        "lift",
+        "open",
+        "rotate",
+        "tie",
+        "NONE",
+        "clean",
+        "expose",
+        "inspect",
+        "pause",
+        "fix",
+        "cut",
+        "perform_sweeping_maneuvers",
+        "continue_action",
+        "dissect",
+        "apply_traction",
+        "stop",
+        "navigate_space",
+        "ensure_safety",
+        "spread",
+        "adjust_direction"
+    ],
+    "instrument": [
+        "stapler",
+        "needle_driver",
+        "stitch",
+        "fourth_arm",
+        "general_instrument",
+        "clip",
+        "needle",
+        "suction",
+        "arm_instrument",
+        "energy_device",
+        "catheter",
+        "retractor",
+        "NONE",
+        "right_hand",
+        "graspers",
+        "bipolar",
+        "left_hand",
+        "spreader",
+        "scissors",
+        "suture_material",
+        "balloon",
+        "camera"
+    ]
+}
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.021)] Train iters/epoch (approx): 421; Val batches: 106
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.021)] Validating configuration...
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.021)] Configuration validated.
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.021)] Initializing predictor with type: 'surgical_vl'
+[pid=1795131] time=(2025-08-10 02:01:13) elapsed=(00:00:00.021)] Loading base surgical VL model: PeskaVLP
+[pid=1795131] time=(2025-08-10 02:01:17) elapsed=(00:00:03.423)] Base model loaded.
+[pid=1795131] time=(2025-08-10 02:01:17) elapsed=(00:00:03.423)] Total embedding dimension: 768
+[pid=1795131] time=(2025-08-10 02:01:17) elapsed=(00:00:03.423)] Building SIMULTANEOUS model with shared FFN.
+[pid=1795131] time=(2025-08-10 02:01:17) elapsed=(00:00:03.426)] Assembled unified SurgicalVLModel.
+[pid=1795131] time=(2025-08-10 02:01:17) elapsed=(00:00:03.426)] Training: surgical_vl_base is frozen.
+[pid=1795131] time=(2025-08-10 02:01:17) elapsed=(00:00:03.426)] Training: FFN and all classification heads simultaneously.
+[pid=1795131] time=(2025-08-10 02:01:31) elapsed=(00:00:17.897)] Iter 100/5000 | Loss: 8.4837 | LR: 0.000100
+[pid=1795131] time=(2025-08-10 02:01:46) elapsed=(00:00:32.782)] --- Validation at Iter 100 | Val Loss: 8.4693 ---
+[pid=1795131] time=(2025-08-10 02:01:47) elapsed=(00:00:33.383)] New best model saved to /home/firdavs/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/config/../../outputs/example_iat_predictor_train/best_model_simultaneous.pt
+[pid=1795131] time=(2025-08-10 02:02:00) elapsed=(00:00:47.089)] Iter 200/5000 | Loss: 4.9142 | LR: 0.000100
+[pid=1795131] time=(2025-08-10 02:02:15) elapsed=(00:01:01.860)] --- Validation at Iter 200 | Val Loss: 5.8080 ---
+[pid=1795131] time=(2025-08-10 02:02:16) elapsed=(00:01:02.439)] New best model saved to /home/firdavs/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/config/../../outputs/example_iat_predictor_train/best_model_simultaneous.pt
+[pid=1795131] time=(2025-08-10 02:02:30) elapsed=(00:01:16.449)] Iter 300/5000 | Loss: 3.1307 | LR: 0.000099
+[pid=1795131] time=(2025-08-10 02:02:44) elapsed=(00:01:30.992)] --- Validation at Iter 300 | Val Loss: 4.0341 ---
+[pid=1795131] time=(2025-08-10 02:02:45) elapsed=(00:01:31.565)] New best model saved to /home/firdavs/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/config/../../outputs/example_iat_predictor_train/best_model_simultaneous.pt
+[pid=1795131] time=(2025-08-10 02:02:59) elapsed=(00:01:45.628)] Iter 400/5000 | Loss: 3.3092 | LR: 0.000098
+[pid=1795131] time=(2025-08-10 02:03:13) elapsed=(00:02:00.188)] --- Validation at Iter 400 | Val Loss: 3.9820 ---
+[pid=1795131] time=(2025-08-10 02:03:14) elapsed=(00:02:00.770)] New best model saved to /home/firdavs/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/config/../../outputs/example_iat_predictor_train/best_model_simultaneous.pt
+[pid=1795131] time=(2025-08-10 02:03:28) elapsed=(00:02:14.846)] Iter 500/5000 | Loss: 2.2045 | LR: 0.000098
+[pid=1795131] time=(2025-08-10 02:03:42) elapsed=(00:02:29.243)] --- Validation at Iter 500 | Val Loss: 4.0056 ---
+[pid=1795131] time=(2025-08-10 02:03:56) elapsed=(00:02:43.145)] Iter 600/5000 | Loss: 1.9900 | LR: 0.000096
+[pid=1795131] time=(2025-08-10 02:04:11) elapsed=(00:02:57.419)] --- Validation at Iter 600 | Val Loss: 3.9967 ---
+[pid=1795131] time=(2025-08-10 02:04:25) elapsed=(00:03:11.511)] Iter 700/5000 | Loss: 1.9462 | LR: 0.000095
+[pid=1795131] time=(2025-08-10 02:04:39) elapsed=(00:03:26.042)] --- Validation at Iter 700 | Val Loss: 3.9842 ---
+[pid=1795131] time=(2025-08-10 02:04:53) elapsed=(00:03:40.049)] Iter 800/5000 | Loss: 6.7098 | LR: 0.000094
+[pid=1795131] time=(2025-08-10 02:05:08) elapsed=(00:03:54.593)] --- Validation at Iter 800 | Val Loss: 3.9037 ---
+[pid=1795131] time=(2025-08-10 02:05:08) elapsed=(00:03:55.185)] New best model saved to /home/firdavs/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/config/../../outputs/example_iat_predictor_train/best_model_simultaneous.pt
+[pid=1795131] time=(2025-08-10 02:05:23) elapsed=(00:04:09.472)] Iter 900/5000 | Loss: 2.7267 | LR: 0.000092
+[pid=1795131] time=(2025-08-10 02:05:37) elapsed=(00:04:24.076)] --- Validation at Iter 900 | Val Loss: 4.0709 ---
+[pid=1795131] time=(2025-08-10 02:05:51) elapsed=(00:04:38.229)] Iter 1000/5000 | Loss: 2.9745 | LR: 0.000090
+[pid=1795131] time=(2025-08-10 02:06:06) elapsed=(00:04:52.940)] --- Validation at Iter 1000 | Val Loss: 4.0849 ---
+[pid=1795131] time=(2025-08-10 02:06:20) elapsed=(00:05:07.092)] Iter 1100/5000 | Loss: 1.7659 | LR: 0.000089
+[pid=1795131] time=(2025-08-10 02:06:35) elapsed=(00:05:21.407)] --- Validation at Iter 1100 | Val Loss: 3.9199 ---
+[pid=1795131] time=(2025-08-10 02:06:49) elapsed=(00:05:35.549)] Iter 1200/5000 | Loss: 3.0568 | LR: 0.000086
+[pid=1795131] time=(2025-08-10 02:07:03) elapsed=(00:05:49.823)] --- Validation at Iter 1200 | Val Loss: 4.8968 ---
+[pid=1795131] time=(2025-08-10 02:07:17) elapsed=(00:06:04.246)] Iter 1300/5000 | Loss: 5.9467 | LR: 0.000084
+[pid=1795131] time=(2025-08-10 02:07:32) elapsed=(00:06:18.604)] --- Validation at Iter 1300 | Val Loss: 3.8361 ---
+[pid=1795131] time=(2025-08-10 02:07:32) elapsed=(00:06:19.192)] New best model saved to /home/firdavs/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/config/../../outputs/example_iat_predictor_train/best_model_simultaneous.pt
+[pid=1795131] time=(2025-08-10 02:07:46) elapsed=(00:06:33.190)] Iter 1400/5000 | Loss: 2.4733 | LR: 0.000082
+[pid=1795131] time=(2025-08-10 02:08:01) elapsed=(00:06:47.892)] --- Validation at Iter 1400 | Val Loss: 3.9177 ---
+[pid=1795131] time=(2025-08-10 02:08:15) elapsed=(00:07:01.947)] Iter 1500/5000 | Loss: 2.7195 | LR: 0.000079
+[pid=1795131] time=(2025-08-10 02:08:29) elapsed=(00:07:16.089)] --- Validation at Iter 1500 | Val Loss: 4.0918 ---
+[pid=1795131] time=(2025-08-10 02:08:43) elapsed=(00:07:30.284)] Iter 1600/5000 | Loss: 2.8006 | LR: 0.000077
+[pid=1795131] time=(2025-08-10 02:08:58) elapsed=(00:07:44.955)] --- Validation at Iter 1600 | Val Loss: 4.0825 ---
+[pid=1795131] time=(2025-08-10 02:09:13) elapsed=(00:07:59.531)] Iter 1700/5000 | Loss: 2.9799 | LR: 0.000074
+[pid=1795131] time=(2025-08-10 02:09:27) elapsed=(00:08:14.250)] --- Validation at Iter 1700 | Val Loss: 4.6128 ---
+[pid=1795131] time=(2025-08-10 02:09:41) elapsed=(00:08:28.133)] Iter 1800/5000 | Loss: 2.6754 | LR: 0.000071
+[pid=1795131] time=(2025-08-10 02:09:56) elapsed=(00:08:42.373)] --- Validation at Iter 1800 | Val Loss: 4.8729 ---
+[pid=1795131] time=(2025-08-10 02:09:56) elapsed=(00:08:42.374)] Early stopping at iter 1800 due to no improvement in validation loss.
+[pid=1795131] time=(2025-08-10 02:09:56) elapsed=(00:08:42.415)] Training finished.

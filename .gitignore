@@ -12,7 +12,12 @@ research/logging/
 research/outputs/embeddings/
 research/tmp
 
-data/
+data/CholecT45-related/
+data/tmp/
+data/urology-related
+data/IAT/extractions_df.csv
+
+*.pt
 
 research/outputs/evals/cluster_iat/*.pkl
 

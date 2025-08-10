@@ -1,0 +1,15 @@
+[pid=1173667] time=(2025-08-10 01:34:43) elapsed=(00:00:00.000)] Validating configuration...
+[pid=1173667] time=(2025-08-10 01:34:43) elapsed=(00:00:00.000)] Configuration validated.
+[pid=1173667] time=(2025-08-10 01:34:43) elapsed=(00:00:00.000)] Initializing predictor with type: 'surgical_vl'
+[pid=1173667] time=(2025-08-10 01:34:43) elapsed=(00:00:00.000)] Loading base surgical VL model: PeskaVLP
+[pid=1173667] time=(2025-08-10 01:34:47) elapsed=(00:00:03.357)] Base model loaded.
+[pid=1173667] time=(2025-08-10 01:34:47) elapsed=(00:00:03.357)] Total embedding dimension: 768
+[pid=1173667] time=(2025-08-10 01:34:47) elapsed=(00:00:03.357)] Building SIMULTANEOUS model with shared FFN.
+[pid=1173667] time=(2025-08-10 01:34:47) elapsed=(00:00:03.359)] Assembled unified SurgicalVLModel.
+[pid=1173667] time=(2025-08-10 01:34:47) elapsed=(00:00:03.359)] Training: surgical_vl_base is frozen.
+[pid=1173667] time=(2025-08-10 01:34:47) elapsed=(00:00:03.360)] Training: FFN and all classification heads simultaneously.
+[pid=1173667] time=(2025-08-10 01:35:01) elapsed=(00:00:17.921)] Iter 100/5000 | Loss: 8.5990 | LR: 0.000100
+[pid=1173667] time=(2025-08-10 01:35:15) elapsed=(00:00:31.719)] Iter 200/5000 | Loss: 5.2334 | LR: 0.000100
+[pid=1173667] time=(2025-08-10 01:35:29) elapsed=(00:00:45.289)] Iter 300/5000 | Loss: 3.3816 | LR: 0.000099
+[pid=1173667] time=(2025-08-10 01:35:43) elapsed=(00:00:59.267)] Iter 400/5000 | Loss: 3.3151 | LR: 0.000098
+[pid=1173667] time=(2025-08-10 01:35:57) elapsed=(00:01:13.321)] Iter 500/5000 | Loss: 4.1041 | LR: 0.000098

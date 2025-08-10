@@ -1,0 +1,21 @@
+[pid=1324662] time=(2025-08-10 01:44:18) elapsed=(00:00:00.000)] Validating configuration...
+[pid=1324662] time=(2025-08-10 01:44:18) elapsed=(00:00:00.000)] Configuration validated.
+[pid=1324662] time=(2025-08-10 01:44:18) elapsed=(00:00:00.000)] Initializing predictor with type: 'surgical_vl'
+[pid=1324662] time=(2025-08-10 01:44:18) elapsed=(00:00:00.000)] Loading base surgical VL model: PeskaVLP
+[pid=1324662] time=(2025-08-10 01:44:21) elapsed=(00:00:03.360)] Base model loaded.
+[pid=1324662] time=(2025-08-10 01:44:21) elapsed=(00:00:03.360)] Total embedding dimension: 768
+[pid=1324662] time=(2025-08-10 01:44:21) elapsed=(00:00:03.360)] Building SIMULTANEOUS model with shared FFN.
+[pid=1324662] time=(2025-08-10 01:44:21) elapsed=(00:00:03.362)] Assembled unified SurgicalVLModel.
+[pid=1324662] time=(2025-08-10 01:44:21) elapsed=(00:00:03.362)] Training: surgical_vl_base is frozen.
+[pid=1324662] time=(2025-08-10 01:44:21) elapsed=(00:00:03.363)] Training: FFN and all classification heads simultaneously.
+[pid=1324662] time=(2025-08-10 01:44:36) elapsed=(00:00:17.892)] Iter 100/5000 | Loss: 8.5493 | LR: 0.000100
+[pid=1324662] time=(2025-08-10 01:44:49) elapsed=(00:00:31.429)] Iter 200/5000 | Loss: 3.9512 | LR: 0.000100
+[pid=1324662] time=(2025-08-10 01:45:03) elapsed=(00:00:45.203)] Iter 300/5000 | Loss: 3.1441 | LR: 0.000099
+[pid=1324662] time=(2025-08-10 01:45:17) elapsed=(00:00:59.052)] Iter 400/5000 | Loss: 3.3542 | LR: 0.000098
+[pid=1324662] time=(2025-08-10 01:45:31) elapsed=(00:01:13.160)] Iter 500/5000 | Loss: 3.9094 | LR: 0.000098
+[pid=1324662] time=(2025-08-10 01:45:59) elapsed=(00:01:41.501)] Iter 600/5000 | Loss: 4.6542 | LR: 0.000096
+[pid=1324662] time=(2025-08-10 01:46:13) elapsed=(00:01:55.182)] Iter 700/5000 | Loss: 3.1945 | LR: 0.000095
+[pid=1324662] time=(2025-08-10 01:46:27) elapsed=(00:02:08.921)] Iter 800/5000 | Loss: 4.7752 | LR: 0.000094
+[pid=1324662] time=(2025-08-10 01:46:40) elapsed=(00:02:22.769)] Iter 900/5000 | Loss: 2.4203 | LR: 0.000092
+[pid=1324662] time=(2025-08-10 01:46:54) elapsed=(00:02:36.510)] Iter 1000/5000 | Loss: 6.6575 | LR: 0.000090
+[pid=1324662] time=(2025-08-10 01:47:09) elapsed=(00:02:51.211)] Early stopping at iter 1000 due to no improvement in validation loss.

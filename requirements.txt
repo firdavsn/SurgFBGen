@@ -9,3 +9,6 @@ opencv-python
 scikit-image
 matplotlib
 openpyxl
+backoff
+google-generativeai
+h5py

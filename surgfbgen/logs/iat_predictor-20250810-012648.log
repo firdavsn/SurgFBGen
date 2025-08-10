@@ -1,0 +1,10 @@
+[pid=1097335] time=(2025-08-10 01:26:48) elapsed=(00:00:00.000)] Validating configuration...
+[pid=1097335] time=(2025-08-10 01:26:48) elapsed=(00:00:00.000)] Configuration validated.
+[pid=1097335] time=(2025-08-10 01:26:48) elapsed=(00:00:00.000)] Initializing predictor with type: 'surgical_vl'
+[pid=1097335] time=(2025-08-10 01:26:48) elapsed=(00:00:00.000)] Loading base surgical VL model: PeskaVLP
+[pid=1097335] time=(2025-08-10 01:26:51) elapsed=(00:00:03.201)] Base model loaded.
+[pid=1097335] time=(2025-08-10 01:26:51) elapsed=(00:00:03.201)] Total embedding dimension: 768
+[pid=1097335] time=(2025-08-10 01:26:51) elapsed=(00:00:03.201)] Building SIMULTANEOUS model with shared FFN.
+[pid=1097335] time=(2025-08-10 01:26:51) elapsed=(00:00:03.203)] Assembled unified SurgicalVLModel.
+[pid=1097335] time=(2025-08-10 01:26:51) elapsed=(00:00:03.203)] Training: surgical_vl_base is frozen.
+[pid=1097335] time=(2025-08-10 01:26:51) elapsed=(00:00:03.204)] Training: FFN and all classification heads simultaneously.

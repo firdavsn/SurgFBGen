@@ -146,5 +146,15 @@ def get_logger(name: str = "DefaultLogger", log_file: str = None,
         formatter = logging.Formatter('%(message)s')
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
+        
+    init_msg = (
+        "\n" +
+        "=" * 60 + "\n" +
+        " EnhancedLogger initialized\n" +
+        f" Logger Name: {name}\n" +
+        f" Start Time: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n" +
+        "=" * 60
+    )
+    logger.info(init_msg)
 
     return logger

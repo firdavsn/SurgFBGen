@@ -1,0 +1,4 @@
+[pid=1588063] time=(2025-08-10 01:54:47) elapsed=(00:00:00.000)] Validating configuration...
+[pid=1588063] time=(2025-08-10 01:54:47) elapsed=(00:00:00.000)] Configuration validated.
+[pid=1588063] time=(2025-08-10 01:54:47) elapsed=(00:00:00.000)] Initializing predictor with type: 'surgical_vl'
+[pid=1588063] time=(2025-08-10 01:54:47) elapsed=(00:00:00.000)] Loading base surgical VL model: PeskaVLP

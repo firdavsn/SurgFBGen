@@ -24,9 +24,9 @@ def load_surgical_VL_model(
     model_name: str, 
     device: str = "cuda"
 ) -> tuple[Union[SurgVLP, HecVL, PeskaVLP], Compose, callable]:
-    configs = Config.fromfile(CONFIG_PATHS[model_name], lazy_import=False)['config']
-    model, img_preprocess = surgvlp.load(configs.model_config, device=device, strict_load_state_dict=False)
-    tokenizer = surgvlp.tokenize()
+    configs = Config.fromfile(CONFIG_PATHS[model_name])['config']
+    model, img_preprocess = surgvlp.load(configs.model_config, device=device)
+    tokenizer = surgvlp.tokenize
     return model, img_preprocess, tokenizer
 
 def load_VideoMAE_model(
