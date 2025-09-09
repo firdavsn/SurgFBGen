@@ -274,10 +274,10 @@ def run_via_embs(
     output_json: str,
     pred_csv: str = None,
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
     seed: int = 0,
 ):
     print(f"IAT Column: {iat_col}")
@@ -810,11 +810,11 @@ def run_via_hybrid(
     output_json: str,
     pred_csv: str = None,
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
-    instrument_tracks_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks.h5',
+    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    instrument_tracks_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks.h5',
     seed: int = 0,
     num_tracks: int = 15,
     uncertainty_calibration: str = None,  # None or 'platt'
@@ -882,10 +882,10 @@ def run_via_hybrid(
 def main_embs(
     output_format: str = '{iat_col}-{model}-{inputs}-none={num_none_included}',
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
     seed: int = 0,
 ):
     for model in [
@@ -900,11 +900,11 @@ def main_embs(
             pred_csvs = {}
             for iat_col in ['instrument', 'action', 'tissue']:
                 output_json = os.path.join(
-                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
+                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.json'    
                 )
                 pred_csv = os.path.join(
-                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.csv'    
                 )
                 pred_csvs[iat_col] = pred_csv
@@ -941,7 +941,7 @@ def main_embs(
                 else:
                     combined_df = combined_df.merge(df, on=['cvid', 'procedure', 'procedure_defn', 'task', 'task_defn', 'dialogue', 'instrument', 'action', 'tissue', ], how='outer')
             combined_pred_csv = os.path.join(
-                '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                 output_format.format(iat_col='dummy', model=model, inputs=inputs, num_none_included=num_none_included).replace('dummy-', '') + '.csv'
             )
             combined_df.to_csv(combined_pred_csv, index=False)
@@ -949,11 +949,11 @@ def main_embs(
 def main_hybrid(
     output_format: str = '{iat_col}-{model}-{inputs}+tracks-none={num_none_included}',
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
-    instrument_tracks_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
+    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    instrument_tracks_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
     seed: int = 0,
     num_tracks: int = 15,
     uncertainty_calibration: str = None,  # None or 'platt'
@@ -970,11 +970,11 @@ def main_hybrid(
             pred_csvs = {}
             for iat_col in ['instrument', 'action', 'tissue']:
                 output_json = os.path.join(
-                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
+                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.json'
                 )
                 pred_csv = os.path.join(
-                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.csv'
                 )
                 
@@ -1019,7 +1019,7 @@ def main_hybrid(
                 else:
                     combined_df = combined_df.merge(df, on=['cvid', 'procedure', 'procedure_defn', 'task', 'task_defn', 'dialogue', 'instrument', 'action', 'tissue'], how='outer')
             combined_pred_csv = os.path.join(
-                '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                 output_format.format(iat_col='dummy', model=model, inputs=inputs, num_none_included=num_none_included).replace('dummy-', '') + '.csv'
             )
             if uncertainty_calibration is not None:
@@ -1036,36 +1036,36 @@ if __name__ == "__main__":
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=1-final',
     #     num_tracks=1,
-    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=1.h5',
+    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=1.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=5-final',
     #     num_tracks=5,
-    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=5.h5',
+    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=5.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=15-final',
     #     num_tracks=15,
-    #     annotations_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
+    #     annotations_path='~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=30-final',
     #     num_tracks=30,
-    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=30.h5',
+    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=30.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=100-final',
     #     num_tracks=100,
-    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=100.h5',
+    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=100.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-no_filter_instrument_tracks-final',
     #     num_tracks=400,
-    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-no_filter.h5',
+    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-no_filter.h5',
     # )

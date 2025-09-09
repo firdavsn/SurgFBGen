@@ -4,14 +4,14 @@ import pandas as pd
 
 from surgfbgen.models.feedback_generator import FeedbackGenerator, FeedbackGeneratorConfig
 
-clips_dir = '/home/firdavs/surgery/clips_with_wiggle/fb_clips_wiggle'
+clips_dir = '~/surgery/clips_with_wiggle/fb_clips_wiggle'
 
-# full_split_path = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv'
-# full_split_path = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/extractions_df.csv'
+# full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv'
+# full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/extractions_df.csv'
 
-full_split_path = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision+procedure+task+tracks-none=100-num_tracks=15-final.csv'
-# full_split_path = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision+procedure+task-none=100-final.csv'
-# full_split_path = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision_procedure_task+tracks-none=100-uncertainty_calibration=platt.csv'
+full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision+procedure+task+tracks-none=100-num_tracks=15-final.csv'
+# full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision+procedure+task-none=100-final.csv'
+# full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision_procedure_task+tracks-none=100-uncertainty_calibration=platt.csv'
 full_split_df = pd.read_csv(full_split_path)
 
 # full_split_df['instrument'] = full_split_df['instrument-extraction']
@@ -41,7 +41,7 @@ print("Running iat=pred, no frames")
 
 # print("Running no_iat, yes frames")
 
-# chatllm_outputs_dir = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/ChatLLM_outputs/gpt-4o/20250831_173231'
+# chatllm_outputs_dir = '~/surgery/surgical_fb_generation/SurgFBGen/ChatLLM_outputs/gpt-4o/20250831_173231'
 # paths = sorted([os.path.join(chatllm_outputs_dir, p) for p in os.listdir(chatllm_outputs_dir) if p.endswith('.json')])
 # feedback_outputs = []
 # for path in paths:
@@ -77,21 +77,21 @@ feedback_df = feedback_generator.generate_all_feedback(
 )
 
 
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=extractions-yes_frames.csv', index=False)
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=extractions-no_frames.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=extractions-yes_frames.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=extractions-no_frames.csv', index=False)
 
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-yes_frames.csv', index=False)
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-no_frames.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-yes_frames.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-no_frames.csv', index=False)
 
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-no_iat-yes_frames.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-no_iat-yes_frames.csv', index=False)
 
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-no_frames-task_examples.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-no_frames-task_examples.csv', index=False)
 
 
 
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames.csv', index=False)
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-yes_frames.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-yes_frames.csv', index=False)
 
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-final.csv', index=False)
-feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-final-modified_prompt.csv', index=False)
-# feedback_df.to_csv('/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-no_tracks.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-final.csv', index=False)
+feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-final-modified_prompt.csv', index=False)
+# feedback_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-no_tracks.csv', index=False)

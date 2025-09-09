@@ -260,9 +260,9 @@ def track_instruments(
 
 
 def main(
-    clips_dir: str = '/home/firdavs/surgery/clips_with_wiggle/fb_clips_wiggle',
-    output_h5_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks.h5',
-    cotracker_checkpoint_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/checkpoints/cotracker3.pth',
+    clips_dir: str = '~/surgery/clips_with_wiggle/fb_clips_wiggle',
+    output_h5_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks.h5',
+    cotracker_checkpoint_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/checkpoints/cotracker3.pth',
     overwrite: bool = False,
     filter_instrument: bool = True,
     filter_instrument_num_tracks: int = 30
@@ -315,7 +315,7 @@ def main(
 
 if __name__ == "__main__":
     main(
-        output_h5_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=1.h5',
+        output_h5_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=1.h5',
         filter_instrument=True,
         overwrite=True,
         filter_instrument_num_tracks=1
