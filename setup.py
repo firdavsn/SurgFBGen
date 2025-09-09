@@ -6,6 +6,6 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[],
-    author="Firdavs Nasriddinov",
+    author="",
     python_requires=">=3.10",
 )
