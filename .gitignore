@@ -1,0 +1,14 @@
+__pycache__/*
+
+keys.json
+*checkpoints/*
+
+data/*
+
+*.pt
+*.pth
+
+*-info/
+
+outputs/*
+ChatLLM_outputs/*
