@@ -202,14 +202,16 @@ def get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, col, mode
     
     # Vision embeddings
     vis_embs_mean = np.array(df[f'{model_name}_vis_embs'].values.tolist()).mean(axis=1)
-    vis_embs_multiple = np.array(df[f'{model_name}_vis_embs'].values.tolist())
+    print(f"vis_embs_mean.shape: {vis_embs_mean.shape}")
+    print(f"df[f'{model_name}_vis_embs'][0].shape: {df[f'{model_name}_vis_embs'].iloc[0].shape}")
     
     emb_col = ''
     if model_name == 'surgvlp': emb_col = 'SurgVLP'
     elif model_name == 'hecvl': emb_col = 'HecVL'
     elif model_name == 'peskavlp': emb_col = 'PeskaVLP'
     elif model_name == 'pe224' or model_name == 'pe336' or model_name == 'pe448': emb_col = 'MedEmbed_small'
-    elif model_name == 'videomae_urology' or model_name == 'videomae_cholect45': emb_col = 'MedEmbed_small'
+    elif 'videomae' in model_name: emb_col = 'MedEmbed_small'
+    elif model_name == 'vjepa2': emb_col = 'MedEmbed_small'
     else:
         raise ValueError(f"Model name {model_name} is not supported.")
     print(f"Embedding column: {emb_col}")
@@ -1505,7 +1507,8 @@ def main_embs(
     for model in [
         # 'peskavlp', 
         # 'surgvlp', 
-        'hecvl',
+        # 'hecvl',
+        'vjepa2',
     ]:
         for inputs in [
             'vision',
@@ -1577,9 +1580,11 @@ def main_hybrid(
     multiple_instance_training: bool = False,
 ):
     for model in [
-        'peskavlp', 
+        # 'peskavlp', 
         # 'surgvlp', 
         # 'hecvl',
+        # 'vjepa2',
+        'videomae_base',
     ]:
         for inputs in [
             # 'vision',
@@ -1651,7 +1656,7 @@ if __name__ == "__main__":
     pass
     
     # main_embs(
-    #     output_format='{iat_col}-{model}-{inputs}-none={num_none_included}-f1_macro',
+    #     output_format='{iat_col}-{model}-{inputs}-none={num_none_included}',
     #     metric_avg='macro',
     # )
     
@@ -1669,12 +1674,12 @@ if __name__ == "__main__":
     # )
     
     main_hybrid(
-        output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=15-multiple_instance_training-voting',
+        output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=15',
         num_tracks=15,
         annotations_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
         instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
         metric_avg='macro',
-        multiple_instance_training=True,
+        multiple_instance_training=False,
     )
     
     # main_hybrid(

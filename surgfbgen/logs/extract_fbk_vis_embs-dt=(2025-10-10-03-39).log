@@ -1,0 +1,5 @@
+2025-10-10 03:39:59,014 - INFO - Set seed: 42
+2025-10-10 03:39:59,014 - INFO - videomae_base_h5_path: /home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision/videomae_base_fbk_vis_embs.h5
+2025-10-10 03:39:59,014 - INFO - Extracting VideoMAE-Base embeddings...
+2025-10-10 03:40:00,850 - INFO - Found 4206 clips
+2025-10-10 03:40:00,851 - INFO - Processing 1/4206: c9_s0_1-48-10.avi
