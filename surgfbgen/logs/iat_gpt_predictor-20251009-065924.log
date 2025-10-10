@@ -1,0 +1,14 @@
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.000)] 
+============================================================
+ EnhancedLogger initialized
+ Logger Name: IATGPTPredictor
+ Start Time: 2025-10-09 06:59:24
+============================================================
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.000)] Loading IAT definitions...
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.000)] Validating configuration...
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.000)] Configuration validated.
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.000)] Initializing predictor interface...
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.000)] Initializing GPT-based predictor.
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.017)] ChatLLMInterface initialized for model: 'gpt-4o'
+[pid=353966] time=(2025-10-09 06:59:24) elapsed=(00:00:00.017)] Predictor interface initialized successfully.
+[pid=353966] time=(2025-10-09 06:59:26) elapsed=(00:00:01.557)] Processing batch item 1/4

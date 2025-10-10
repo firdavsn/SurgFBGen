@@ -12,7 +12,7 @@ clips_dir = '~/surgery/clips_with_wiggle/fb_clips_wiggle'
 # feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-yes_frames.csv'
 # feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-iat=cluster-no_frames.csv'
 
-# feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/feedback_df-no_iat-yes_frames.csv'
+feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-no_iat-yes_frames.csv'
 
 # feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/notebooks/outputs/llama-3.2-11b---10frames_proc+task/inference_results.csv'
 # feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/notebooks/outputs/llama-3.2-11b---10frames_proc+task_strict_instruction/inference_results.csv'
@@ -22,7 +22,7 @@ clips_dir = '~/surgery/clips_with_wiggle/fb_clips_wiggle'
 # feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-yes_frames.csv'
 
 # feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-final.csv'
-feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-final-modified_prompt.csv'
+# feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-final-modified_prompt.csv'
 # feedback_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_generations/feedback_df-iat=pred-no_frames-no_tracks.csv'
 
 feedback_df = pd.read_csv(feedback_path)
@@ -40,15 +40,17 @@ print("Running iat=pred, no frames")
 # print("Running Llama-3.2-11b base")
 
 config = FeedbackEvaluatorConfig(
-    chatllm_name='gpt-4.1-mini',
+    # chatllm_name='gpt-4.1-mini',
     # chatllm_name='gpt-4o',
+    chatllm_name='gemini-2.5-flash',
     temperature=0.2,
     max_tokens=10000,
 )
 
 feedback_evaluator = FeedbackEvaluator(
     config=config,
-    api_key=os.environ['OPENAI_API_KEY'],  # or 'GOOGLE_API_KEY' for Gemini
+    # api_key=os.environ['OPENAI_API_KEY'],  # or 'GOOGLE_API_KEY' for Gemini
+    api_key=os.environ['GOOGLE_API_KEY'],  # or 'GOOGLE_API_KEY' for Gemini
 )
 
 scores_df = feedback_evaluator.generate_all_scores(
@@ -67,14 +69,17 @@ scores_df = feedback_evaluator.generate_all_scores(
 # scores_df.to_csv('~/surgery/surgical_fb_generation/SurgFBGen/results/feedback_evaluations/scores_df-iat=cluster-no_frames.csv', index=False)
 
 # scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/results/feedback_evaluations/scores_df-no_iat-yes_frames.csv'
+scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/results/feedback_evaluations/scores_df-no_iat-yes_frames-gemini_25_flash.csv'
 
 # scores_path = feedback_path.replace('inference_results.csv', 'scores_df.csv')
 
 # scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-no_frames-no_calibration-num_tracks=15.csv'
 # scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-no_frames.csv'
 # scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-yes_frames.csv'
+# scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-yes_frames-gemini_25_flash.csv'
 
-scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-no_frames-final-modified_prompt.csv'
+# scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-no_frames-final-modified_prompt.csv'
+# scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-no_frames-final-gemini_25_flash.csv'
 # scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-iat=pred-no_frames-no_tracks.csv'
 
 import pickle

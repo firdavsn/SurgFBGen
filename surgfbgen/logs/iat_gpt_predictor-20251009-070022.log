@@ -1,0 +1,21 @@
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.000)] 
+============================================================
+ EnhancedLogger initialized
+ Logger Name: IATGPTPredictor
+ Start Time: 2025-10-09 07:00:22
+============================================================
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.000)] Loading IAT definitions...
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.000)] Validating configuration...
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.000)] Configuration validated.
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.000)] Initializing predictor interface...
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.000)] Initializing GPT-based predictor.
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.017)] ChatLLMInterface initialized for model: 'gpt-4o'
+[pid=357296] time=(2025-10-09 07:00:22) elapsed=(00:00:00.017)] Predictor interface initialized successfully.
+[pid=357296] time=(2025-10-09 07:00:24) elapsed=(00:00:01.732)] Processing batch item 1/4
+[pid=357296] time=(2025-10-09 07:00:25) elapsed=(00:00:02.337)] Attempt 1/3 for batch item 1
+[pid=357296] time=(2025-10-09 07:00:27) elapsed=(00:00:04.404)] Successfully parsed valid response for batch item 1
+[pid=357296] time=(2025-10-09 07:00:27) elapsed=(00:00:04.404)] Processing batch item 2/4
+[pid=357296] time=(2025-10-09 07:00:27) elapsed=(00:00:04.406)] Attempt 1/3 for batch item 2
+[pid=357296] time=(2025-10-09 07:00:28) elapsed=(00:00:05.352)] Successfully parsed valid response for batch item 2
+[pid=357296] time=(2025-10-09 07:00:28) elapsed=(00:00:05.353)] Processing batch item 3/4
+[pid=357296] time=(2025-10-09 07:00:28) elapsed=(00:00:05.355)] Attempt 1/3 for batch item 3

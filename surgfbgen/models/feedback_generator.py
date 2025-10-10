@@ -175,14 +175,12 @@ class FeedbackGenerator:
         
         prompt_args = {
             'iat_triplet': iat_str,
-            'frames': frames,
             'procedure': procedure,
             'procedure_defn': procedure_defn,
             'task': task,
             'task_defn': task_defn,
             'class_definitions': class_definitions,
             'reference_examples': reference_examples,
-            'video_frames': ''
         }
         prompt_name = PROMPT_NAMES[
             (self.config.input_frames, self.config.input_iat_triplet)

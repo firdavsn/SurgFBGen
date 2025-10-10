@@ -16,6 +16,6 @@ def set_envvars(constants_path='constants.json'):
     with open(keys_path, "r") as f:
         keys = json.load(f)
     os.environ["OPENAI_API_KEY"] = keys[constants["openai_api_key_name"]]
-    os.environ["GEMINI_API_KEY"] = keys["gemini_api_key"]
+    os.environ["GOOGLE_API_KEY"] = keys[constants["google_api_key_name"]]
 
 set_envvars(constants_path=os.path.join(os.environ['REPO_DIRECTORY'], 'constants.json'))

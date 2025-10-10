@@ -58,7 +58,6 @@ class ChatLLMInterface:
         
         self.client = self._initialize_client(api_key)
 
-
     def _get_provider(self, model_name: str) -> str:
         """Determines the provider (openai or google) based on the model name."""
         all_supported_openai = self.supported_models.openai

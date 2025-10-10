@@ -27,6 +27,9 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import roc_auc_score, accuracy_score, precision_score, recall_score, f1_score, average_precision_score, confusion_matrix as compute_confusion_matrix
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
+import collections
+from scipy.stats import mode
 
 def add_vis_embs(name, annotations_df, embedding_dir, force=False):
     annotations_df = annotations_df.copy()
@@ -198,7 +201,8 @@ def get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, col, mode
     df = annotations_df.copy()
     
     # Vision embeddings
-    vis_embs_avg = np.array(df[f'{model_name}_vis_embs'].values.tolist()).mean(axis=1)
+    vis_embs_mean = np.array(df[f'{model_name}_vis_embs'].values.tolist()).mean(axis=1)
+    vis_embs_multiple = np.array(df[f'{model_name}_vis_embs'].values.tolist())
     
     emb_col = ''
     if model_name == 'surgvlp': emb_col = 'SurgVLP'
@@ -242,30 +246,159 @@ def get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, col, mode
     # Labels
     labels = np.array(df[col].values.tolist())
     
-    
-    df['vis_embs_avg'] = list(vis_embs_avg)
+    df['vis_embs_avg'] = list(vis_embs_mean)
     df['procedure_embs'] = list(procedure_embs) if procedures_df is not None else None
     df['task_embs'] = list(task_embs) if tasks_df is not None else None
     df['label'] = list(labels)
     df = df.reset_index(drop=True)
     
     if procedures_df is not None and tasks_df is not None:
-        embeddings_comb = np.concatenate([vis_embs_avg, procedure_embs, task_embs], axis=1)
+        embeddings_comb = np.concatenate([vis_embs_mean, procedure_embs, task_embs], axis=1)
     elif procedures_df is not None:
-        embeddings_comb = np.concatenate([vis_embs_avg, procedure_embs], axis=1)
+        embeddings_comb = np.concatenate([vis_embs_mean, procedure_embs], axis=1)
     elif tasks_df is not None:
-        embeddings_comb = np.concatenate([vis_embs_avg, task_embs], axis=1)
+        embeddings_comb = np.concatenate([vis_embs_mean, task_embs], axis=1)
     else:
-        embeddings_comb = vis_embs_avg
+        embeddings_comb = vis_embs_mean
     df['embedding'] = list(embeddings_comb)
     
     # print emb dims
-    print(f"Vision Embedding Dimension: {vis_embs_avg.shape[1]}")
-    print(f"Procedure Embedding Dimension: {procedure_embs.shape[1]}")
-    print(f"Task Embedding Dimension: {task_embs.shape[1]}")
+    print(f"Vision Embedding Dimension: {vis_embs_mean.shape[1]}")
+    if procedures_df is not None:
+        print(f"Procedure Embedding Dimension: {procedure_embs.shape[1]}")
+    if tasks_df is not None:
+        print(f"Task Embedding Dimension: {task_embs.shape[1]}")
     print(f"Combined Embedding Dimension: {embeddings_comb.shape[1]}")
     
     return df
+
+import numpy as np
+import pandas as pd
+
+def get_embeddings_and_labels_multiple(annotations_df, procedures_df, tasks_df, col, model_name, current_fps, target_fps):
+    """
+    Generates a DataFrame with embeddings and labels, expanding rows for each individual vision embedding.
+
+    This function takes annotations and optional procedure/task dataframes. For each row 
+    in the annotations_df, it duplicates the row for every frame-wise vision embedding 
+    found in 'vis_embs_multiple'. The final DataFrame contains a row for each individual 
+    frame, with a new 'vis_embs_individual' column and a combined 'embedding' column.
+    
+    Vision embeddings can be downsampled from a `current_fps` to a `target_fps`.
+
+    Args:
+        annotations_df (pd.DataFrame): DataFrame containing annotations and a column with lists of vision embeddings.
+        procedures_df (pd.DataFrame): Optional DataFrame with procedure text embeddings.
+        tasks_df (pd.DataFrame): Optional DataFrame with task text embeddings.
+        col (str): The name of the column in annotations_df to use as the label.
+        model_name (str): The name of the model used for embeddings, to determine which columns to use.
+        current_fps (int): The original frames per second of the vision embeddings.
+        target_fps (int): The target frames per second to sample the embeddings to.
+
+    Returns:
+        pd.DataFrame: A new DataFrame where each row corresponds to a single vision embedding,
+                      containing the individual vision embedding, its corresponding label, any text
+                      embeddings, and a final concatenated embedding vector.
+    """
+    df = annotations_df.copy()
+    
+    # Vision embeddings are expected to be a list of embedding arrays for each row.
+    vis_embs_lists = df[f'{model_name}_vis_embs'].values.tolist()
+    
+    # Sample the vision embeddings based on target FPS.
+    if current_fps > target_fps:
+        stride = int(round(current_fps / target_fps))
+        if stride > 1:
+            print(f"Sampling embeddings from {current_fps}fps to {target_fps}fps with a stride of {stride}.")
+            vis_embs_lists = [embs[::stride] for embs in vis_embs_lists]
+    
+    # Determine the corresponding text embedding column based on the model name.
+    emb_col = ''
+    if model_name == 'surgvlp': emb_col = 'SurgVLP'
+    elif model_name == 'hecvl': emb_col = 'HecVL'
+    elif model_name == 'peskavlp': emb_col = 'PeskaVLP'
+    elif 'pe' in model_name or 'videomae' in model_name: emb_col = 'MedEmbed_small'
+    else:
+        raise ValueError(f"Model name {model_name} is not supported.")
+    print(f"Embedding column: {emb_col}")
+    
+    # Extract procedure embeddings if the dataframe is provided.
+    procedure_embs = []
+    if procedures_df is not None:
+        for i in range(len(df)):
+            case = df.iloc[i]['case']
+            tmp_df = procedures_df[procedures_df['case_id'] == case]
+            procedure_embs.append(tmp_df[f"procedure_defn_emb-{emb_col}"].values[0])
+    
+    # Extract task embeddings if the dataframe is provided.
+    task_embs = []
+    if tasks_df is not None:
+        if 'secs' not in df.columns:
+             df['secs'] = df['cvid'].apply(lambda x: sum([a*b for a,b in zip(map(int, x.split('_')[-1][:-4].split('-')), [3600, 60, 1])]))
+        
+        for i in range(len(df)):
+            secs = df.iloc[i]['secs']
+            case = df.iloc[i]['case']
+            tmp_df = tasks_df[tasks_df['case_id'] == case]
+            tmp_df = tmp_df[(tmp_df['start_secs'] <= secs) & (tmp_df['end_secs'] > secs)]
+            emb_size = len(tasks_df[f"task_defn_emb-{emb_col}"].iloc[0])
+            if len(tmp_df) == 0:
+                task_embs.append(np.zeros(emb_size))
+            elif len(tmp_df) > 1:
+                print(f"Multiple teaching steps found for case {case} and timestamp {secs}")
+                task_embs.append(np.zeros(emb_size))
+            else:
+                task_embs.append(tmp_df[f"task_defn_emb-{emb_col}"].values[0])
+    
+    # Extract labels.
+    labels = df[col].values.tolist()
+    
+    # --- Main Logic: Expand the DataFrame ---
+    # Create a new list of rows, where each original row is duplicated for each of its vision embeddings.
+    expanded_rows = []
+    for i in range(len(df)):
+        original_row_data = df.iloc[i].to_dict()
+        current_label = labels[i]
+        current_proc_emb = procedure_embs[i] if procedures_df is not None else None
+        current_task_emb = task_embs[i] if tasks_df is not None else None
+        
+        # Iterate over each individual vision embedding for the current row.
+        for vis_emb in vis_embs_lists[i]:
+            new_row = original_row_data.copy()
+            
+            # Add the specific vision embedding for this new row.
+            new_row['vis_embs_individual'] = vis_emb
+            new_row['label'] = current_label
+
+            # Add procedure and task embeddings.
+            if procedures_df is not None:
+                new_row['procedure_embs'] = current_proc_emb
+            if tasks_df is not None:
+                new_row['task_embs'] = current_task_emb
+
+            # Create the final combined embedding.
+            embs_to_concat = [vis_emb]
+            if procedures_df is not None:
+                embs_to_concat.append(current_proc_emb)
+            if tasks_df is not None:
+                embs_to_concat.append(current_task_emb)
+            
+            new_row['embedding'] = np.concatenate(embs_to_concat)
+            expanded_rows.append(new_row)
+            
+    final_df = pd.DataFrame(expanded_rows).reset_index(drop=True)
+
+    # Print embedding dimensions for verification.
+    print(f"Vision Embedding Dimension: {len(final_df['vis_embs_individual'].iloc[0])}")
+    if procedures_df is not None:
+        print(f"Procedure Embedding Dimension: {len(final_df['procedure_embs'].iloc[0])}")
+    if tasks_df is not None:
+        print(f"Task Embedding Dimension: {len(final_df['task_embs'].iloc[0])}")
+    print(f"Combined Embedding Dimension: {len(final_df['embedding'].iloc[0])}")
+    
+    return final_df
+
+
 
 def run_via_embs(
     iat_col: str,   # instrument, action, or tissue
@@ -274,11 +407,12 @@ def run_via_embs(
     output_json: str,
     pred_csv: str = None,
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
     seed: int = 0,
+    metric_avg: str = 'weighted',
 ):
     print(f"IAT Column: {iat_col}")
     print(f"Model: {model}")
@@ -309,7 +443,7 @@ def run_via_embs(
         processed_df = get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, iat_col, model)
     else:
         raise ValueError(f"Inputs type {inputs} is not supported.")
-    metrics, pred_df = evaluate_via_embs(processed_df, metric_avg='weighted', num_folds=5, hidden_layer_sizes=(64, 32, 16), seed=seed)
+    metrics, pred_df = evaluate_via_embs(processed_df, metric_avg=metric_avg, num_folds=5, hidden_layer_sizes=(64, 32, 16), seed=seed)
 
     print(f"Mean AUPRC: {metrics['auprc_mean']:.4f}")
     print(f"Mean AUROC: {metrics['auroc_mean']:.4f}")
@@ -345,6 +479,35 @@ def standardize_track_shape(track, target_dots=None):
     standardized_track[:, :dots_to_copy, :] = track[:, :dots_to_copy, :]
     return standardized_track
 
+def _calculate_ece(y_true, y_prob, num_bins=5):
+    """
+    Computes the Expected Calibration Error (ECE).
+    This version matches the logic of the user-provided example.
+
+    Args:
+        y_true: The true labels for the samples.
+        y_prob: The predicted probabilities for each class (shape: [n_samples, n_classes]).
+        num_bins: The number of bins to use for the calculation.
+    """
+    bin_boundaries = np.linspace(0, 1, num_bins + 1)
+    bin_lowers = bin_boundaries[:-1]
+    bin_uppers = bin_boundaries[1:]
+
+    confidences = np.max(y_prob, axis=1)
+    predictions = np.argmax(y_prob, axis=1)
+    accuracies = (predictions == y_true)
+
+    ece = 0.0
+    for bin_lower, bin_upper in zip(bin_lowers, bin_uppers):
+        in_bin = (confidences > bin_lower) & (confidences <= bin_upper)
+        prop_in_bin = np.mean(in_bin)
+
+        if prop_in_bin > 0:
+            accuracy_in_bin = np.mean(accuracies[in_bin])
+            avg_confidence_in_bin = np.mean(confidences[in_bin])
+            ece += np.abs(avg_confidence_in_bin - accuracy_in_bin) * prop_in_bin
+            
+    return ece
 
 class HybridDataset(Dataset):
     def __init__(self, embeddings, tracks, labels):
@@ -404,35 +567,245 @@ class LSTMFusionModel(nn.Module):
         logits = self.classification_head(combined_features)
         return logits
     
-def _calculate_ece(y_true, y_prob, num_bins=5):
+
+class CrossTransformerModel(nn.Module):
+    def __init__(self, embedding_dim, track_feature_dim, num_heads, num_classes, hidden_dim=128, num_layers=1, dropout=0.2):
+        super(CrossTransformerModel, self).__init__()
+        self.embedding_proj = nn.Linear(embedding_dim, hidden_dim)
+        self.track_proj = nn.Linear(track_feature_dim, hidden_dim)
+        self.cls_token = nn.Parameter(torch.zeros(1, 1, hidden_dim))
+        
+        # Dynamic sinusoidal positional embeddings (no parameters to slim down here)
+        max_len = 200
+        position = torch.arange(max_len).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, hidden_dim, 2) * (-math.log(10000.0) / hidden_dim))
+        pe = torch.zeros(1, max_len, hidden_dim)
+        pe[0, :, 0::2] = torch.sin(position * div_term)
+        pe[0, :, 1::2] = torch.cos(position * div_term)
+        self.register_buffer('pos_embedding', pe)
+        
+        self.pos_dropout = nn.Dropout(p=dropout)
+
+        # A single, lighter transformer layer
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=hidden_dim, 
+            nhead=num_heads, # Reduced from 4 to 2
+            dropout=dropout,
+            batch_first=True
+        )
+        self.transformer_encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+        
+        # A much simpler classification head
+        self.classification_head = nn.Sequential(
+            nn.LayerNorm(hidden_dim),
+            nn.Linear(hidden_dim, num_classes)
+        )
+
+    def forward(self, embedding, track):
+        emb_proj = self.embedding_proj(embedding).unsqueeze(1)
+        track_proj = self.track_proj(track)
+        
+        cls_tokens = self.cls_token.expand(embedding.shape[0], -1, -1)
+        
+        x = torch.cat((cls_tokens + emb_proj, track_proj), dim=1)
+        
+        x = x + self.pos_embedding[:, :x.size(1), :]
+        x = self.pos_dropout(x)
+        
+        transformer_output = self.transformer_encoder(x)
+        cls_output = transformer_output[:, 0, :]
+        
+        logits = self.classification_head(cls_output)
+        return logits
+
+    
+class HybridLSTMTransformerModel(nn.Module):
+    def __init__(self, embedding_dim, track_feature_dim, num_classes, 
+                 lstm_hidden_dim=64, num_lstm_layers=1, 
+                 hidden_dim=128, num_heads=2, num_layers=1, dropout=0.2):
+        super(HybridLSTMTransformerModel, self).__init__()
+        
+        # --- Part 1: LSTM for Track Summarization (from LSTMFusionModel) ---
+        self.lstm = nn.LSTM(
+            input_size=track_feature_dim,
+            hidden_size=lstm_hidden_dim,
+            num_layers=num_lstm_layers,
+            batch_first=True
+        )
+        
+        # --- Part 2: Cross-Attention Transformer (adapted from CrossTransformerModel) ---
+        self.embedding_proj = nn.Linear(embedding_dim, hidden_dim)
+        
+        #  projects the LSTM's output, not the raw track features.
+        self.track_proj = nn.Linear(lstm_hidden_dim, hidden_dim) 
+        
+        self.cls_token = nn.Parameter(torch.zeros(1, 1, hidden_dim))
+        
+        # Using fixed sinusoidal positional embeddings for the two inputs (CLS and track summary)
+        max_len = 10 # More than enough for CLS + track summary
+        position = torch.arange(max_len).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, hidden_dim, 2) * (-math.log(10000.0) / hidden_dim))
+        pe = torch.zeros(1, max_len, hidden_dim)
+        pe[0, :, 0::2] = torch.sin(position * div_term)
+        pe[0, :, 1::2] = torch.cos(position * div_term)
+        self.register_buffer('pos_embedding', pe)
+        
+        self.pos_dropout = nn.Dropout(p=dropout)
+
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=hidden_dim, 
+            nhead=num_heads,
+            dropout=dropout,
+            batch_first=True
+        )
+        self.transformer_encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+        
+        self.classification_head = nn.Sequential(
+            nn.LayerNorm(hidden_dim),
+            nn.Linear(hidden_dim, num_classes)
+        )
+
+    def forward(self, embedding, track):
+        # 1. Process the entire track sequence with the LSTM to get a summary vector
+        # We only need the final hidden state.
+        _, (hidden_state, _) = self.lstm(track)
+        
+        # Get the hidden state from the last LSTM layer, shape: (batch, lstm_hidden_dim)
+        track_summary = hidden_state[-1]
+        
+        # 2. Prepare inputs for the Transformer
+        emb_proj = self.embedding_proj(embedding).unsqueeze(1) # Shape: (batch, 1, hidden_dim)
+        
+        # Project the track summary and add a sequence dimension
+        track_proj = self.track_proj(track_summary).unsqueeze(1) # Shape: (batch, 1, hidden_dim)
+        
+        # Prepare the classification token
+        cls_tokens = self.cls_token.expand(embedding.shape[0], -1, -1) # Shape: (batch, 1, hidden_dim)
+        
+        # 3. Combine for the transformer's input sequence (length = 2)
+        # The sequence is now [CLS_token+embedding, track_summary]
+        x = torch.cat((cls_tokens + emb_proj, track_proj), dim=1)
+        
+        # Add positional embeddings for the two items in the sequence
+        x = x + self.pos_embedding[:, :x.size(1), :]
+        x = self.pos_dropout(x)
+        
+        # 4. Pass through the transformer encoder
+        transformer_output = self.transformer_encoder(x)
+        
+        # 5. Get the output corresponding to the CLS token for classification
+        cls_output = transformer_output[:, 0, :]
+        
+        # 6. Final classification
+        logits = self.classification_head(cls_output)
+        return logits
+
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class FFNFusionModel(nn.Module):
     """
-    Computes the Expected Calibration Error (ECE).
-    This version matches the logic of the user-provided example.
+    A model that fuses a global embedding with a sequential track feature
+    using a Feed-Forward Network (FFN) for classification.
 
-    Args:
-        y_true: The true labels for the samples.
-        y_prob: The predicted probabilities for each class (shape: [n_samples, n_classes]).
-        num_bins: The number of bins to use for the calculation.
+    This model first processes the track and embedding features independently through
+    two separate 2-layer MLPs. The track sequence is summarized by averaging its
+    features before being passed to its processor. The outputs of these processors
+    are then concatenated and passed through a final series of dense layers to
+    produce the classification logits.
     """
-    bin_boundaries = np.linspace(0, 1, num_bins + 1)
-    bin_lowers = bin_boundaries[:-1]
-    bin_uppers = bin_boundaries[1:]
+    def __init__(self, embedding_dim, track_feature_dim, num_classes, track_summary_dim=64, embedding_summary_dim=64, hidden_dims=[128, 64], dropout=0.2):
+        """
+        Initializes the FFNFusionModel.
 
-    confidences = np.max(y_prob, axis=1)
-    predictions = np.argmax(y_prob, axis=1)
-    accuracies = (predictions == y_true)
+        Args:
+            embedding_dim (int): The dimensionality of the global input embedding.
+            track_feature_dim (int): The dimensionality of features in the track sequence.
+            num_classes (int): The number of output classes for classification.
+            track_summary_dim (int): The output dimension for the track processing MLP.
+            embedding_summary_dim (int): The output dimension for the embedding processing MLP.
+            hidden_dims (list of int, optional): A list specifying the size of each
+                                                 hidden layer in the final classification head.
+                                                 Defaults to [128, 64].
+            dropout (float, optional): The dropout rate to apply after hidden layers.
+                                       Defaults to 0.2.
+        """
+        super(FFNFusionModel, self).__init__()
 
-    ece = 0.0
-    for bin_lower, bin_upper in zip(bin_lowers, bin_uppers):
-        in_bin = (confidences > bin_lower) & (confidences <= bin_upper)
-        prop_in_bin = np.mean(in_bin)
+        # MLP to process the track sequence and create a summary
+        self.track_processor = nn.Sequential(
+            nn.Linear(track_feature_dim, hidden_dims[0]),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_dims[0], track_summary_dim)
+        )
 
-        if prop_in_bin > 0:
-            accuracy_in_bin = np.mean(accuracies[in_bin])
-            avg_confidence_in_bin = np.mean(confidences[in_bin])
-            ece += np.abs(avg_confidence_in_bin - accuracy_in_bin) * prop_in_bin
-            
-    return ece
+        # MLP to process the global embedding
+        self.embedding_processor = nn.Sequential(
+            nn.Linear(embedding_dim, hidden_dims[0]),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_dims[0], embedding_summary_dim)
+        )
+
+        # The input dimension for the final FFN is the sum of the processed feature dimensions.
+        input_dim = track_summary_dim + embedding_summary_dim
+        
+        layers = []
+        # Dynamically build the final MLP layers based on the hidden_dims list
+        for h_dim in hidden_dims:
+            layers.append(nn.Linear(input_dim, h_dim))
+            layers.append(nn.ReLU())
+            layers.append(nn.Dropout(dropout))
+            # The input for the next layer is the output of this one
+            input_dim = h_dim
+        
+        # Add the final output layer
+        layers.append(nn.Linear(input_dim, num_classes))
+        
+        self.classification_head = nn.Sequential(*layers)
+
+    def forward(self, embedding, track):
+        """
+        Forward pass of the model.
+
+        Args:
+            embedding (torch.Tensor): The global embedding tensor.
+                                      Shape: (batch_size, embedding_dim)
+            track (torch.Tensor): The sequence of track features.
+                                  Shape: (batch_size, seq_len, track_feature_dim)
+
+        Returns:
+            torch.Tensor: The output logits from the classification head.
+                          Shape: (batch_size, num_classes)
+        """
+        # embedding shape: (batch_size, embedding_dim)
+        # track shape: (batch_size, seq_len, track_feature_dim)
+
+        # 1. Create track summary by averaging over the sequence length dimension.
+        # track_mean shape: (batch_size, track_feature_dim)
+        track_mean = torch.mean(track, dim=1)
+        # track_summary shape: (batch_size, track_summary_dim)
+        track_summary = self.track_processor(track_mean)
+
+        # 2. Process the global embedding.
+        # processed_embedding shape: (batch_size, embedding_summary_dim)
+        processed_embedding = self.embedding_processor(embedding)
+        
+        # 3. Concatenate the processed embedding with the track summary.
+        # combined_features shape: (batch_size, embedding_summary_dim + track_summary_dim)
+        combined_features = torch.cat((processed_embedding, track_summary), dim=1)
+        
+        # 4. Get final predictions from the MLP head.
+        # logits shape: (batch_size, num_classes)
+        logits = self.classification_head(combined_features)
+        
+        return logits
+
+
+
 
 def evaluate_via_hybrid_original(
     processed_df,
@@ -694,6 +1067,22 @@ def evaluate_via_hybrid(
             num_lstm_layers=10,
             dropout=0.2
         ).to(device)
+        # model = CrossTransformerModel(
+        #     embedding_dim=embedding_dim,
+        #     track_feature_dim=track_feature_dim,
+        #     num_classes=num_classes,
+        #     num_heads=2,
+        #     num_layers=4,
+        # ).to(device)
+        # model = FFNFusionModel(
+        #     embedding_dim=embedding_dim,
+        #     track_feature_dim=track_feature_dim,
+        #     num_classes=num_classes,
+        #     track_summary_dim=64,
+        #     embedding_summary_dim=64,
+        #     hidden_dims=(64, 16),
+        #     dropout=0.2,
+        # ).to(device)
         
         criterion = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
@@ -743,8 +1132,16 @@ def evaluate_via_hybrid(
         with torch.no_grad():
             for batch_embs, batch_tracks, _ in full_fold_loader:
                 batch_tracks_device = batch_tracks.to(device)
-                _, (hidden_state, _) = model.lstm(batch_tracks_device)
-                track_summary = hidden_state[-1]
+                if isinstance(model, LSTMFusionModel):
+                    _, (hidden_state, _) = model.lstm(batch_tracks_device)
+                    track_summary = hidden_state[-1]
+                elif isinstance(model, CrossTransformerModel):
+                    hidden_state = model.track_proj(batch_tracks_device)
+                    track_summary = hidden_state[:, -1, :]
+                elif isinstance(model, FFNFusionModel):
+                    track_mean = torch.mean(batch_tracks_device, dim=1)
+                    track_summary = model.track_processor(track_mean)
+                
                 all_fold_track_summaries.extend(track_summary.cpu().numpy())
                 all_fold_embeddings.extend(batch_embs.cpu().numpy())
         
@@ -772,7 +1169,7 @@ def evaluate_via_hybrid(
         y_test_binarized = label_binarize(y_test_fold, classes=np.arange(num_classes))
 
         auprc_scores.append(average_precision_score(y_test_binarized, y_pred_prob, average=metric_avg))
-        auroc_scores.append(roc_auc_score(y_test_fold, y_pred_prob, multi_class='ovo', average=metric_avg))
+        auroc_scores.append(roc_auc_score(y_test_fold, y_pred_prob, multi_class='ovo', average='weighted'))
         accuracy_scores.append(accuracy_score(y_test_fold, y_pred))
         precision_scores.append(precision_score(y_test_fold, y_pred, average=metric_avg, zero_division=0))
         recall_scores.append(recall_score(y_test_fold, y_pred, average=metric_avg, zero_division=0))
@@ -801,6 +1198,201 @@ def evaluate_via_hybrid(
     }
     return metrics, pred_df
 
+
+def evaluate_via_hybrid_multiple(
+    processed_df,
+    metric_avg='weighted',
+    sampler=None,
+    num_folds=5,
+    seed=42,
+    **kwargs
+):
+    """
+    Evaluates a hybrid model using instance-level stratified k-fold cross-validation.
+
+    Training is performed on individual frames. For evaluation, predictions are made
+    on all frames of a test instance, and the final label is determined by a
+    majority vote. The final prediction dataframe has one row per instance.
+
+    Args:
+        processed_df (pd.DataFrame): DataFrame where each row corresponds to a single
+                                     frame/embedding. Must contain a 'cvid' column
+                                     to identify unique feedback instances.
+        metric_avg (str): The averaging method for multi-class metrics.
+        num_folds (int): The number of folds for cross-validation.
+        seed (int): The random seed for reproducibility.
+        **kwargs: Additional arguments.
+
+    Returns:
+        tuple: A tuple containing:
+            - metrics (dict): A dictionary of evaluation metrics.
+            - pred_df (pd.DataFrame): A DataFrame with instance-level predictions.
+    """
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {device}")
+
+    # --- Data Preparation ---
+    # Extract frame-level data
+    embeddings = np.array(processed_df['embedding'].values.tolist())
+    tracks = np.array(processed_df['tracks'].values.tolist())
+    tracks_reshaped = tracks.reshape(tracks.shape[0], tracks.shape[1], -1)
+
+    # Encode labels
+    label_encoder = LabelEncoder()
+    processed_df['encoded_label'] = label_encoder.fit_transform(processed_df['label'])
+    encoded_labels = processed_df['encoded_label'].values
+    num_classes = len(label_encoder.classes_)
+
+    # --- Instance-level Stratified K-Fold ---
+    # We must split by instance ('cvid') to prevent data leakage
+    unique_instances = processed_df.drop_duplicates(subset=['cvid']).copy()
+    instance_cvids = unique_instances['cvid'].values
+    instance_labels = unique_instances['encoded_label'].values
+
+    skf = StratifiedKFold(n_splits=num_folds, shuffle=True, random_state=seed)
+
+    # --- Metric Storage ---
+    all_metrics = collections.defaultdict(list)
+    
+    # This df will store instance-level predictions from all folds
+    final_pred_df = unique_instances.copy()
+    final_pred_df['pred'] = None
+    final_pred_df['confidence'] = 0.0
+
+    epochs = 20
+    batch_size = 8
+    learning_rate = 0.001
+
+    fold_num = 1
+    for train_instance_indices, test_instance_indices in skf.split(instance_cvids, instance_labels):
+        print(f"--- Fold {fold_num}/{num_folds} ---")
+        
+        # Get the 'cvid's for train and test sets for this fold
+        train_cvids = instance_cvids[train_instance_indices]
+        test_cvids = instance_cvids[test_instance_indices]
+
+        # Get the row indices from the main processed_df corresponding to these cvids
+        train_index = processed_df[processed_df['cvid'].isin(train_cvids)].index
+        test_index = processed_df[processed_df['cvid'].isin(test_cvids)].index
+
+        # --- Training (Frame-level) ---
+        X_train_embs, X_train_tracks = embeddings[train_index], tracks_reshaped[train_index]
+        y_train = encoded_labels[train_index]
+        
+        train_dataset = HybridDataset(X_train_embs, X_train_tracks, y_train)
+        train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
+
+        embedding_dim = X_train_embs.shape[1]
+        track_feature_dim = X_train_tracks.shape[2]
+
+        # Initialize model for the fold
+        torch.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        model = LSTMFusionModel(
+            embedding_dim=embedding_dim,
+            track_feature_dim=track_feature_dim,
+            num_classes=num_classes,
+            lstm_hidden_dim=32,
+            num_lstm_layers=10,
+            dropout=0.2
+        ).to(device)
+
+        criterion = nn.CrossEntropyLoss()
+        optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+        
+        # Training loop
+        model.train()
+        for epoch in range(epochs):
+            for batch_embs, batch_tracks, batch_labels in train_loader:
+                batch_embs, batch_tracks, batch_labels = batch_embs.to(device), batch_tracks.to(device), batch_labels.to(device)
+                outputs = model(batch_embs, batch_tracks)
+                loss = criterion(outputs, batch_labels)
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+
+        # --- Evaluation (Frame-level Prediction, then Instance-level Voting) ---
+        model.eval()
+        X_test_embs, X_test_tracks = embeddings[test_index], tracks_reshaped[test_index]
+        y_test_frames = encoded_labels[test_index]
+        test_cvids_frames = processed_df.loc[test_index, 'cvid'].values
+
+        test_dataset = HybridDataset(X_test_embs, X_test_tracks, y_test_frames)
+        test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
+        
+        fold_preds_probs = []
+        with torch.no_grad():
+            for batch_embs, batch_tracks, _ in test_loader:
+                batch_embs, batch_tracks = batch_embs.to(device), batch_tracks.to(device)
+                outputs = model(batch_embs, batch_tracks)
+                probs = torch.softmax(outputs, dim=1)
+                fold_preds_probs.append(probs.cpu().numpy())
+        
+        y_pred_prob_frames = np.concatenate(fold_preds_probs, axis=0)
+        y_pred_frames = np.argmax(y_pred_prob_frames, axis=1)
+        
+        # --- Aggregation by Majority Vote ---
+        frame_results_df = pd.DataFrame({
+            'cvid': test_cvids_frames,
+            'true_label': y_test_frames,
+            'pred_label': y_pred_frames
+        })
+        # Add probabilities for each class to the frame-level dataframe
+        for i, class_name in enumerate(label_encoder.classes_):
+            frame_results_df[f'prob_{class_name}'] = y_pred_prob_frames[:, i]
+            
+        # Define aggregation logic
+        agg_funcs = {
+            'pred_label': ('pred_label', lambda x: mode(x, keepdims=False)[0]),
+            'true_label': ('true_label', 'first')
+        }
+        # Add mean aggregation for each probability column
+        for class_name in label_encoder.classes_:
+            agg_funcs[f'prob_{class_name}'] = (f'prob_{class_name}', 'mean')
+
+        instance_results_df = frame_results_df.groupby('cvid').agg(**agg_funcs).reset_index()
+        
+        y_test_instance = instance_results_df['true_label'].values
+        y_pred_instance = instance_results_df['pred_label'].values
+        prob_cols = [f'prob_{c}' for c in label_encoder.classes_]
+        y_pred_prob_instance = instance_results_df[prob_cols].values
+
+        # --- Store Instance-level Predictions for final_pred_df ---
+        for _, row in instance_results_df.iterrows():
+            cvid = row['cvid']
+            # Find the index in the final (unique) prediction dataframe
+            target_idx = final_pred_df[final_pred_df['cvid'] == cvid].index[0]
+            
+            final_pred_df.loc[target_idx, 'pred'] = label_encoder.inverse_transform([row['pred_label']])[0]
+            final_pred_df.loc[target_idx, 'confidence'] = y_pred_prob_instance[instance_results_df['cvid'] == cvid].max()
+            
+            # Store full probability distribution
+            prob_dict = {label_encoder.classes_[j]: float(y_pred_prob_instance[instance_results_df['cvid'] == cvid][0, j]) for j in range(num_classes)}
+            final_pred_df.loc[target_idx, 'pred_probs'] = str(prob_dict)
+
+        # --- Calculate and Store Metrics for the Fold ---
+        y_test_binarized = label_binarize(y_test_instance, classes=np.arange(num_classes))
+        
+        all_metrics['auprc_scores'].append(average_precision_score(y_test_binarized, y_pred_prob_instance, average=metric_avg))
+        all_metrics['auroc_scores'].append(roc_auc_score(y_test_instance, y_pred_prob_instance, multi_class='ovo', average='weighted'))
+        all_metrics['accuracy_scores'].append(accuracy_score(y_test_instance, y_pred_instance))
+        all_metrics['precision_scores'].append(precision_score(y_test_instance, y_pred_instance, average=metric_avg, zero_division=0))
+        all_metrics['recall_scores'].append(recall_score(y_test_instance, y_pred_instance, average=metric_avg, zero_division=0))
+        all_metrics['f1_scores'].append(f1_score(y_test_instance, y_pred_instance, average=metric_avg, zero_division=0))
+        all_metrics['ece_scores'].append(_calculate_ece(y_test_instance, y_pred_prob_instance))
+        
+        fold_num += 1
+
+    # --- Finalize Metrics ---
+    metrics = {f"{key.split('_')[0]}_mean": float(np.mean(val)) for key, val in all_metrics.items()}
+    metrics.update(all_metrics) # Also include the list of scores per fold
+    
+    # Clean up final prediction dataframe
+    cols_to_drop = [col for col in final_pred_df.columns if 'emb' in col or col == 'encoded_label'] + ['tracks']
+    final_pred_df = final_pred_df.drop(columns=cols_to_drop, errors='ignore')
+
+    return metrics, final_pred_df
+
 # evaluate_via_hybrid = evaluate_via_hybrid_original
 
 def run_via_hybrid(
@@ -810,14 +1402,16 @@ def run_via_hybrid(
     output_json: str,
     pred_csv: str = None,
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
-    instrument_tracks_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks.h5',
+    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    instrument_tracks_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks.h5',
     seed: int = 0,
     num_tracks: int = 15,
     uncertainty_calibration: str = None,  # None or 'platt'
+    metric_avg: str = 'weighted',
+    multiple_instance_training: bool = False,
 ):
     print(f"IAT Column: {iat_col}")
     print(f"Model: {model}")
@@ -830,19 +1424,31 @@ def run_via_hybrid(
     annotations_df = add_vis_embs(model, annotations_df, vision_embeddings_dir, force=True)
     annotations_df = annotations_df.dropna(subset=[f'{model}_vis_embs']).copy()
     annotations_df = filter_none(annotations_df, num_none_included, iat_col, seed=seed)
-    
+
     if inputs == 'vision':
-        processed_df = get_embeddings_and_labels(annotations_df, None, None, iat_col, model)
+        if not multiple_instance_training:
+            processed_df = get_embeddings_and_labels(annotations_df, None, None, iat_col, model)
+        else:
+            processed_df = get_embeddings_and_labels_multiple(annotations_df, None, None, iat_col, model, current_fps=5, target_fps=1)
     elif inputs == 'vision+procedure':
         procedures_df = pd.read_parquet(procedures_embs_path)
-        processed_df = get_embeddings_and_labels(annotations_df, procedures_df, None, iat_col, model)
+        if not multiple_instance_training:
+            processed_df = get_embeddings_and_labels(annotations_df, procedures_df, None, iat_col, model)
+        else:
+            processed_df = get_embeddings_and_labels_multiple(annotations_df, procedures_df, None, iat_col, model, current_fps=5, target_fps=1)
     elif inputs == 'vision+task':
         tasks_df = pd.read_parquet(tasks_embs_path)
-        processed_df = get_embeddings_and_labels(annotations_df, None, tasks_df, iat_col, model)
+        if not multiple_instance_training:
+            processed_df = get_embeddings_and_labels(annotations_df, None, tasks_df, iat_col, model)
+        else:
+            processed_df = get_embeddings_and_labels_multiple(annotations_df, None, tasks_df, iat_col, model, current_fps=5, target_fps=1)
     elif inputs == 'vision+procedure+task':
         procedures_df = pd.read_parquet(procedures_embs_path)
         tasks_df = pd.read_parquet(tasks_embs_path)
-        processed_df = get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, iat_col, model)
+        if not multiple_instance_training:
+            processed_df = get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, iat_col, model)
+        else:
+            processed_df = get_embeddings_and_labels_multiple(annotations_df, procedures_df, tasks_df, iat_col, model, current_fps=5, target_fps=1)
     else:
         raise ValueError(f"Inputs type {inputs} is not supported.")
     
@@ -855,15 +1461,22 @@ def run_via_hybrid(
     processed_df = processed_df.reset_index(drop=True)
     print(f"Number of samples after loading embeddings and tracks: {len(processed_df)}")
 
-    metrics, pred_df = evaluate_via_hybrid(
+    eval_func = None
+    if not multiple_instance_training:
+        eval_func = evaluate_via_hybrid
+    else:
+        eval_func = evaluate_via_hybrid_multiple
+        
+    metrics, pred_df = eval_func(
         processed_df, 
-        metric_avg='weighted', 
+        metric_avg=metric_avg, 
         seed=seed, 
         uncertainty_calibration=uncertainty_calibration,
         abstention_mechanism='margin_of_confidence' if uncertainty_calibration is not None else None,
         abstention_threshold=0.15,
         output_calibration_path=output_json.replace('.json', '_calibration.png') if uncertainty_calibration is not None else None,
     )
+    
 
     print(f"Mean AUROC: {metrics['auroc_mean']:.4f}")
     print(f"Mean ECE: {metrics.get('ece_mean', 'N/A')}")
@@ -882,15 +1495,17 @@ def run_via_hybrid(
 def main_embs(
     output_format: str = '{iat_col}-{model}-{inputs}-none={num_none_included}',
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
     seed: int = 0,
+    metric_avg: str = 'weighted',
 ):
     for model in [
-        'peskavlp', 
-        'surgvlp', 
+        # 'peskavlp', 
+        # 'surgvlp', 
+        'hecvl',
     ]:
         for inputs in [
             'vision',
@@ -900,11 +1515,11 @@ def main_embs(
             pred_csvs = {}
             for iat_col in ['instrument', 'action', 'tissue']:
                 output_json = os.path.join(
-                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
+                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.json'    
                 )
                 pred_csv = os.path.join(
-                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.csv'    
                 )
                 pred_csvs[iat_col] = pred_csv
@@ -922,6 +1537,7 @@ def main_embs(
                     procedures_embs_path=procedures_embs_path,
                     tasks_embs_path=tasks_embs_path,
                     seed=seed,
+                    metric_avg=metric_avg,
                 )
                 print('-'*50)
                 
@@ -941,7 +1557,7 @@ def main_embs(
                 else:
                     combined_df = combined_df.merge(df, on=['cvid', 'procedure', 'procedure_defn', 'task', 'task_defn', 'dialogue', 'instrument', 'action', 'tissue', ], how='outer')
             combined_pred_csv = os.path.join(
-                '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                 output_format.format(iat_col='dummy', model=model, inputs=inputs, num_none_included=num_none_included).replace('dummy-', '') + '.csv'
             )
             combined_df.to_csv(combined_pred_csv, index=False)
@@ -949,32 +1565,35 @@ def main_embs(
 def main_hybrid(
     output_format: str = '{iat_col}-{model}-{inputs}+tracks-none={num_none_included}',
     num_none_included: int = 100,
-    vision_embeddings_dir: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
-    annotations_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    procedures_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
-    tasks_embs_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
-    instrument_tracks_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
+    vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
+    annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+    procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
+    tasks_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/tasks_embs_df.parquet',
+    instrument_tracks_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
     seed: int = 0,
     num_tracks: int = 15,
     uncertainty_calibration: str = None,  # None or 'platt'
+    metric_avg: str = 'weighted',
+    multiple_instance_training: bool = False,
 ):
     for model in [
         'peskavlp', 
-        'surgvlp', 
+        # 'surgvlp', 
+        # 'hecvl',
     ]:
         for inputs in [
-            'vision',
-            'vision+procedure',
+            # 'vision',
+            # 'vision+procedure',
             'vision+procedure+task',
         ]:
             pred_csvs = {}
             for iat_col in ['instrument', 'action', 'tissue']:
                 output_json = os.path.join(
-                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
+                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_metrics',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.json'
                 )
                 pred_csv = os.path.join(
-                    '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                    '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                     output_format.format(iat_col=iat_col, model=model, inputs=inputs, num_none_included=num_none_included) + '.csv'
                 )
                 
@@ -1000,6 +1619,8 @@ def main_hybrid(
                     seed=seed,
                     uncertainty_calibration=uncertainty_calibration,
                     num_tracks=num_tracks,
+                    metric_avg=metric_avg,
+                    multiple_instance_training=multiple_instance_training,
                 )
                 print('-'*50)
 
@@ -1019,7 +1640,7 @@ def main_hybrid(
                 else:
                     combined_df = combined_df.merge(df, on=['cvid', 'procedure', 'procedure_defn', 'task', 'task_defn', 'dialogue', 'instrument', 'action', 'tissue'], how='outer')
             combined_pred_csv = os.path.join(
-                '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
+                '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions',
                 output_format.format(iat_col='dummy', model=model, inputs=inputs, num_none_included=num_none_included).replace('dummy-', '') + '.csv'
             )
             if uncertainty_calibration is not None:
@@ -1030,42 +1651,47 @@ if __name__ == "__main__":
     pass
     
     # main_embs(
-    #     output_format='{iat_col}-{model}-{inputs}-none={num_none_included}-final-with_conf',
+    #     output_format='{iat_col}-{model}-{inputs}-none={num_none_included}-f1_macro',
+    #     metric_avg='macro',
     # )
+    
     # main_tracks()
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=1-final',
     #     num_tracks=1,
-    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=1.h5',
+    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=1.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=5-final',
     #     num_tracks=5,
-    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=5.h5',
+    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=5.h5',
     # )
     
-    # main_hybrid(
-    #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=15-final',
-    #     num_tracks=15,
-    #     annotations_path='~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
-    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
-    # )
+    main_hybrid(
+        output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=15-multiple_instance_training-voting',
+        num_tracks=15,
+        annotations_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
+        instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=15.h5',
+        metric_avg='macro',
+        multiple_instance_training=True,
+    )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=30-final',
     #     num_tracks=30,
-    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=30.h5',
+    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=30.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-num_tracks=100-final',
     #     num_tracks=100,
-    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=100.h5',
+    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=100.h5',
     # )
     
     # main_hybrid(
     #     output_format='{iat_col}-{model}-{inputs}+tracks-none={num_none_included}-no_filter_instrument_tracks-final',
     #     num_tracks=400,
-    #     instrument_tracks_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-no_filter.h5',
+    #     instrument_tracks_path='/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-no_filter.h5',
     # )
+    
