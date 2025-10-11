@@ -60,7 +60,7 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 from typing import Any, List, Optional, Tuple, Union, Dict, Set, Callable
-from transformers.models.qwen3_moe.modeling_qwen3_moe import (F, Optional, nn)
+from transformers.models.qwen2_5_vl.modeling_qwen2_5_vl import (F, Optional, nn)
 
 def forward(self, input: Tensor, output_size: Optional[list[int]] = None) -> Tensor:
     """
