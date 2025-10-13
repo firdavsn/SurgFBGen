@@ -72,7 +72,7 @@ scores_df = feedback_evaluator.generate_all_scores(
 
 # scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/results/feedback_evaluations/scores_df-no_iat-yes_frames.csv'
 # scores_path = '~/surgery/surgical_fb_generation/SurgFBGen/results/feedback_evaluations/scores_df-no_iat-yes_frames-gemini_25_flash.csv'
-scores_path = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/results/feedback_evaluations/scores_df-qwen_vl-frame_wise_voting.csv'
+scores_path = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/feedback_evaluations/scores_df-qwen_vl-frame_wise_voting.csv'
 
 # scores_path = feedback_path.replace('inference_results.csv', 'scores_df.csv')
 
