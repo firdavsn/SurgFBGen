@@ -13,7 +13,7 @@ from surgfbgen.prompts.cli import format_prompt
 
 PROMPT_NAME = 'judge_feedback'
 
-IAT_CLASS_DEFINITIONS_PATH = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'iat_class_definitions.json')
+IAT_CLASS_DEFINITIONS_PATH = os.path.join(os.environ['REPO_DIR'], 'data', 'iat', 'iat_class_definitions.json')
 with open(IAT_CLASS_DEFINITIONS_PATH, 'r') as f:
     IAT_CLASS_DEFINITIONS = json.load(f)
 

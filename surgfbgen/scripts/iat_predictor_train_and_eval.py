@@ -15,7 +15,6 @@ from sklearn.metrics import (
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.isotonic import IsotonicRegression
-import numpy as np
 from sklearn.calibration import calibration_curve
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder, label_binarize
@@ -25,8 +24,6 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import roc_auc_score, accuracy_score, precision_score, recall_score, f1_score, average_precision_score, confusion_matrix as compute_confusion_matrix
-import numpy as np
-import pandas as pd
 from tqdm import tqdm
 import collections
 from scipy.stats import mode
@@ -68,10 +65,7 @@ def evaluate_via_embs(
     num_classes = len(label_encoder.classes_)
     
     pred_df = processed_df.copy()
-    # pred_df['pred'] = None
     pred_df['confidence'] = 0.0
-    # pred_df['pred_probs'] = None
-    # pred_df['pred_probs'] = pred_df['pred_probs'].astype('object')
 
     fold_num = 1
     for train_index, test_index in skf.split(embeddings, encoded_labels):
@@ -202,8 +196,6 @@ def get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, col, mode
     
     # Vision embeddings
     vis_embs_mean = np.array(df[f'{model_name}_vis_embs'].values.tolist()).mean(axis=1)
-    print(f"vis_embs_mean.shape: {vis_embs_mean.shape}")
-    print(f"df[f'{model_name}_vis_embs'][0].shape: {df[f'{model_name}_vis_embs'].iloc[0].shape}")
     
     emb_col = ''
     if model_name == 'surgvlp': emb_col = 'SurgVLP'
@@ -214,7 +206,6 @@ def get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, col, mode
     elif model_name == 'vjepa2': emb_col = 'MedEmbed_small'
     else:
         raise ValueError(f"Model name {model_name} is not supported.")
-    print(f"Embedding column: {emb_col}")
     
     # Procedure embeddings
     procedure_embs = []
@@ -236,7 +227,6 @@ def get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, col, mode
             tmp_df = tmp_df[(tmp_df['start_secs'] <= secs) & (tmp_df['end_secs'] > secs)]
             emb_size = len(tasks_df[f"task_defn_emb-{emb_col}"].iloc[0])
             if len(tmp_df) == 0:
-                # print(f"No teaching step found for case {case} and timestamp {secs}")
                 task_embs.append(np.zeros(emb_size))
             elif len(tmp_df) > 1:
                 print(f"Multiple teaching steps found for case {case} and timestamp {secs}")
@@ -273,9 +263,6 @@ def get_embeddings_and_labels(annotations_df, procedures_df, tasks_df, col, mode
     print(f"Combined Embedding Dimension: {embeddings_comb.shape[1]}")
     
     return df
-
-import numpy as np
-import pandas as pd
 
 def get_embeddings_and_labels_multiple(annotations_df, procedures_df, tasks_df, col, model_name, current_fps, target_fps):
     """
@@ -322,7 +309,6 @@ def get_embeddings_and_labels_multiple(annotations_df, procedures_df, tasks_df, 
     elif 'pe' in model_name or 'videomae' in model_name: emb_col = 'MedEmbed_small'
     else:
         raise ValueError(f"Model name {model_name} is not supported.")
-    print(f"Embedding column: {emb_col}")
     
     # Extract procedure embeddings if the dataframe is provided.
     procedure_embs = []
@@ -453,7 +439,6 @@ def run_via_embs(
     print(f"Mean Precision: {metrics['precision_mean']:.4f}")
     print(f"Mean Recall: {metrics['recall_mean']:.4f}")
     print(f"Mean F1: {metrics['f1_mean']:.4f}")
-    print(f"Mean ECE: {metrics['ece_mean']:.4f}")
     with open(output_json, 'w') as f:
         metrics['iat_col'] = iat_col
         metrics['model'] = model
@@ -897,6 +882,7 @@ def evaluate_via_hybrid_original(
             for batch_embs, batch_tracks, batch_labels in train_loader:
                 batch_embs, batch_tracks, batch_labels = batch_embs.to(device), batch_tracks.to(device), batch_labels.to(device)
                 
+                # NOTE: Masking out None labels (not helpful)
                 # mask = batch_labels != none_label_encoded
                 # if mask.sum() > 0:
                 #     outputs = model(batch_embs, batch_tracks)
@@ -937,6 +923,7 @@ def evaluate_via_hybrid_original(
                     global_step += 1
                     batch_idx += 1
                     
+                    # NOTE: Masking out None labels (not helpful)
                     # mask = batch_labels != none_label_encoded
                     # if mask.sum() > 0:
                     #     outputs = model(batch_embs, batch_tracks)
@@ -1059,6 +1046,7 @@ def evaluate_via_hybrid(
         embedding_dim = X_train_embs.shape[1]
         track_feature_dim = X_train_tracks.shape[2]
         
+        # NOTE: LSTMFusionModel is the best model so far
         torch.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
         model = LSTMFusionModel(
@@ -1102,6 +1090,7 @@ def evaluate_via_hybrid(
                 loss.backward()
                 optimizer.step()
         
+        # NOTE: Decoupling the feature encoder and training the classification head only (after training the feature encoder) is not helpful
         # if kwargs.get('do_decoupling', True):
         #     print("Applying the training trick: freezing feature encoder and training clf head only.")
         #     decoupled_epochs = 3
@@ -1149,7 +1138,6 @@ def evaluate_via_hybrid(
         
         all_fold_embeddings = np.array(all_fold_embeddings)
         all_fold_track_summaries = np.array(all_fold_track_summaries)
-        print(f"Motion embeddings shape: {all_fold_track_summaries.shape}")
         
         combined_features = np.concatenate((all_fold_embeddings, all_fold_track_summaries), axis=1)
 
@@ -1395,6 +1383,100 @@ def evaluate_via_hybrid_multiple(
 
     return metrics, final_pred_df
 
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, Dataset
+from sklearn.model_selection import train_test_split, StratifiedKFold
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score, f1_score,
+    roc_auc_score, average_precision_score
+)
+from sklearn.preprocessing import label_binarize
+from sklearn.neural_network import MLPClassifier
+import numpy as np
+import pandas as pd
+import collections
+from scipy.stats import mode
+import copy # Used for deepcopying the best model
+
+# Assuming HybridDataset, LSTMFusionModel, etc., are defined elsewhere
+# (e.g., in the same file or imported)
+
+# --- Helper Classes (from your provided context) ---
+class HybridDataset(Dataset):
+    def __init__(self, embeddings, tracks, labels):
+        self.embeddings = torch.tensor(embeddings, dtype=torch.float32)
+        self.tracks = torch.tensor(tracks, dtype=torch.float32)
+        self.labels = torch.tensor(labels, dtype=torch.long)
+
+    def __len__(self):
+        return len(self.labels)
+
+    def __getitem__(self, idx):
+        return self.embeddings[idx], self.tracks[idx], self.labels[idx]
+
+# NOTE: Add your model definitions here (LSTMFusionModel, etc.)
+# ... (e.g., LSTMFusionModel, CrossTransformerModel, FFNFusionModel) ...
+# Example Placeholder (replace with your actual definition)
+class LSTMFusionModel(nn.Module):
+    def __init__(self, embedding_dim, track_feature_dim, num_classes, 
+                 lstm_hidden_dim, num_lstm_layers, dropout):
+        super(LSTMFusionModel, self).__init__()
+        self.lstm = nn.LSTM(track_feature_dim, lstm_hidden_dim, 
+                            num_lstm_layers, batch_first=True, 
+                            dropout=dropout if num_lstm_layers > 1 else 0)
+        
+        # Example internal feature extractor logic
+        self.track_processor = nn.Sequential(
+            nn.Linear(lstm_hidden_dim, 64),
+            nn.ReLU()
+        )
+        self.embedding_processor = nn.Sequential(
+            nn.Linear(embedding_dim, 64),
+            nn.ReLU()
+        )
+        
+        # Example final classifier head
+        self.classifier = nn.Sequential(
+            nn.Linear(64 + 64, 32), # 64 from track, 64 from embedding
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(32, num_classes)
+        )
+        self.embedding_dim = embedding_dim
+        self.lstm_hidden_dim = lstm_hidden_dim
+
+    def forward(self, emb, tracks):
+        # 1. Process tracks with LSTM
+        # tracks shape: [batch, seq_len, features]
+        _, (hidden_state, _) = self.lstm(tracks)
+        # hidden_state shape: [num_layers, batch, hidden_dim]
+        # Get the last layer's hidden state
+        track_summary = hidden_state[-1] # Shape: [batch, hidden_dim]
+
+        # 2. Extract features (if decoupling)
+        # These are the features we'd feed to the MLP
+        track_features = self.track_processor(track_summary)
+        emb_features = self.embedding_processor(emb)
+        
+        # 3. Combine and classify
+        combined = torch.cat((emb_features, track_features), dim=1)
+        logits = self.classifier(combined)
+        return logits
+
+    def extract_features(self, emb, tracks):
+        """Helper to get intermediate features for MLP training."""
+        with torch.no_grad():
+            _, (hidden_state, _) = self.lstm(tracks)
+            track_summary = hidden_state[-1]
+
+            track_features = self.track_processor(track_summary)
+            emb_features = self.embedding_processor(emb)
+        
+        combined = torch.cat((emb_features, track_features), dim=1)
+        return combined.cpu().numpy()
+
 # evaluate_via_hybrid = evaluate_via_hybrid_original
 
 def run_via_hybrid(
@@ -1404,6 +1486,7 @@ def run_via_hybrid(
     output_json: str,
     pred_csv: str = None,
     num_none_included: int = 100,
+    num_folds: int = 5,
     vision_embeddings_dir: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision',
     annotations_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv',
     procedures_embs_path: str = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/data/iat/procedures_embs_df.parquet',
@@ -1457,7 +1540,7 @@ def run_via_hybrid(
     h5 = h5py.File(instrument_tracks_path, 'r')
     processed_df['tracks'] = processed_df['cvid'].apply(lambda x: standardize_track_shape(h5[x][:][0], target_dots=num_tracks) if x in h5 else None)
     h5.close()
-    print(processed_df['tracks'].iloc[0].shape) 
+    print(f"Tracks shape: {processed_df['tracks'].iloc[0].shape}") 
     
     processed_df.dropna(subset=['tracks', 'embedding'], inplace=True)
     processed_df = processed_df.reset_index(drop=True)
@@ -1472,6 +1555,7 @@ def run_via_hybrid(
     metrics, pred_df = eval_func(
         processed_df, 
         metric_avg=metric_avg, 
+        num_folds=num_folds,
         seed=seed, 
         uncertainty_calibration=uncertainty_calibration,
         abstention_mechanism='margin_of_confidence' if uncertainty_calibration is not None else None,
@@ -1481,16 +1565,19 @@ def run_via_hybrid(
     
 
     print(f"Mean AUROC: {metrics['auroc_mean']:.4f}")
-    print(f"Mean ECE: {metrics.get('ece_mean', 'N/A')}")
     
+    os.makedirs(os.path.dirname(output_json), exist_ok=True)
     with open(output_json, 'w') as f:
         metrics['iat_col'] = iat_col
         metrics['model'] = model
         metrics['inputs'] = f"{inputs}+tracks"
         metrics['num_none_included'] = num_none_included
+        print(f"Saving metrics to {output_json}")
         json.dump(metrics, f, indent=4)
         
     if pred_csv is not None:
+        print(f"Saving predictions to {pred_csv}")
+        os.makedirs(os.path.dirname(pred_csv), exist_ok=True)
         pred_df.to_csv(pred_csv, index=False)
 
     

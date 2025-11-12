@@ -196,9 +196,11 @@ def track_instruments(
     filter_instrument: bool = True,
     filter_instrument_num_tracks: int = 30
 ):
+    if not torch.cuda.is_available():
+        raise ValueError("CUDA is not available. Please use a GPU.")
+    
     video = read_video_from_path(video_path)
     video = torch.from_numpy(video).permute(0, 3, 1, 2).float()
-    print(f"Loaded video from {os.path.basename(video_path)} with shape {video.shape}")
     
     depths = depth_video(video)
     masks = solidify_depth(
@@ -259,7 +261,7 @@ def track_instruments(
         return pred_tracks, depths, masks
 
 
-def main(
+def run(
     clips_dir: str = '~/surgery/clips_with_wiggle/fb_clips_wiggle',
     output_h5_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks.h5',
     cotracker_checkpoint_path: str = '~/surgery/surgical_fb_generation/SurgFBGen/checkpoints/cotracker3.pth',
@@ -314,7 +316,7 @@ def main(
 
 
 if __name__ == "__main__":
-    main(
+    run(
         output_h5_path='~/surgery/surgical_fb_generation/SurgFBGen/outputs/instrument_tracks/instrument_tracks-num_tracks=1.h5',
         filter_instrument=True,
         overwrite=True,

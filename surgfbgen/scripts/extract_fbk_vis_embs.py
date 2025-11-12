@@ -14,19 +14,41 @@ from logging import Logger
 from tqdm import tqdm
 from datetime import datetime
 from transformers import AutoImageProcessor, VideoMAEModel, VideoMAEForPreTraining, AutoVideoProcessor, AutoModel
-from pytorchvideo.transforms import UniformTemporalSubsample
+
+REPO_DIR = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    '..',
+    '..'
+)
+REPO_DIR = os.path.abspath(REPO_DIR)
 
 SEED = 42
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-SurgVLP_path = '/home/firdavs/surgery/surgical_fb_generation/SurgVLP'
+SurgVLP_path = os.path.join(REPO_DIR, 'SurgVLP')
 CLIPS_DATA_DIR = "/home/firdavs/surgery/clips_with_wiggle/fb_clips_wiggle"
 CLIP_FILE_TYPE = 'avi'
-LOGGING_PATH = f'/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/surgfbgen/logs/extract_fbk_vis_embs-dt=({datetime.now().strftime("%Y-%m-%d-%H-%M")}).log'
-OUTPUT_DIR = '/home/firdavs/surgery/surgical_fb_generation/SurgFBGen/outputs/embeddings/vision'
+LOGGING_PATH = os.path.join(REPO_DIR, 'logs', f'extract_fbk_vis_embs-dt=({datetime.now().strftime("%Y-%m-%d-%H-%M")}).log')
+OUTPUT_DIR = os.path.join(REPO_DIR, 'outputs', 'embeddings', 'vision')
 
-import sys
-sys.path.append(SurgVLP_path)
-import surgvlp
+from surgfbgen.models.utils import surgvlp_load
+
+class UniformTemporalSubsample(torch.nn.Module):
+    def __init__(self, num_samples: int, temporal_dim: int = -3):
+        super().__init__()
+        self.num_samples = num_samples
+        self.temporal_dim = temporal_dim
+    
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.uniform_temporal_subsample(x, self.num_samples, self.temporal_dim)
+
+    def uniform_temporal_subsample(
+        self, x: torch.Tensor, num_samples: int, temporal_dim: int = -3
+    ) -> torch.Tensor:
+        t = x.shape[temporal_dim]
+        assert num_samples > 0 and t > 0
+        indices = torch.linspace(0, t - 1, num_samples)
+        indices = torch.clamp(indices, 0, t - 1).long()
+        return torch.index_select(x, temporal_dim, indices)
 
 def set_seed_all(seed, logger: Logger = None):
     torch.manual_seed(seed)
@@ -185,36 +207,36 @@ def surgvlp_embeddings(clips_data_dir: str, output_h5_path: str, device: str, lo
         
     # Load model and preprocessor
     configs = Config.fromfile(os.path.join(SurgVLP_path, 'tests', 'config_surgvlp.py'), lazy_import=False)['config']
-    model, preprocessor = surgvlp.load(configs.model_config, device=device, strict_load_state_dict=False)
+    model, preprocessor = surgvlp_load(configs.model_config, device=device, strict_load_state_dict=False)
     
     # Extract embeddings
     get_vlp_embeddings(model, preprocessor, clips_data_dir, output_h5_path, device, logger, clip_file_type, overwrite=overwrite)
 
 
-def hecvl_embeddings(clips_data_dir: str, output_h5_path: str, device: str, logger: Logger = None, clip_file_type: str = 'avi'):
+def hecvl_embeddings(clips_data_dir: str, output_h5_path: str, device: str, logger: Logger = None, clip_file_type: str = 'avi', overwrite: bool = False):
     print("Extracting HecVL embeddings...")
     if logger:
         logger.info("Extracting PeskaVLP embeddings...")
         
     # Load model and preprocessor
     configs = Config.fromfile(os.path.join(SurgVLP_path, 'tests', 'config_hecvl.py'), lazy_import=False)['config']
-    model, preprocessor = surgvlp.load(configs.model_config, device=device, strict_load_state_dict=False)
+    model, preprocessor = surgvlp_load(configs.model_config, device=device, strict_load_state_dict=False)
     
     # Extract embeddings
-    get_vlp_embeddings(model, preprocessor, clips_data_dir, output_h5_path, device, logger, clip_file_type)
+    get_vlp_embeddings(model, preprocessor, clips_data_dir, output_h5_path, device, logger, clip_file_type, overwrite=overwrite)
     
 
-def peskavlp_embeddings(clips_data_dir: str, output_h5_path: str, device: str, logger: Logger = None, clip_file_type: str = 'avi'):
+def peskavlp_embeddings(clips_data_dir: str, output_h5_path: str, device: str, logger: Logger = None, clip_file_type: str = 'avi', overwrite: bool = False):
     print("Extracting PeskaVLP embeddings...")
     if logger:
         logger.info("Extracting PeskaVLP embeddings...")
         
     # Load model and preprocessor
     configs = Config.fromfile(os.path.join(SurgVLP_path, 'tests', 'config_peskavlp.py'), lazy_import=False)['config']
-    model, preprocessor = surgvlp.load(configs.model_config, device=device, strict_load_state_dict=False)
+    model, preprocessor = surgvlp_load(configs.model_config, device=device, strict_load_state_dict=False)
     
     # Extract embeddings
-    get_vlp_embeddings(model, preprocessor, clips_data_dir, output_h5_path, device, logger, clip_file_type)
+    get_vlp_embeddings(model, preprocessor, clips_data_dir, output_h5_path, device, logger, clip_file_type, overwrite=overwrite)
     
 
 def videomae_urology_embeddings(clips_data_dir: str, output_h5_path: str, device: str, logger: Logger = None, clip_file_type: str = 'avi'):

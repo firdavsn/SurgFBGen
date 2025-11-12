@@ -4,6 +4,7 @@ import pandas as pd
 
 from surgfbgen.models.feedback_generator import FeedbackGenerator, FeedbackGeneratorConfig
 
+
 clips_dir = '~/surgery/clips_with_wiggle/fb_clips_wiggle'
 
 # full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/data/iat_predictor_splits/full.csv'
@@ -11,7 +12,7 @@ clips_dir = '~/surgery/clips_with_wiggle/fb_clips_wiggle'
 
 full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision+procedure+task+tracks-none=100-num_tracks=15-final.csv'
 # full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision+procedure+task-none=100-final.csv'
-# full_split_path = '~/surgery/surgical_fb_generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision_procedure_task+tracks-none=100-uncertainty_calibration=platt.csv'
+# full_split_path = '~/surgery/surgical_fb  _generation/SurgFBGen/outputs/iat_predictions/peskavlp-vision_procedure_task+tracks-none=100-uncertainty_calibration=platt.csv'
 full_split_df = pd.read_csv(full_split_path)
 
 # full_split_df['instrument'] = full_split_df['instrument-extraction']

@@ -216,7 +216,7 @@ def visualize_and_find_thresholds(extractions_df: pd.DataFrame):
     plt.grid(True)
     plt.tight_layout()
     plt.show()
-    plt.savefig(os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat_predictor_splits', 'IAT_class_counts_with_thresholds.png'))
+    plt.savefig(os.path.join(os.environ['REPO_DIR'], 'data', 'iat_predictor_splits', 'IAT_class_counts_with_thresholds.png'))
     plt.close()
     
     return thresholds
@@ -228,9 +228,9 @@ def ensure_valid_actionable_fb(extractions_df: pd.DataFrame) -> pd.DataFrame:
         
 def main():
     # Load dataframes
-    extractions_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'extractions_df.csv')
-    procedures_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'procedures_df.csv')
-    tasks_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'tasks_df.csv')
+    extractions_path = os.path.join(os.environ['REPO_DIR'], 'data', 'iat', 'extractions_df.csv')
+    procedures_path = os.path.join(os.environ['REPO_DIR'], 'data', 'iat', 'procedures_df.csv')
+    tasks_path = os.path.join(os.environ['REPO_DIR'], 'data', 'iat', 'tasks_df.csv')
     extractions_df = pd.read_csv(extractions_path)
     procedures_df = pd.read_csv(procedures_path)
     tasks_df = pd.read_csv(tasks_path)
@@ -239,9 +239,9 @@ def main():
     extractions_df = set_procedure_and_task(extractions_df, procedures_df, tasks_df)
 
     # Load mappings
-    instrument_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'instrument_clusters-mapping.json')
-    action_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'action_clusters-mapping.json')
-    tissue_mappings_path = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat', 'tissue_clusters-mapping.json')
+    instrument_mappings_path = os.path.join(os.environ['REPO_DIR'], 'data', 'iat', 'instrument_clusters-mapping.json')
+    action_mappings_path = os.path.join(os.environ['REPO_DIR'], 'data', 'iat', 'action_clusters-mapping.json')
+    tissue_mappings_path = os.path.join(os.environ['REPO_DIR'], 'data', 'iat', 'tissue_clusters-mapping.json')
     instrument_mappings = pd.read_json(instrument_mappings_path, typ='series').to_dict()
     action_mappings = pd.read_json(action_mappings_path, typ='series').to_dict()
     tissue_mappings = pd.read_json(tissue_mappings_path, typ='series').to_dict()
@@ -254,8 +254,8 @@ def main():
         tissue_mappings=tissue_mappings
     )
     
-    extractions_df.to_csv(os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat_predictor_splits', 'clusters_df.csv'), index=False)
-    print(f"Saved extractions_df with clusters to {os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat_predictor_splits', 'clusters_df.csv')}")
+    extractions_df.to_csv(os.path.join(os.environ['REPO_DIR'], 'data', 'iat_predictor_splits', 'clusters_df.csv'), index=False)
+    print(f"Saved extractions_df with clusters to {os.path.join(os.environ['REPO_DIR'], 'data', 'iat_predictor_splits', 'clusters_df.csv')}")
     
     # Remove IAT classes that are too few in the count
     thresholds = visualize_and_find_thresholds(extractions_df)
@@ -313,7 +313,7 @@ def main():
         splits.append({'train_df': train_df, 'val_df': val_df, 'full_df': full_df})
 
     # Save splits to CSV files
-    output_dir = os.path.join(os.environ['REPO_DIRECTORY'], 'data', 'iat_predictor_splits')
+    output_dir = os.path.join(os.environ['REPO_DIR'], 'data', 'iat_predictor_splits')
     os.makedirs(output_dir, exist_ok=True)
     for i, split in enumerate(splits):
         train_file_path = os.path.join(output_dir, f'train{i + 1}.csv')

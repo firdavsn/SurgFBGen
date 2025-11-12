@@ -1,0 +1,68 @@
+[project]
+name = "surgfbgen"
+version = "0.1.0"
+description = "Library to generate surgical feedback from endoscopic videos."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Firdavs Nasriddinov", email = "firdavs@caltech.edu"},
+    { name = "Rafal Kocielnik",     email = "Rafal.Kocielnik@cshs.org"}
+]
+dependencies = [
+    "backoff>=2.2.1",
+    "decord>=0.6.0",
+    "fastparquet>=2024.11.0",
+    "fvcore>=0.1.5.post20221221",
+    "google-generativeai>=0.8.5",
+    "h5py>=3.15.1",
+    "imageio>=2.37.2",
+    "ipython>=8.37.0",
+    "mmengine>=0.10.7",
+    "openai>=2.7.2",
+    "pandas>=2.3.3",
+    "pillow>=12.0.0",
+    "pydantic>=2.12.4",
+    "torch[cuda]>=2.9.0",
+    "torchvision>=0.24.0",
+    "transformers>=4.57.1",
+]
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11.1", "ruff>=0.6.1"]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["surgfbgen"]
+
+[tool.setuptools.package-dir]
+"surgfbgen" = "surgfbgen"
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "D",    # pydocstyle
+    "D401", # First line should be in imperative mood
+    "T201",
+    "UP",
+]
+lint.ignore = [
+    "UP006",
+    "UP007",
+    "UP035",
+    "D417",
+    "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "UP"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

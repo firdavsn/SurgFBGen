@@ -1,9 +1,12 @@
-__pycache__/*
+__pycache__
 
-keys.json
-*checkpoints/*
+.env
 
 data/*
+data/iat/*
+!data/iat/
+!data/iat/procedures_df.csv
+!data/iat/tasks_df.csv
 
 *.pt
 *.pth
@@ -12,3 +15,12 @@ data/*
 
 outputs/*
 ChatLLM_outputs/*
+
+.venv/*
+
+SurgVLP/*
+co-tracker/*
+
+surgfbgen/logs/*
+
+uv.lock

@@ -21,7 +21,7 @@ class SupportedModels:
         'gpt-4.1', 'gpt-4.1-mini'
     ])
     google: List[str] = field(default_factory=lambda: [
-        'gemini-2.5-pro', 'gemini-2.5-flash'
+        'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.5-flash-lite'
     ])
 
 class ChatLLMInterface:
@@ -31,7 +31,7 @@ class ChatLLMInterface:
     """
 
     def __init__(self, model_name: str, api_key: Optional[str] = None, temperature: float = 0.2, max_tokens: int = 1000, 
-                 ChatLLM_outputs_dir: Optional[str] = os.path.join(os.environ['REPO_DIRECTORY'], 'ChatLLM_outputs')):
+                 ChatLLM_outputs_dir: Optional[str] = os.path.join(os.environ['REPO_DIR'], 'ChatLLM_outputs')):
         """
         Initializes the chat interface for a specific model.
 
