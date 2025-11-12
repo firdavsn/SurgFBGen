@@ -92,6 +92,15 @@ uv run surgfbgen/main.py
 | GPT-4o | Context+(I,A,T) | 2.33<sup>**</sup><sub>&pm;.02</sub> | 7.4% ↑ | 32.7% | 2.4% | 4.2<sub>&pm;0.2</sub> | 18.2% ↓ | 0.13<sub>&pm;.01</sub> | 16.5% ↑ |
 | GPT-4o | +confidence gate | 2.44<sup>**</sup><sub>&pm;.03</sub> | 12.4% ↑ | 42.0% | 2.9% | 3.5<sub>&pm;0.4</sub> | 31.3% ↓ | 0.18<sub>&pm;.01</sub> | 63.6% ↑ |
 
+**Table 3: Inter-rater agreement on fidelity ratings for LLM-as-judge.** Based on blind Human ratings of 30 stratified examples of aligned LLM-generated and real-world surgeon provided feedback.
+
+| Comparison | $\kappa_{\text{quad}}$ (95% CI) | $\rho$ (95% CI) | $P_o$ (95% CI) |
+| :--- | :--- | :--- | :--- |
+| Human--Human | 0.70 [0.17, 0.92] | 0.58 [0.24, 0.86] | 0.77 [0.60, 0.90] |
+| LLM vs. Avg. Human | 0.82 [0.56, 0.94] | 0.64 [0.33, 0.87] | 0.80 [0.63, 0.93] |
+| Human Rater 1 vs. LLM | 0.80 [0.54, 0.93] | 0.79 [0.62, 0.93] | 0.77 [0.60, 0.90] |
+| Human Rater 2 vs. LLM | 0.91 [0.70, 1.00] | 0.88 [0.68, 1.00] | 0.90 [0.80, 1.00] |
+
 ## Key Components
 
 ### Models
