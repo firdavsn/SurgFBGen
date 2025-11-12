@@ -98,7 +98,7 @@ uv run surgfbgen/main.py
 
 - **surgfbgen/models/iat_predictor/IATPredictor**: An individual model for IAT (Instrument, Action, or Tissue) prediction that consists of:
     1. A feature encoder (e.g., LSTMFusionModel) that processes embeddings and tracks
-    2. An optional MLP classifier that operates on the extracted features
+    2. An MLP classifier that operates on the extracted features
 
 - **surgfbgen/models/iat_predictor/LSTMFusionModel**: Temporal encoder that processes instrument motion trajectories to capture kinematic patterns critical for surgical action recognition.
 
