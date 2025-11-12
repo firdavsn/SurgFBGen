@@ -96,15 +96,15 @@ uv run surgfbgen/main.py
 
 ### Models
 
-- **surgbfgen/models/iat_predictor/IATPredictor**: An individual model for IAT (Instrument, Action, or Tissue) prediction that consists of:
+- **surgfbgen/models/iat_predictor/IATPredictor**: An individual model for IAT (Instrument, Action, or Tissue) prediction that consists of:
     1. A feature encoder (e.g., LSTMFusionModel) that processes embeddings and tracks
     2. An optional MLP classifier that operates on the extracted features
 
-- **surgbfgen/models/iat_predictor/LSTMFusionModel**: Temporal encoder that processes instrument motion trajectories to capture kinematic patterns critical for surgical action recognition.
+- **surgfbgen/models/iat_predictor/LSTMFusionModel**: Temporal encoder that processes instrument motion trajectories to capture kinematic patterns critical for surgical action recognition.
 
-- **surgbfgen/models/feedback_generator/FeedbackGenerator**: LLM-based generator that produces natural-language feedback conditioned on IAT triplets, procedure context, and optional reference examples.
+- **surgfbgen/models/feedback_generator/FeedbackGenerator**: LLM-based generator that produces natural-language feedback conditioned on IAT triplets, procedure context, and optional reference examples.
 
-- **surgbfgen/models/feedback_evaluator/FeedbackEvaluator**: Automated evaluation system using LLM-as-judge with a clinician-aligned fidelity rubric to assess feedback quality against ground truth.
+- **surgfbgen/models/feedback_evaluator/FeedbackEvaluator**: Automated evaluation system using LLM-as-judge with a clinician-aligned fidelity rubric to assess feedback quality against ground truth.
 
 
 ### Code
