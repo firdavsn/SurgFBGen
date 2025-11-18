@@ -2,7 +2,7 @@
 ---
 #### **Authors**: Firdavs Nasriddinov*, Rafal Kocielnik*, Anima Anandkumar, Andrew J. Hung
 
-This official repository holds code for the paper "**Generating Natural-Language Surgical Feedback: From Structured Representation to Domain-Grounded Evaluation**". Our paper is accepted at [ML4H 2025](https://ahli.cc/ml4h/). We open source all code here under a permissive MIT license, to encourage reproduction and further research exploration. 
+This official repository holds code for the paper "**Generating Natural-Language Surgical Feedback: From Structured Representation to Domain-Grounded Evaluation**". Our [paper](https://github.com/firdavsn/SurgFBGen.git) is accepted at [ML4H 2025](https://ahli.cc/ml4h/). We open source all code here under a permissive MIT license, to encourage reproduction and further research exploration. 
 
 <img width="1366" alt="Framework" src="figures/overview.png">
 <hr>
