@@ -2,7 +2,7 @@
 ---
 #### **Authors**: Firdavs Nasriddinov*, Rafal Kocielnik*, Anima Anandkumar, Andrew J. Hung
 
-This official repository holds code for the paper "**Generating Natural-Language Surgical Feedback: From Structured Representation to Domain-Grounded Evaluation**". Our paper is accepted at [ML4H 2025](https://ahli.cc/ml4h/). We open source all code here under a permissive MIT license, to encourage reproduction and further research exploration. 
+This official repository holds code for the paper "**Generating Natural-Language Surgical Feedback: From Structured Representation to Domain-Grounded Evaluation**". Our paper is accepted at [ML4H 2025](https://openreview.net/forum?id=cuKblBdJ1M). We open source all code here under a permissive MIT license, to encourage reproduction and further research exploration. 
 
 <img width="1366" alt="Framework" src="figures/overview.png">
 <hr>
@@ -143,16 +143,15 @@ Retry
 - **evaluate_feedback**: Evaluates generated feedback against ground truth using a FeedbackEvaluator.
 
 
-<!-- ## Citation
+## Citation
 ```bash
-@misc{nasriddinov2024automatingfeedbackanalysissurgical,
-      title={Automating Feedback Analysis in Surgical Training: Detection, Categorization, and Assessment}, 
-      author={Firdavs Nasriddinov and Rafal Kocielnik and Arushi Gupta and Cherine Yang and Elyssa Wong and Anima Anandkumar and Andrew Hung},
-      year={2024},
-      eprint={2412.00760},
-      archivePrefix={arXiv},
-      primaryClass={eess.AS},
-      url={https://arxiv.org/abs/2412.00760}, 
+@inproceedings{
+    nasriddinov2025generatingsurgicalfeedback,
+    title={Generating Natural-Language Surgical Feedback: From Structured Representation to Domain-Grounded Evaluation}, 
+    author={Firdavs Nasriddinov and Rafal Kocielnik and Anima Anandkumar and Andrew Hung},
+    year={2025},
+    booktitle={Machine Learning for Health 2025},
+    url={https://openreview.net/forum?id=cuKblBdJ1M}, 
 }
-``` -->
+```
 ---
